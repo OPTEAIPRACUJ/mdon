@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prelegenci kongresu MDON">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Prelegenci</title>
+  <link rel="stylesheet" href="/assets/404.67f322dd.css" />
+<link rel="stylesheet" href="/assets/prelegenci.d272311b.css" /><script type="module" src="/page.8271e986.js"></script></head>
+  <body class="max-w-[90%] mx-auto py-10">
+    <div class="lg:min-h-screen flex flex-col">
+      <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
+  <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
+    <picture class="astro-3WCREGVO">
+      <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
+      <img src="/images/mdon_logo_m.webp" alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022" class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
+    </picture>
+  </a>
+
+  <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
+      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
+        <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
+          Kongres
+        </div>
+        <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
+          <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
+          <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
+          <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
+          <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
+          <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
+          <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
+        </div>
+      </div>
+      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
+        <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
+          Mikołajkowy Jarmark Pracy
+        </div>
+        <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
+          <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
+          <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
+        </div>
+      </div>
+      <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
+      <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
+      <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
+    </div>
+    <button @click="isOpen = !isOpen" type="button" class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO" :class="{ 'transition transform-180': isOpen }">
+      <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" class="astro-3WCREGVO"></path>
+        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" class="astro-3WCREGVO"></path>
+      </svg>
+    </button>
+    <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+      <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
+        <details class="group astro-3WCREGVO">
+          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+            <span class=" astro-3WCREGVO">Kongres</span>
+
+            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
+              </svg>
+            </span>
+          </summary>
+          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+            <a href="/mdon_2022/o-kongresie/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              O Kongresie
+            </a>
+
+            <a href="/mdon_2022/program/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Program
+            </a>
+            <a href="/mdon_2022/prelegenci/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Prelegenci
+            </a>
+            <a href="/mdon_2022/patronat-honorowy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Patronat honorowy
+            </a>
+            <a href="/mdon_2022/patronat-medialny/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Patronat medialny
+            </a>
+            <a href="/mdon_2022/partnerzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Partnerzy
+            </a>
+          </nav>
+        </details>
+        <details class="group astro-3WCREGVO">
+          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+            <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
+
+            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
+              </svg>
+            </span>
+          </summary>
+          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+            <a href="/mdon_2022/organizacje/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Organizacje
+            </a>
+
+            <!-- <span
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+              Atrakcje
+            </span> -->
+          </nav>
+        </details>
+        <a href="/mdon_2022/organizatorzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          Organizatorzy</a>
+        <a href="/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          MDON 2023
+        </a>
+        <a href="/kontakt/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          Kontakt
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+      <div class="flex justify-center grow pt-12">
+        <main class="container mx-auto text-center">
+    <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+  Przedstawiamy prelegentów kongresu
+</h1>
+    <div class="flex flex-col items-center xl:items-start xl:grid xl:grid-cols-2 py-8 gap-8">
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/malgorzata_jarosinska-jedynak.webp" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4">
+            <strong>Małgorzata Jarosińska&nbsp;-&nbsp;Jedynak</strong>
+          </p>
+          <p>Minister Funduszy i Polityki Regionalnej</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Małgorzata Jarosińska&nbsp;-&nbsp;Jedynak</strong></p>
+          <p>Minister Funduszy i Polityki Regionalnej</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Małgorzata Jarosińska-Jedynak 29 października 2020 r. została powołana na stanowisko
+            sekretarza stanu w Ministerstwie Funduszy i Polityki Regionalnej. Od 26 października
+            2020 r. pełni również funkcję Pełnomocnika Rządu do spraw przygotowania Światowego Forum
+            Miejskiego w Katowicach w 2022 r. Od 29 listopada 2018 r. do 15 listopada 2019 r.
+            podsekretarz stanu w Ministerstwie Inwestycji i Rozwoju. Od 15 listopada 2019 r. do 6
+            października 2020 r. pełniła funkcję ministra funduszy i polityki regionalnej.
+          </p>
+          <p>
+            Wiceminister Jarosińska-Jedynak od początku swojej kariery związana jest z samorządem.
+            Przez kilkanaście lat zajmowała się funduszami unijnymi, rozwojem regionalnym i
+            wsparciem przedsiębiorczości. Pracowała w Urzędzie Marszałkowskim Województwa
+            Podkarpackiego, gdzie przeszła wszystkie szczeble – od inspektora do dyrektora
+            Departamentu Wspierania Przedsiębiorczości. Wcześniej pracowała w Podkarpackim Urzędzie
+            Wojewódzkim i Urzędzie Gminy i Miasta Tyczyn.
+          </p>
+          <p>
+            Jest absolwentką Wydziału Budownictwa i Inżynierii Środowiska Politechniki Rzeszowskiej,
+            gdzie uzyskała dyplom magistra inżyniera w specjalności inżynieria komunalna. Ukończyła
+            też Studia podyplomowe z zakresu zarządzania bezpieczeństwem i higieną pracy na tej
+            samej uczelni.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/pawel-wdowik.jpg" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4"><strong>Paweł Wdówik</strong></p>
+          <p>Minister Rodziny i Polityki Społecznej</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Paweł Wdówik</strong></p>
+          <p>Minister Rodziny i Polityki Społecznej</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Jest absolwentem Ośrodka dla Dzieci Niewidomych w Laskach oraz Wydziału Psychologii
+            Uniwersytetu Warszawskiego.
+          </p>
+          <p>Twórca systemu wsparcia dla osób niepełnosprawnych na Uniwersytecie Warszawskim.</p>
+          <p>
+            Od 1997 r. kierownik Biura ds. Osób Niepełnosprawnych na UW. <br> W latach 1993-2003 -
+            wykładowca na Akademii Pedagogiki Specjalnej, w latach 2001-2010 - Pracował także jako redaktor
+            Katolickiego Radia Józef.
+          </p>
+          <p>
+            Pasjonat amerykańskiej ustawy Americans with Disabilities act; od wielu lat aktywnie
+            działający na rzecz równych praw osób z niepełnosprawnością w Polsce. Od 2010 członek
+            komisji ekspertów ds. Osób Niepełnosprawnych przy Rzeczniku Praw Obywatelskich.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/ewa_leniart.webp" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4"><strong>Ewa Leniart</strong></p>
+          <p>Wojewoda Podkarpacki</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Ewa Leniart</strong></p>
+          <p>Wojewoda Podkarpacki</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Ewa Leniart urodziła się w 1976 r. w Dylągówce w województwie podkarpackim. W latach
+            1995–2000 studiowała na Wydziale Prawa Uniwersytetu Marii Curie-Skłodowskiej w Lublinie
+            (filia w Rzeszowie), gdzie uzyskała tytuł magistra prawa.
+          </p>
+          <p>
+            W latach 2002–2005 była kierownikiem Referatu Prawno-Organizacyjnego w Oddziale
+            Instytutu Pamięci Narodowej w Rzeszowie. Od grudnia 2005 r. do stycznia 2007 r. była
+            koordynatorem, a następnie dyrektorem Gabinetu Wojewody w Podkarpackim Urzędzie
+            Wojewódzkim w Rzeszowie.
+          </p>
+          <p>
+            Od 1 lutego 2007 r. do 8 grudnia 2015 r. pełniła funkcję dyrektora Oddziału Instytutu
+            Pamięci Narodowej w Rzeszowie. W lutym 2014 r. uzyskała stopień doktora nauk prawnych. W
+            latach 2015 – 2019 była Wojewodą Podkarpackim.
+          </p>
+          <p>W ostatnich wyborach parlamentarnych została wybrana na Posła RP IX kadencji.</p>
+          <p>
+            Z dniem 13 stycznia 2020 r. premier Mateusz Morawiecki ponownie powołał ją na stanowisko
+            Wojewody Podkarpackiego.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/stanislaw_kruczek.jpg" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4"><strong>Stanisław Kruczek</strong></p>
+          <p>Członek zarządu Województwa Podkarpackiego</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Stanisław Kruczek</strong></p>
+          <p>Członek zarządu Województwa Podkarpackiego</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <table class="table-fixed text-sm">
+            <tr><td class="w-1/3">Komisje sejmikowe</td>
+              <td>Członek Komisji Ochrony Zdrowia, Polityki Prorodzinnej i Społecznej, Członek
+                Komisji Rozwoju Regionalnego Członek Komisji Rolnictwa, Rozwoju Obszarów Wiejskich i
+                Ochrony Środowiska Sejmiku Województwa Podkarpackiego
+              </td>
+            </tr>
+            <tr><td>Funkcje w Sejmiku Województwa Podkarpackiego</td>
+              <td>Członek Zarządu Województwa Podkarpackiego od 2014 roku do teraz, Radny Sejmiku
+                Województwa Podkarpackiego V i VI kadencji, Członek Klubu Radnych PiS Sejmiku
+                Województwa Podkarpackiego
+              </td>
+            </tr>
+            <tr><td>Wykształcenie</td>
+              <td>Wyższe – Inżynier Elektryk - Politechnika Rzeszowska Studia Podyplomowe–
+                Zarządzanie Sieciami Telekomunikacyjnymi - Instytut Łączności w Warszawie Posiada
+                uprawnienia budowlane w telekomunikacji
+              </td>
+            </tr>
+            <tr><td>Praca zawodowa</td>
+              <td>1991-1992 Projektant – Kierownik Pracowni Projektowej – Łączbud Sp. zoo w Rzeszowie
+                <br> 1992-1998 – Główny Inżynier Sieci – Spółdzielnia Telekomunikacyjna OST w Tyczynie
+                <br> 1998-2014-Prezes Spółdzielnia Telekomunikacyjna OST w Tyczynie
+                <br> 2014-do teraz – Członek Zarządu Województwa Podkarpackiego, Radny Województwa
+                Podkarpackiego
+              </td>
+            </tr>
+            <tr><td>Inna działalność</td>
+              <td>Samorządowiec od 1990 roku. W latach 1990-1998 był radnym pierwszej i drugiej
+                kadencji oraz przewodniczącym pierwszej demokratycznie wybranej w 1990 roku Rady
+                Miejskiej w Błażowej. Radny Powiatu Rzeszowskiego III i IV kadencji w latach
+                2006-2014, gdzie przewodniczył Komisji Spraw Gospodarczych i Transportu, Komisji
+                Budżetowej oraz był członkiem Rady Społecznej największego w regionie SP ZOZ nr 2 w
+                Rzeszowie, Wieloletni Prezes LKS Błażowianka
+              </td>
+            </tr>
+            <tr><td>Życie prywatne</td>
+              <td>Od 1988 roku w związku małżeńskim z Wiolettą, sześcioro dzieci. Aktywnie spędza
+                wolny czas wraz z rodziną. Pasjonuje się Piłką Nożną, kibicując Błażowiance i
+                wszystkim drużynom z Podkarpacia
+              </td>
+            </tr>
+          </table>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/krzysztof-michalkiewicz.webp" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4"><strong>Krzysztof Michałkiewicz</strong></p>
+          <p>Prezes zarządu PFRON</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Krzysztof Michałkiewicz</strong></p>
+          <p>Prezes zarządu PFRON</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Krzysztof Michałkiewicz urodził się 26 września 1953 r. w Obornikach Śląskich. Ukończył
+            studia socjologiczne na Katolickim Uniwersytecie Lubelskim. W 1979 r. rozpoczął pracę
+            jako socjolog w Zakładzie Remontowym Energetyki w Lublinie (1979-1981).
+          </p>
+          <p>
+            W 1980 r. wstąpił do NSZZ „Solidarność". W 1981 r. pracował w zarządzie Regionu NSZZ
+            „Solidarność" w Lublinie, był redaktorem Biuletynu Informacyjnego. Za udział w strajku
+            WSK Świdnik został aresztowany i skazany na karę 2,5 roku pozbawienia wolności. W latach
+            1982-1983 przebywał w zakładach karnych w Lublinie, Łodzi, Łęczycy i Hrubieszowie. W
+            1983 r. w trakcie przerwy w odbywaniu kary więzienia otrzymał paszport z prawem
+            jednokrotnego przekroczenia granicy polskiej. Wspólnie z rodziną wyjechał do Australii,
+            gdzie przez organizacje polonijne wspierał opozycję w kraju. Jako człowiek
+            „Solidarności" współorganizował w stolicy Australii, historyczne wybory do Sejmu i
+            Senatu 4 czerwca 1989 roku.
+          </p>
+
+          <p>
+            Po powrocie do kraju w 1992 r. został kierownikiem Rejonowego Urzędu Pracy w Lublinie. W
+            latach 1992-1998 sprawował funkcję dyrektora Wojewódzkiego Zespołu Pomocy Społecznej, a
+            w latach 1999-2002 dyrektora Wydziału Spraw Społecznych Urzędu Wojewódzkiego. W latach
+            2002-2003 był zastępcą dyrektora Miejskiego Ośrodka Pomocy Rodzinie, a w latach
+            2003-2004 dyrektorem Domu Pomocy Społecznej. Od 2004 r. pełnił funkcję zastępcy ds.
+            społecznych prezydenta Lublina.
+          </p>
+          <p>
+            W wyborach parlamentarnych z 2005 r. został wybrany z listy Prawa i Sprawiedliwości na
+            posła V kadencji w okręgu lubelskim. Od 31 października 2005 r. do 5 maja 2006 r.
+            sprawował urząd ministra pracy i polityki społecznej w rządzie Prawa i Sprawiedliwości.
+          </p>
+          <p>
+            W wyborach w 2007 r. po raz drugi uzyskał mandat poselski, zaś w wyborach w 2011 r. i
+            2015 r. z powodzeniem ubiegał się o reelekcję.
+          </p>
+          <p>
+            W latach 2015-2019 był sekretarzem stanu w Ministerstwie Rodziny, Pracy i Polityki
+            Społecznej, pełnomocnikiem rządu ds. osób niepełnosprawnych oraz prezesem rady
+            nadzorczej PFRON.
+          </p>
+          <p>
+            W trakcie kariery poselskiej był m.in. przewodniczącym podkomisji stałej do spraw pomocy
+            społecznej oraz członkiem komisji polityki społecznej i rodziny. Pełnił funkcję
+            wiceprzewodniczącego lubelskiego zespołu parlamentarnego oraz parlamentarnego zespołu
+            ds. osób starszych. Był także członkiem parlamentarnego zespołu ds. współpracy z
+            organizacjami pozarządowymi.
+          </p>
+          <p>
+            Odznaczony Krzyżem Oficerskim Orderu Odrodzenia Polski oraz licznymi wyróżnieniami za
+            działania na rzecz środowiska osób niepełnosprawnych.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-72 lg:w-96 mx-auto">
+            <img src="/images/prelegenci/konrad_fijolek.jpg" alt="" class="h-72 lg:h-96 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-3xl mt-4"><strong>Konrad Fijołek</strong></p>
+          <p>Prezydent Miasta Rzeszowa</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-2xl"><strong>Konrad Fijołek</strong></p>
+          <p>Prezydent Miasta Rzeszowa</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Konrad Fijołek urodził się w 1976 roku w Rzeszowie. Jest absolwentem IV Liceum
+            Ogólnokształcącego im. Mikołaja Kopernika w Rzeszowie i Wydziału Socjologii Wyższej
+            Szkoły Pedagogicznej w Rzeszowie. W 2018 roku uzyskał tytuł Executive Master of Business
+            Administration w Apsley Business School of London.
+          </p>
+          <p>
+            W latach 1998 – 2021 radny miasta Rzeszowa. W latach 2006–2010 przewodniczący Rady
+            Miasta Rzeszowa, a od 2010 roku wiceprzewodniczący Rady Miasta Rzeszowa.
+          </p>
+          <p>
+            Od wielu lat tworzy liczne inicjatywy na rzecz mieszkańców. W 2015 r. powołał jeden z
+            pierwszych ruchów miejskich w Rzeszowie – „Rzeszów Smart City”. Ruch stał się m.in.
+            propagatorem wykorzystania nowoczesnych technologii w zarządzaniu miastem. Jest
+            współautorem pionierskiego projektu Urban Lab, miejskiego laboratorium w centrum
+            Rzeszowa. Miejsca otwartego dla ambitnych i kreatywnych ludzi, którzy chcą wpływać na
+            jakość życia w mieście. Pomaga w tym zespół naukowców, osób z organizacji pozarządowych
+            oraz biznesu. Wszystko po to, by rozwiązywać lokalne problemy i ułatwiać życie
+            miejscowej społeczności.
+          </p>
+          <p>
+            W dniu 13 czerwca 2021 roku wygrał w I turze przedterminowe wybory na Prezydenta Miasta
+            Rzeszowa.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-y-16 py-24 justify-center">
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/beata_drzazga.webp" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Beata Drzazga</strong></p>
+          <p>Prezes Betamed S.A. Centrum Medyczne</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Beata Drzazga</strong></p>
+          <p>Prezes Betamed S.A. Centrum Medyczne</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Założycielka i Prezes BetaMed SA – największej firmy medycznej w Polsce, świadczącej
+            usługi opieki długoterminowej w domu pacjenta oraz w Clinice BetaMed w Chorzowie.
+            Zatrudnia ponad 3 tys. osób, opiekuje się ponad 6 tys. pacjentów. Posiada 91 filii
+            opieki domowej w 11 województwach w Polsce. Właściciel i Prezes firmy medycznej BetaMed
+            International w Las Vegas.
+          </p>
+          <p>
+            Właścicielka DRZAZGA CLINIC – Kliniki Laseroterapii i Medycyny Estetycznej oferującej
+            ekskluzywne zabiegi na twarz i ciało z wykorzystaniem najnowocześniejszego sprzętu.
+          </p>
+          <p>
+            Właścicielka ekskluzywnego salonu mody „DONO DA SCHEGGIA" w którym oferowane są
+            najnowsze kolekcje ze światowych stolic mody m.in. Mediolanu, Londynu, Paryża czy
+            Wiednia.
+          </p>
+          <p>
+            Ekspert w dziedzinie zarządzania służbą zdrowia. Prelegent wielu polskich i
+            międzynarodowych konferencji ekonomicznych i medycznych. Uczestniczka misji
+            gospodarczych m.in. w Nevadzie, Kalifornii, Peru, Chile, Chinach, Niemczech, Czechach,
+            Francji.
+          </p>
+          <p>
+            Dziekan Wydziału Medycznego Uczelni GWSH w Katowicach. Laureatka blisko 200 prestiżowych
+            nagród i wyróżnień przyznawanych zarówno w Polsce, jak i na arenie międzynarodowej.
+          </p>
+          <p>
+            Swój sukces zawdzięcza pasji, samozaparciu, samodyscyplinie i miłości do ludzi. Jej
+            życiowe motto brzmi: „Sukcesem jest odnosić sukcesy, ale zawsze pozostawać sobą".
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/magdalena_florek.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Magdalena Florek</strong></p>
+          <p>Dyrektor Personalny GK Specjał</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Magdalena Florek</strong></p>
+          <p>Dyrektor Personalny GK Specjał</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Dyrektor Personalny GK Specjał, która zatrudnia ponad 6 tyś pracowników. Współpracuje z
+            Fundacją Specjał, która udziela wsparcia i pomocy dla uzdolnionych dzieci z ubogich
+            rodzin.
+          </p>
+          <p>
+            Absolwentka Uniwersytetu Rzeszowskiego na wydziale Prawa i Administracji, uczestniczka
+            licznych certyfikowanych warsztatów. Członek Powiatowej Rady Rynku Pracy z ramienia
+            organizacji Pracodawcy RP. Od ponad 25 lat związana z obszarem HR w dużych firmach z
+            sektora FMCG. Posiada wieloletnie doświadczenie w zarządzaniu zasobami ludzkimi.
+          </p>
+          <p>
+            Uczestniczyła w wielu projektach wdrożeniowych usprawniających pracę i polepszających
+            wyniki pracowników. Współpracuje w ramach GK Specjał z Uniwersytetem Przedsiębiorczości
+            oferującym różnego rodzaju szkolenia on-line dla wszystkich grup pracowniczych
+            podnoszących kwalifikacje oraz rozwój kompetencji pracowników.
+          </p>
+          <p>
+            W życiu zawodowym kieruje się mottem ”Menager jest silny siłą swojego zespołu”. Grupa
+            ludzi jest dużo bardziej skuteczna od pojedynczych osób, a każdy pracownik jest bardzo
+            ważnym ogniwem w organizacji. Wspólna droga trwa dłużej niż podróż w pojedynkę.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/jerzy-jeczmienionka.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Jerzy Jęczmienionka</strong></p>
+          <p>
+            Dyrektor Regionalnego Ośrodka <br>
+            Polityki Społecznej w Rzeszowie
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Jerzy Jęczmienionka</strong></p>
+          <p>Dyrektor Regionalnego Ośrodka Polityki Społecznej w Rzeszowie</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Prawnik, radny Miasta Rzeszowa. Przewodniczący Komisji Porządku Publicznego i Współpracy
+            z Samorządami Osiedlowymi. Dyrektor Regionalnego Ośrodka Polityki Społecznej w
+            Rzeszowie.
+          </p>
+          <p>
+            Od ponad 20 lat związany z organizacjami pozarządowymi jako prezes Podkarpackiego Banku
+            Żywności (w latach 2003- 2015). Sekretarz ZG PZG w Warszawie.
+          </p>
+          <p>
+            Specjalista z zakresu polityki społecznej, organizacji pozarządowych, kierownik i
+            koordynator w zakresie realizacji projektów, organizacji szkoleń i warsztatów,
+            zarządzania zasobami ludzkimi, koordynator działań z zakresu pomocy społecznej na
+            terenie województwa podkarpackiego.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/rafal_kowalczyk.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+
+          <p class="text-xl mt-4"><strong>Rafał Kowalczyk</strong></p>
+          <p>Prezes Fundacji OPTEA</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Rafał Kowalczyk</strong></p>
+          <p>Prezes Fundacji OPTEA</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Założyciel i Prezes Zarządu Fundacji Optea, Przewodniczący Rady Nadzorczej
+            iPRACUJZDALNIE.pl Sp. z o. o. oraz OPTEA Sp. z o. o., prawnik.
+          </p>
+          <p>
+            Posiada wieloletnie doświadczenie w dużych firmach na stanowiskach dyrektorskich, w
+            których był odpowiedzialny za działy sprzedaży, finansowe, marketingu, inwestycji i
+            HR-u. Posiada umiejętność wdrażania i kontrolowania planów krótko - średnio – i
+            długoterminowych, zarządzania dużymi zespołami ludzkimi i strategicznego zarządzania
+            kapitałem ludzkim.
+          </p>
+          <p>
+            Główne osiągnięcia: tworzenie strategii firm i określanie misji przedsiębiorstwa,
+            optymalizacja procesów biznesowych i ich wdrażanie, współtworzenie szkoleń i kursów dla
+            działów HR-u przeprowadzonych przez najlepszych trenerów w Polsce, podejmowanie decyzji
+            o kluczowym znaczeniu dla firm, wdrażanie nowych rozwiązań.
+          </p>
+          <p>
+            Autor wielu publikacji oraz panelista licznych konferencji na temat zatrudniania i
+            rekrutacji osób niepełnosprawnych z otwartego rynku pracy. W swojej pracy jest
+            ukierunkowany na budowanie dobrych relacji z ludźmi. Jako Absolwent Wydziału Prawa
+            Katolickiego Uniwersytetu Lubelskiego w Lublinie oraz studiów MBA wykorzystuje fachową
+            wiedzę w budowaniu profesjonalnych relacji biznesowych.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/damian_liskiewicz.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Damian Liśkiewicz</strong></p>
+          <p>
+            Biuro ds. Osób Niepełnosprawnych <br>
+            Wyższej Szkoły Informatyki i Zarządzania <br>
+            z siedzibą w Rzeszowie
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Damian Liśkiewicz</strong></p>
+          <p>
+            Biuro ds. Osób Niepełnosprawnych Wyższej Szkoły Informatyki i Zarządzania z siedzibą w
+            Rzeszowie
+          </p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Pełnomocnik Rektora ds. Osób z Niepełnosprawnościami w Wyższej Szkole Informatyki i
+            Zarządzania w Rzeszowie. Kierownik Zakładu Wychowania Fizycznego i Sportu. Kierownik
+            Biura ds. Osób z Niepełnosprawnościami WSIiZ. Magister wychowania fizycznego o
+            specjalności rehabilitacja (Wyższa Szkoła Pedagogiczna w Rzeszowie/Uniwersytet
+            Rzeszowski, Wydział Wychowania Fizycznego). Członek Zarządu Środowiskowego Akademickiego
+            Związku Sportowego na Podkarpaciu. Prezes Klubu Uczelnianego AZS WSIiZ. Członek
+            Polskiego Stowarzyszenia Trenerów Tenisa. Członek Polskiego Stowarzyszenia Trenerów
+            Narciarstwa. Otrzymał nagrodę Orła AZS oraz nagrodę zasłużonego dla AZS Podkarpacki
+            Zarząd Środowiskowy. Instruktor pływania, siatkówki, narciarstwa, tenisa. Pilot
+            wycieczek.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/aleksandra_loboda.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Aleksandra Łoboda</strong></p>
+          <p>student Uniwersytetu Rzeszowskiego</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Aleksandra Łoboda</strong></p>
+          <p>student Uniwersytetu Rzeszowskiego</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Studentka V roku dietetyki na Uniwersytecie Rzeszowskim. Aktywnie uczestniczy w życiu
+            uczelni angażując się w różne akcje. Pasjonatka gotowania i pływania. Od początku swoich
+            studiów współpracuje z Biurem ds. Osób z Niepełnosprawnościami Uniwersytetu
+            Rzeszowskiego, gdzie miała możliwość uczestnictwa w różnych kursach, szkoleniach, a
+            także spotkaniach czy obozach integracyjno-szkoleniowych. Uważa, że BON to świetna
+            inicjatywa, pozwalająca studentom z niepełnosprawnościami rozwijać się i powiększać
+            możliwości.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/stanislaw_mazur.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Stanisław Mazur</strong></p>
+          <p>Prezes Centrum Medycznego MEDYK</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Stanisław Mazur</strong></p>
+          <p>Prezes Centrum Medycznego MEDYK</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Dr Stanisław Mazur - lekarz medycyny, specjalista chorób wewnętrznych i kardiolog,
+            stypendysta naukowy w Hamburgu oraz Filadelfii, autor kilku publikacji naukowych.
+            Pionier inicjatyw prozdrowotnych. Inicjator działań społecznych, poświęconych edukacji
+            prozdrowotnej oraz profilaktyce zdrowia. Prekursor prywatnej służby zdrowia w Rzeszowie.
+          </p>
+          <p>
+            Od ponad 33 lat wraz z rodziną prowadzi firmę Centrum Medyczne Medyk – pierwszy prywatny
+            podmiot leczniczy na terenie miasta Rzeszowa, jedną z najszybciej rozwijających się
+            sieci placówek medycznych w województwie podkarpackim. Obecnie Centrum Medyczne Medyk
+            świadczy usługi medyczne dla ponad pół miliona pacjentów, 8000 firm oraz łącznie daje
+            pracę ponad 1000 osobom. W ciągu kilkudziesięciu lat firma z jego inicjatywy
+            zorganizowała tysiące spotkań edukacyjnych i akcji prozdrowotnych. W okresie pandemii
+            COVID-19 stworzył setki miejsc umożliwiających mieszkańcom regionu zaszczepienie się jak
+            i wykonanie testów, a także izolatoria dla chorych oraz medyków pracujących na
+            oddziałach covidowych.
+          </p>
+          <p>
+            "Zasłużony dla Miasta Rzeszowa", laureat wielu nagród w tym nagrody Rzecznika Praw
+            Pacjenta "Złoty Lider" w konkursie Ochrony Zdrowia 2019. W 2021 r. odebrał nagrodę PR
+            Wings za komunikację i zarządzanie kryzysowe procesu szczepień.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/magdalena_mika.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Magdalena Mika</strong></p>
+          <p>Fundacja OPTEA</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Magdalena Mika</strong></p>
+          <p>Fundacja OPTEA</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Absolwentka prawa na Wydziale Prawa i Administracji Uniwersytetu Rzeszowskiego.
+            Specjalistka ds. Marketingu w Fundacji Optea oraz przy współpracującym z Fundacją
+            portalu pracy IPRACUJZDALNIE.PL. Aktywnie działająca w Biurze ds. Osób z
+            Niepełnosprawnościami Uniwersytetu Rzeszowskiego.
+          </p>
+          <p>
+            Trenująca pływanie w ramach Polskiego Komitetu Paraolimpijskiego. Promotorka
+            profilaktyki zdrowia, współzałożycielka społeczności Klub Realizacji Marzeń,
+            propagującej dbanie o zdrowie i rozwój osobisty. Od ponad roku buduje markę osobistą w
+            mediach społecznościowych.
+          </p>
+          <p>
+            Laureatka brązowego paragrafu za udział w Lokalnym Konkursie Krasomówczym organizowanym
+            w siedzibie Sądu Okręgowego w Rzeszowie.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/maria_pietrusza-budzynska.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Maria Pietrusza&nbsp;–&nbsp;Budzyńska</strong></p>
+          <p>Prezes Fundacji Teatroterapia Lubelska</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Maria Pietrusza&nbsp;–&nbsp;Budzyńska</strong></p>
+          <p>Prezes Fundacji Teatroterapia Lubelska</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Pedagog i wieloletni reżyser Warsztatów Terapii Zajęciowej Teatroterapia. Prezes
+            Fundacji Teatroterapia Lubelska, którą założyła w oparciu o pozytywne doświadczenia
+            artystyczne, teatralne, terapeutyczne i społeczno- kulturotwórcze wyniesione z
+            piętnastoletniej współpracy z Teatrem im. Juliusza Osterwy w Lublinie.
+          </p>
+          <p>
+            W 1991 roku rozpoczęła eksperyment pedagogiczny, oparty m.in. na poszukiwaniu własnych
+            metod pracy i sposobów działania przez zastosowanie technik teatralnych w rehabilitacji
+            osób z upośledzeniem umysłowym. Doprowadził on do powstania pierwszego w Polsce teatru
+            ludzi niepełnosprawnych oraz ukształtowania w środowisku pedagogicznym i teatralnym
+            różnorodnych kierunków, idei, programów i metod teatroterapii.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/lukasz_pelc.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Łukasz Pelc</strong></p>
+          <p>Dyrektor Działu IT i Komunikacji w Grupie AF</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Łukasz Pelc</strong></p>
+          <p>Dyrektor Działu IT i Komunikacji w Grupie AF</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            W Grupie AF pełni funkcję Dyrektora Działu IT i Komunikacji odpowidając za usługi: web
+            content accessibility guidelines WCAG 2.1, e-learning platforms oraz digital
+            accessibility audits. Kieruje też działaniami personal/employer branding. Specjalista w
+            zakresie zarządzania projektami komunikacji cyfrowej krótko i długoterminowymi. W tym
+            zakresie pracuje też dla spółki-córki Poland-IT Lab LCC w Stanach Zjednoczonych.
+          </p>
+          <p>
+            Absolwent Dziennikarstwa i Komunikacji Społecznej Uniwersytetu Jagiellońskiego i IT
+            Business Management Akademii Górniczo-Hutniczej w Krakowie. Współpracuje z Fundacją
+            Biznes Bez Barier, w której wspiera dostępności cyfrowej dla instytucji publicznych
+            zgodnie z ustawą o zapewnieniu dostępności dla osób ze szczególnymi potrzebami. Wspiera
+            też działalność Fundatora, członka Rady Dostępności.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/henryk_pietrzak.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>dr Henryk Pietrzak, prof.&nbsp;CH-SGM</strong></p>
+          <p>
+            Pełnomocnik Rektora Collegium Humanum <br>
+            Doradca Ministra Edukacji i Nauki
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>dr Henryk Pietrzak, prof.&nbsp;CH-SGM</strong></p>
+          <p>Pełnomocnik Rektora Collegium Humanum Doradca Ministra Edukacji i Nauki</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Pełnomocnik Rektora Szkoły Głównej Menedżerskiej Collegium Humanum w Warszawie ds.
+            Interesariuszy Zewnętrznych. W 2020 r. uzyskał tytuł Profesora Szkoły Głównej
+            Menedżerskiej Collegium Humanum w Warszawie. W 1999 odbył staż w Comenius University
+            Departament of Psychology Bratysława i w Departament of Social and Biological
+            Communication Slovak Academy of Sciences. Ukończył kurs na Członków Rad Nadzorczych
+            Spółek Skarbu Państwa. Ukończył studia podyplomowe z zakresu zarządzania w oświacie oraz
+            studia podyplomowe Executive Master of Business Administration w Wyższej Szkole
+            Menedżerskiej i Apsley Business School-London. Promotor 58 prac magisterskich i 90 prac
+            licencjackich z 33- letnim doświadczeniem w pracy edukacyjnej i w sferze kultury
+            medialnej.
+          </p>
+          <p>
+            W latach 1994 – 1997 członek Rady Nadzorczej Polskiego Radia Rzeszów SA. W latach 2000 –
+            2002 Członek Zarządu Polskiego Radia Rzeszów SA ds. Marketingu. Od 2002 do 2006r. Prezes
+            Polskiego Radia Rzeszów S.A. Od 2010 do 2011 r. Główny Specjalista w O/regionalny TVP w
+            Rzeszowie. W latach 2011- 2016 Prezes Polskiego Radia Rzeszów S.A. Obecnie pełni funkcję
+            Pełnomocnika Rektora SGM ds. Interesariuszy zewnętrznych oraz Prezesa Towarzystwa
+            Przyjaciół Rzeszowa. Wykładowca Uniwersytetu Trzeciego Wieku UR. Członek Polskiej
+            Akademii Umiejętności. Ekspert Fundacji Bankowej im. Leopolda Kronenberga Banku
+            Handlowego w Warszawie. Jest również Członkiem Rady Programowej OTV Rzeszów oraz Doradcą
+            Ministra Nauki i Edukacji.
+          </p>
+          <p>
+            Laureat Nagrody Rektora WSP II stopnia, Srebrnego Krzyża Zasługi, Srebrnej Odznaki
+            „Zasłużony dla Policji” oraz Srebrnej Odznaki „Zasłużony dla Służby Penitencjarnej”.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/michal_skora.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Michał Skóra</strong></p>
+          <p>
+            Nauczyciel akademicki <br>
+            Uniwersytet Rzeszowski
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Michał Skóra</strong></p>
+          <p>Nauczyciel akademicki Uniwersytet Rzeszowski</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            mgr Michał Skóra – absolwent Wydziału Prawa i Administracja Uniwersytetu Rzeszowskiego
+            na kierunkach: prawo oraz europeistyka. Asystent w Zakładzie Prawa Pracy i Ubezpieczeń
+            Społecznych Instytutu Nauk Prawnych Uniwersytetu Rzeszowskiego. Autor kilkunastu
+            publikacji naukowych z zakresu prawa pracy. Uczestnik międzynarodowych i krajowych
+            konferencji naukowych. Odbył staże międzynarodowe, m. in. w ramach programu Erasmus +
+            prowadził zajęcia na Universita Degli Studi del Sannio w Benevento (Włochy) oraz krajowe
+            (Wydział Prawa i Administracji Uniwersytetu Gdańskiego). Przygotowuje dysertację
+            doktorską dotyczącą problematyki prawnych aspektów zatrudnienia osób z
+            niepełnosprawnościami.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/kamil_szymanski.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Kamil Szymański</strong></p>
+          <p>Prezes G2A Arena</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Kamil Szymański</strong></p>
+          <p>Prezes G2A Arena</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Menager z międzynarodowym doświadczeniem. Obecnie pełni funkcję Prezesa G2A Arena -
+            Centrum Wystawienniczo - Kongresowego Województwa Podkarpackiego oraz Prezesa Kongresu
+            60 Milionów – Globalnego Zjazdu Polonii. Zajmował stanowisko prokurenta i dyrektora ds.
+            rozwoju biznesu w Arena Gdańsk Operator Sp. z o.o., zarządzającej Stadionem Energa w
+            Gdańsku.
+          </p>
+          <p>
+            Jako wiceprezes ELSA Poland - Europejskiego Stowarzyszenia Studentów Prawa oraz ELSA
+            International - European Law Students' Association w Brukseli, koordynował realizację
+            licznych projektów w ponad 40 krajach. Był również odpowiedzialny za kontakty
+            instytucjonalne z Radą Europy, UNESCO, UN ECOSOC, UNICTAL, WIPO, INTA, HRC.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/maciej_szymanski.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Maciej Szymański</strong></p>
+          <p>
+            Dyrektor Państwowego Funduszu Rehabilitacji <br>
+            Osób Niepełnosprawnych w Rzeszowie
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Maciej Szymański</strong></p>
+          <p>Dyrektor Państwowego Funduszu Rehabilitacji Osób Niepełnosprawnych w Rzeszowie</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p></p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/barbara_swiech-bober.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Barbara Święch&nbsp;–&nbsp;Bober</strong></p>
+          <p>
+            Polskie Towarzystwo Wspierania Warsztatów <br>
+            Terapii Zajęciowej „MOST”
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Barbara Święch&nbsp;–&nbsp;Bober</strong></p>
+          <p>Polskie Towarzystwo Wspierania Warsztatów Terapii Zajęciowej „MOST”</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Organizatorka wieczorów integracyjnych dla osób z niepełnosprawnościami oraz widowisk
+            historycznych. Autorka licznych materiałów promujących Gminę Wielopole Skrzyńskie.
+          </p>
+          <p>
+            W 2012 r. odznaczona przez Ministra Sportu i Turystyki Odznaką Honorową za zasługi dla
+            turystyki. Od 2011 r. jest kierownikiem Warsztatów Terapii Zajęciowej w Wielopolu
+            Skrzyńskim, gdzie stosuje innowacyjne metody terapii m. in. koloterapię i haloterapię.
+            Od 2017 r. jest Prezesem Zarządu Głównego Polskiego Towarzystwa Wspierania Warsztatów
+            Terapii Zajęciowej MOST, Aktualnie wspólnie z PTW WTZ MOST jest partnerem i
+            współorganizatorem Festiwalu Osób Wyjątkowych z WDK w Rzeszowie.
+          </p>
+          <p>
+            Przedstawicielka Regionalnej Sieci Warsztatów Terapii Zajęciowej Województwa
+            Podkarpackiego. Zaangażowana w pracę Podkarpackiego oraz Krajowego Komitetu Rozwoju
+            Ekonomii Społecznej. Jest członkiem Krajowej Rady Konsultacyjnej do spraw osób
+            niepełnosprawnych. Prywatnie – szczęśliwa żoną i matka 9-letniego syna.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/iwona_tabaczek-bejster.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4">
+            <strong>dr hab. Iwona Tabaczek&nbsp;-&nbsp;Bejster, <br> Prof. UR</strong>
+          </p>
+          <p>
+            Biuro ds. Osób Niepełnosprawnych <br>
+            Uniwersytetu Rzeszowskiego
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl">
+            <strong>dr hab. Iwona Tabaczek&nbsp;-&nbsp;Bejster, Prof. UR</strong>
+          </p>
+          <p>Biuro ds. Osób Niepełnosprawnych Uniwersytetu Rzeszowskiego</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Profesor w Kolegium Nauk Medycznych Uniwersytetu Rzeszowskiego (Zakład Ratownictwa
+            Medycznego); wcześniej pracowała w Zakładzie Sportów Wodnych i Zimowych UR, trener
+            pływania kl. I, instruktor WOPR, instruktor narciarstwa, instruktor kajakarstwa, sternik
+            motorowodny, ratownik kwalifikowanej pierwszej pomocy, instruktor fitness, członek
+            Zarządu Rzeszowskiego WOPR. Od 2009 r. pracuje ze studentami z niepełnosprawnością, a od
+            2011 r. pełni funkcję Pełnomocnika Rektora ds. Osób z Niepełnosprawnościami Uniwersytetu
+            Rzeszowskiego.
+          </p>
+          <p>
+            Jest autorką i współautorką ponad osiemdziesięciu prac naukowych dotyczących tematyki
+            działalności wodnych służb ratowniczych na świecie, WOPR, zagadnień sportów pływackich w
+            Polsce oraz zagadnień związanych z niepełnosprawnością. Od lat propaguje konieczność
+            pełnej integracji studentów z niepełnosprawnościami ze środowiskiem akademickim oraz
+            poprzez jednostkę przez siebie kierowaną – Biuro ds. Osób z Niepełnosprawnościami
+            Uniwersytetu Rzeszowskiego – podejmuje działania związane ze stwarzaniem studentom i
+            doktorantom, będącym osobami niepełnosprawnymi, warunków do pełnego udziału w procesie
+            kształcenia.
+          </p>
+          <p>
+            Od 2017 r. współpracuje z Polskim Komitetem Paraolimpijskim i prowadzi sekcję pływacką
+            dla osób z niepełnosprawnością. Kierowane przez nią Biuro ds. Osób Niepełnosprawnych
+            było wielokrotnie wyróżniane za swoją działalność, między innymi III miejscem podczas
+            Ogólnopolskiej Gali Konkursu Lodołamacze 2021. Jest kierownikiem projektu ogłoszonego
+            przez NCBiR – „Przyjazny nURt" – rozwój dostępności UR.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/roman_warkocz.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Roman Warkocz</strong></p>
+          <p>Polska Grupa Bruno Tassi Sp. z o. o.</p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Roman Warkocz</strong></p>
+          <p>Polska Grupa Bruno Tassi Sp. z o. o.</p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Facylitator, HR Business Partner, trener i mentor. Kierownik ds. Personalnych i
+            Optymalizacji Procesów w Polskiej Grupie Bruno Tassi Sp. z o.o. oraz Starszy Konsultant
+            w firmie Huberts Mozes & Partners.
+          </p>
+          <p>
+            Od ponad 20 lat jest związany z obszarem HR w firmach projektowych (przemysł ciężki,
+            automotive, IT) i FMCG. Współpracuje z biznesem, 3 sektorem (fundacje, stowarzyszenia,
+            związki zawodowe) i administracją. Inicjuje i realizuje wiele projektów
+            rozwojowo-szkoleniowych (L&D), a także projekty związane z innowacyjnością. Facylituje
+            pracę małych i dużych zespołów/grup z wykorzystaniem m.in. takich metod jak World Cafe i
+            Open Space Technology. Prowadzi szkolenia z zakresu budowania efektywnych zespołów i
+            polityki personalnej. Prelegent podczas konferencji HR oraz autor artykułów w prasie
+            branżowej.
+          </p>
+          <p>
+            Szczególnie bliski jest mu temat odpowiedzialności w kontekście odpowiedzialności
+            społecznej biznesu/organizacji (CSR) jak i w roli facylitatora.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+  Przedstawiamy prowadzących
+</h1>
+    <div class="flex flex-col lg:flex-row gap-8 justify-evenly">
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/annamaria_kaliszczak.jpg" alt="" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Annamaria Kaliszczak</strong></p>
+          <p>
+            Dyplomowana Specjalistka ds. Zarządzania Rehabilitacją, <br class="hidden lg:block"> absolwentka
+            studiów na kierunku prawo i prawo kanoniczne.
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Annamaria Kaliszczak</strong></p>
+          <p>
+            Dyplomowana Specjalistka ds. Zarządzania Rehabilitacją, <br class="hidden lg:block"> absolwentka
+            studiów na kierunku prawo i prawo kanoniczne.
+          </p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>Autorka publikacji dotyczących aktywizacji, rehabilitacji zawodowej i prawa pracy.</p>
+          <p>
+            Trenerka i wykładowca szkoleniowy - współpracująca z fundacjami, stowarzyszeniami i
+            firmami działającymi na rzecz środowiska osób z niepełnosprawnościami.
+          </p>
+          <p>
+            Praktykowała jako prawnik w Wojewódzkim Zespole ds. Orzekania o Niepełnosprawności w
+            Krakowie, odbywała staże zawodowe w kancelariach adwokackich, Ministerstwie
+            Sprawiedliwości oraz w parlamencie Europejskim w Brukseli.
+          </p>
+          <p>
+            Posiada szeroką wiedzę w zakresie współpracy, zatrudniania oraz inkluzji społecznej osób
+            z niepełnosprawnością w Polsce.
+          </p>
+          <p>Pasjonuje się tematyką procesów rekrutacyjnych ukierunkowanych na różnorodność.</p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="undefined astro-NZNGEB2F" x-data="function mainPrelegent() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false">
+  <div>
+          <div class="w-60 lg:w-72 mx-auto">
+            <img src="/images/prelegenci/agata_pieniazek.jpg" alt="Agata Pieniążek" class="h-60 lg:h-72 w-full object-cover" loading="lazy">
+          </div>
+          <p class="text-xl mt-4"><strong>Agata Pieniążek</strong></p>
+          <p>
+            prezes Rzeszowskiego Stowarzyszenia na Rzecz Dzieci <br class="hidden lg:block"> Niepełnosprawnych
+            i Autystycznych „Solis Radius”
+          </p>
+        </div>
+
+  <button x-on:click="modal.open = true" class="group inline-flex items-center overflow-hidden rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-NZNGEB2F">
+    <span class="text-sm astro-NZNGEB2F"> Dowiedz się więcej...</span>
+  </button>
+
+  <!-- <button class="text-black mt-2 hover:text-mdon_blue focus:text-mdon_blue active:text-mdon_blue"
+    >Dowiedz się więcej...</button
+  > -->
+  <div x-cloak class="relative z-10 astro-NZNGEB2F" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-NZNGEB2F">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-NZNGEB2F">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-NZNGEB2F">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-NZNGEB2F">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-NZNGEB2F">
+            <div class="sm:flex sm:items-start astro-NZNGEB2F">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-NZNGEB2F">
+                <h3 class="text-sm leading-6 text-gray-900 astro-NZNGEB2F" id="modal-title">
+                  <div>
+          <p class="text-xl"><strong>Agata Pieniążek</strong></p>
+          <p>
+            prezes Rzeszowskiego Stowarzyszenia na Rzecz Dzieci <br class="hidden lg:block"> Niepełnosprawnych
+            i Autystycznych „Solis Radius”
+          </p>
+        </div>
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-NZNGEB2F">
+                  <div>
+          <p>
+            Certyfikowany diagnosta ADOS-2, ADIR, prezes Rzeszowskiego Stowarzyszenia na Rzecz
+            Dzieci Niepełnosprawnych i Autystycznych „Solis Radius”, która od 25 lat pracuje z
+            osobami niepełnosprawnymi i autystycznymi, pedagog specjalny i naurologopeda.
+          </p>
+          <p>
+            Zapoczątkowała innowacyjny model terapii opartej na zachowaniu równowagi pomiędzy rolą
+            rodzica a rolą specjalisty. Propaguje rzetelną wiedzę na temat autyzmu, tworzy wzorcowe
+            - autorskie ośrodki edukacyjne, diagnostyczne i terapeutyczne. Wspiera prawnie i
+            rzeczniczo Osoby z ASD i Ich Rodziny.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-NZNGEB2F">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-NZNGEB2F">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </main>
+      </div>
+      <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December" class="w-96 my-16 self-end">
+    </div>
+    <footer class="border-t border-black pt-8">
+  <nav class="flex flex-wrap justify-between">
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Kongres</li><li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li><li><a href="/mdon_2022/program/">Program</a></li><li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li><li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li><li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li><li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li><li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Organizator</li><li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
+</ul>
+
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Tegoroczna Edycja</li><li><a href="/">MDON 2023</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Kontakt</li><li>
+        <address class="not-italic space-y-2">
+          <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
+          <p><a href="tel:+48666526920">666 526 920</a></p>
+          <p><strong>Fundacja OPTEA</strong></p>
+          <p>Jasionka 953, 36-002 Jasionka</p>
+        </address>
+      </li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li><li><a href="/mdon_2022/rodo/">RODO</a></li>
+</ul>
+  </nav>
+</footer>
+  </body></html>

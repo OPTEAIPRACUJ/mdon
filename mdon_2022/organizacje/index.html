@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" sizes="32x32" href="/mdon_2022/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/mdon_2022/favicon-16x16.png">
+    <title>Organizacje</title>
+  <link rel="stylesheet" href="/mdon_2022/assets/404.67f322dd.css" />
+<link rel="stylesheet" href="/mdon_2022/assets/organizacje.5009ef11.css" /><script type="module" src="/mdon_2022/page.8271e986.js"></script></head>
+  <body class="max-w-[90%] mx-auto py-10">
+    <div class="lg:min-h-screen flex flex-col">
+      <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
+  <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
+    <picture class="astro-3WCREGVO">
+      <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
+      <img src="/mdon_2022/images/mdon_logo_m.webp" alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022" class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
+    </picture>
+  </a>
+
+  <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
+      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
+        <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
+          Kongres
+        </div>
+        <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
+          <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
+          <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
+          <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
+          <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
+          <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
+          <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
+        </div>
+      </div>
+      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
+        <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
+          Mikołajkowy Jarmark Pracy
+        </div>
+        <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
+          <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
+          <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
+        </div>
+      </div>
+      <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
+      <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
+      <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
+    </div>
+    <button @click="isOpen = !isOpen" type="button" class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO" :class="{ 'transition transform-180': isOpen }">
+      <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" class="astro-3WCREGVO"></path>
+        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" class="astro-3WCREGVO"></path>
+      </svg>
+    </button>
+    <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+      <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
+        <details class="group astro-3WCREGVO">
+          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+            <span class=" astro-3WCREGVO">Kongres</span>
+
+            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
+              </svg>
+            </span>
+          </summary>
+          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+            <a href="/mdon_2022/o-kongresie/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              O Kongresie
+            </a>
+
+            <a href="/mdon_2022/program/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Program
+            </a>
+            <a href="/mdon_2022/prelegenci/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Prelegenci
+            </a>
+            <a href="/mdon_2022/patronat-honorowy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Patronat honorowy
+            </a>
+            <a href="/mdon_2022/patronat-medialny/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Patronat medialny
+            </a>
+            <a href="/mdon_2022/partnerzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Partnerzy
+            </a>
+          </nav>
+        </details>
+        <details class="group astro-3WCREGVO">
+          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+            <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
+
+            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
+              </svg>
+            </span>
+          </summary>
+          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+            <a href="/mdon_2022/organizacje/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Organizacje
+            </a>
+
+            <!-- <span
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+              Atrakcje
+            </span> -->
+          </nav>
+        </details>
+        <a href="/mdon_2022/organizatorzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          Organizatorzy</a>
+        <a href="/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          MDON 2023
+        </a>
+        <a href="/kontakt/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+          Kontakt
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+      <div class="flex justify-center grow pt-12">
+        <main class="container mx-auto text-center">
+    <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+  Organizacje
+</h1>
+
+    <div class="grid lg:grid-cols-2 xl:grid-cols-3 items-center justify-center gap-12">
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Jaśle</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_jaslo.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Jaśle
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej w Jaśle istnieje od 4 maja 1999 roku. Organem założycielskim
+            i prowadzącym było Polskie Stowarzyszenie na rzecz Osób z Niepełnosprawnością
+            Intelektualną Koło w Jaśle. Od 08.06.2018r. Warsztat jest prowadzony przez Specjalny
+            Ośrodek Szkolno-Wychowawczy im. Janusza Korczaka w Jaśle. W warsztacie rehabilitowanych
+            jest 55 uczestników z powiatu jasielskiego w 11 pracowniach terapeutycznych. Głównym
+            zadaniem placówki jest nabywanie i rozwijanie przez uczestników zaradności życiowej oraz
+            podstawowych umiejętności zawodowych. Uczestnicy pod kierunkiem instruktorów w
+            poszczególnych pracowniach wykonują różnorodne prace. Podczas zajęć zdobywają nowe
+            umiejętności. Każde zadanie, praca czy wyzwanie jest źródłem wielu wrażeń i emocji. Czas
+            spędzony w WTZ to także rehabilitacja ruchowo - usprawniająca oraz zajęcia z
+            psychologiem. Uczestnicy objęci są również opieką pielęgniarską.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Baranowie Sandomierskim</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_baranow.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Baranowie Sandomierskim
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat jest placówką pobytu dziennego i realizuje zadania w zakresie rehabilitacji
+            zawodowej, społecznej i ruchowej. Głównie są to zajęcia praktyczne, prowadzone na
+            podstawie indywidualnego programu rehabilitacji, opracowanego dla każdego uczestnika, w
+            5-osobowych grupach terapeutycznych pod kierunkiem instruktorów terapii zajęciowej. Z
+            terapii w placówce korzysta 40 osób niepełnosprawnych. Warsztat zapewnia bezpłatny dowóz
+            na zajęcia.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Tarnobrzegu</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_PSONI_kolo_w_tarnobrzegu.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Tarnobrzegu
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej powstał w maju 1993 roku od tej pory są formą rehabilitacji
+            zawodowej i społecznej dla osób niepełnosprawnych intelektualnie, które ukończyły naukę
+            szkolną i nie mogą podjąć pracy. Uczestnictwo w WTZ umożliwia kontakty z rówieśnikami
+            oraz ze społeczeństwem w pełni sprawnym, sensowną aktywność w pracowniach, uczy
+            współdziałania, samodzielności, opanowania umiejętności codziennego życia podczas
+            praktyk zawodowych. Uczestnicy WTZ także biorą czynny udział w życiu miasta, kraju, a
+            nawet Europy - uczestniczą w Targach pracy, różnych imprezach, których jesteśmy
+            organizatorami, jak i współorganizatorami, np. Międzynarodowy Feswal Piosenki i Teatru,
+            Dzień Godności Osób Niepełnosprawnych, przegląd jasełek, międzynarodowe konferencje itp.
+            Od 2005 roku bierzemy czynny udział w programie aktywizacji zawodowej. Przygotowujemy
+            się do podjęcia pracy. Najpierw szkolimy się, poprzez szkolenia organizowane przez PUP
+            następnie odwiedzamy zakłady pracy, szukamy pracodawców i uczęszczamy na praktyki, a
+            później szukamy pracy na otwartym rynku. Kilku uczestnikom już się to udało. Od 5 lat
+            pracują i są z tego powodu bardzo szczęśliwi. W br. dołączył do grupy pracujących 1
+            uczestnik.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Gorzycach</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_gorzyce.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Gorzycach
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej w Gorzycach powstał 15 grudnia 2006 roku. Jednostką
+            prowadzącą Warsztat jest Ośrodek Pomocy Społecznej w Gorzycach. Uczestnikami warsztatu
+            są osoby niepełnosprawne, które posiadają wskazania do rehabilitacji w formie terapii
+            zajęciowej. Zajęcia prowadzone są od poniedziałku do piątku dla 35 osobowej grupy.
+            Uczestnicy na zajęciach indywidualnych bądź grupowych nabywają i doskonalą różnorodne
+            umiejętności, rozwijają psychofizyczne sprawności niezbędne w pracy oraz kształcą
+            podstawowe zdolności zawodowe, których opanowanie powinno pomóc w znalezieniu
+            zatrudnienia.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Brzostku</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_brzostek.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Brzostku
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztaty Terapii Zajęciowej w Brzostku rozpoczęły swoją działalność 02.01.2002 roku.
+            Obecnie w placówce działa 11 pięcioosobowych pracowni, w których uczestnicy rozwijają
+            swoje umiejętności. Uczestnikami Warsztatów są osoby niepełnosprawne z terenu gminy
+            Brzostek i Pilzno oraz powiatu jasielskiego. Zadaniem placówki jest rehabilitacja
+            społeczna i zawodowa zmierzająca do ogólnego rozwoju i poprawy sprawności każdego
+            uczestnika, aby każdy z podopiecznych stał się możliwie niezależny, samodzielny i mógł
+            aktywnie żyć i funkcjonować w makro, mezo i mikrostrukturze społecznej. W ramach terapii
+            ruchowej prowadzona jest fizjoterapia i hipoterapia na koniach rasy konik polski. Na
+            terenach obiektu, oprócz trawiastego wybiegu stoi kryta ujeżdżalnia, w której Uczestnicy
+            warsztatów uczą się samodzielnej jazdy konnej oraz prowadzona jest gimnastyka na koniu.
+            Warsztaty Terapii Zajęciowej są placówką pobytu dziennego od poniedziałku do piątku, w
+            godzinach od 7:00 do 15:00.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Ropczycach</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_ropczyce.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Ropczycach
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztaty Terapii Zajęciowej Caritas w Ropczycach powstały w grudniu 2003 r. Od tego
+            czasu swoimi działaniami wspierają rehabilitację społeczną i zawodową niepełnosprawnych
+            mieszkańców powiatu ropczycko-sędziszowskiego. Obecnie w zajęciach bierze udział 60
+            osób. Rozwijają one umiejętności zawodowe w 12 profilowanych pracowniach. Uczestnicy
+            mają możliwość wzięcia udziału w praktykach zawodowych u pracodawców lub wykonują prace
+            zlecane przez firmy zewnętrzne, co daje możliwość zapoznania się z czynnościami
+            zawodowymi różnego rodzaju. Warsztaty oferują również zajęcia rozwijające sferę
+            społeczną. Są to okolicznościowe zabawy integracyjne, wyjazdy do kina i teatru, zajęcia
+            na basenie, wycieczki krajoznawcze, ze szczególnym uwzględnieniem lokalnych tradycji i
+            historii, ale również miejsc dalekich, a nawet wyjazdy zagraniczne. W Warsztatach działa
+            również grupa artystyczna. Osoby chętne mogą nauczyć się przygotowania przedstawień,
+            wystąpień, inscenizacji. Sprawdzają swoje możliwości w różnych funkcjach – od reżysera,
+            przez scenarzystę, a na aktorze kończąc. Efekty pracy prezentują z sukcesami podczas
+            przeglądów twórczości osób niepełnosprawnych.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Rudniku nad Sanem</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_rudnik_nad_sanem.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Rudniku nad Sanem
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej w Rudniku nad Sanem działający przy Caritas Diecezji
+            Sandomierskiej funkcjonuje od 2006 roku. Jest to placówka powołana w celu pomocy osobom
+            niepełnosprawnym posiadającym umiarkowany lub znaczny stopnień niepełnosprawności. Celem
+            działania WTZ jest szczególnie rehabilitacja zawodowa i społeczna zmierzająca do
+            wszechstronnego rozwoju uczestnika, poprawy zaradności osobistej, sprawności
+            psychofizycznej oraz przystosowania i funkcjonowania w życiu społecznym. Na zajęcia
+            uczęszcza 55 osób niepełnosprawnych z powiatu niżańskiego. Uczestnicy podnoszą swoje
+            umiejętności poprzez zajęcia na jedenastu pracowniach. Praca na poszczególnych
+            pracowniach realizowana jest w oparciu o Indywidualny Program Rehabilitacji oraz Roczny
+            Plan Pracowni. Poprzez zajęcia na pracowniach tematycznych, podopieczni nabywają
+            umiejętności przysposabiające do pracy jak również kształtują czynności potrzebne do
+            funkcjonowania w życiu codziennym. Zajęcia te przygotowują naszych uczestników do
+            podjęcia pracy na półotwartym bądź zamkniętym rynku pracy w Zakładach Pracy Chronionej
+            lub Zakładach Aktywności Zawodowej.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Mielcu</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_mielec.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Mielcu
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej w Mielcu działa od 1994 roku w obiekcie znajdującym się przy
+            ulicy Kocjana 15. W kolejnych latach naszej działalności zwiększano liczbę uczestników i
+            obecnie rehabilitacja jest prowadzona jeszcze w dwóch osobnych budynkach. WTZ jest
+            placówką prowadzoną przez Miejski Ośrodek Pomocy Społecznej w Mielcu. Jest to placówka
+            pobytu dziennego, w której prowadzona jest rehabilitacja społeczna i zawodowa osób z
+            niepełnosprawnością intelektualną w stopniu znacznym i umiarkowanym. Aktualnie w
+            zajęciach rehabilitacyjnych bierze udział 90 uczestników w szesnastu pracowniach
+            tematycznych. Osoby te posiadają orzeczenia o stopniu niepełnosprawności ze wskazaniem
+            do uczestnictwa w terapii zajęciowej. W ramach rehabilitacji społecznej warsztat
+            współpracuje z innymi placówkami, odbywa spotkania integracyjne z uczniami szkół
+            mieleckich, organizuje kilkudniowe wycieczki turystyczno-krajoznawcze.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Białobrzegach</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_białobrzegi.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Białobrzegach
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztaty Terapii Zajęciowej w Białobrzegach zostały utworzone przez Stowarzyszenie
+            Przyjaciół Młodzieży Specjalnej Troski w Łańcucie w dniu 1 czerwca 2001 r.
+            Stowarzyszenie to zrzesza osoby niepełnosprawne – uczestników WTZ oraz ich rodziców. W
+            chwili powstania Warsztaty zajmowały się 20 osobami ze znaczną i umiarkowaną
+            niepełnosprawnością, obecnie do ośrodka uczęszcza 40 osób. Uczestnicy zdobywają nowe
+            umiejętności zawodowe, rozwijają swoje pasje i zainteresowania a czasem odkrywają
+            zupełnie nowe talenty i predyspozycje, w 7 pracowniach. Nad zdrowiem uczestników WTZ
+            czuwa pielęgniarka, rehabilitantka i psycholog.
+          </p>
+          <p>
+            W ramach rehabilitacji społecznej osoby niepełnosprawne aktywnie uczestniczą w życiu
+            społecznym, biorąc udział w imprezach integracyjnych takich jak: pikniki, kiermasze,
+            festiwale, konkursy. Uczestnicy i terapeuci WTZ są również gospodarzami corocznego
+            wernisażu "Widziano Anioły", który otwiera integracyjną wystawę prac niepełnosprawnych
+            mieszkańców powiatu łańcuckiego.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej przy Stowarzyszeniu Radość</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_przy_stowarzyszeniu_radosc.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej przy Stowarzyszeniu Radość
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Jesteśmy placówką rehabilitującą osoby z niepełnosprawnościami, wspierającą je w
+            aktywnym dążeniu do samodzielności życiowej oraz podjęcia pracy. Tworzymy zespół
+            kompetentny, otwarty i kreatywny. Nasz Warsztat to mieszcząca się w centrum Dębicy,
+            profesjonalna i nowoczesna placówka rehabilitacji społecznej i zawodowej. Terapia
+            zajęciowa w naszym warsztacie przyczynia się do ogólnego usprawnienia podopiecznych,
+            rozwoju ich autonomii, zaradności życiowej, pasji i zainteresowań oraz nabywania przez
+            nich kompetencji zawodowych. W tym celu współpracujemy z Zakładem Aktywności Zawodowej i
+            innymi pracodawcami na lokalnym rynku pracy, organizując praktyki zawodowe. Wspieramy
+            też kandydatów oczekujących na przyjęcie i absolwentów WTZ, którzy podjęli pracę,
+            prowadząc dla nich zajęcia w ramach „Klubu Absolwenta", przy wsparciu specjalistów z
+            różnych dziedzin.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Huzelach k/Leska</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_huzele.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Huzelach k/Leska
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            WTZ istnieje od 2000 r. i jest jedynym Warsztatem w powiecie leskim do którego
+            uczęszczają m.in. osoby niepełnosprawne intelektualnie z różnymi dysfunkcjami oraz osoby
+            po wypadkach komunikacyjnych, które wymagają wsparcia i opieki. Początkowo do Warsztatu
+            uczęszczało 25 osób, obecnie po przeprowadzonych remontach i dostosowaniu budynku (m.in.
+            elektryczna winda) do większej liczby uczestników w zajęciach bierze udział 55 osób z
+            terenu całych Bieszczadów. W naszym Warsztacie działa kółko teatralne „Amadeusze” które
+            bierze udział w licznych spotkaniach teatralnych oraz prowadzona jest rehabilitacja
+            ruchowa czego efektem jest udział w różnych olimpiadach sportowych. Uczestniczymy w
+            szkoleniach, zajęciach praktycznych podczas których uczymy się nowych umiejętności
+            potrzebnych do podjęcia zatrudnienia i codziennego funkcjonowania. Organizujemy wyjazdy
+            integracyjne dla wszystkich uczestników WTZ m.in. na Litwę, Węgry, do Lwowa i Pragi oraz
+            w różne zakątki Polski: Krynica Morska, Warszawa, Zakopane.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Ustrzykach Dolnych</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/mdon_2022/images/organizacje/wtz_ustrzyki_dolne.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Ustrzykach Dolnych
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej przy Stowarzyszeniu Wprowadzać w Świat w Ustrzykach Dolnych
+            utworzony został 19 grudnia 2005 roku. Nasza placówka jest pierwszą i jedyną w powiecie
+            bieszczadzkim. Zajęcia odbywają się w dziewięciu pracowniach terapii zajęciowej.
+            Prowadzone jest również poradnictwo psychologiczne. Warsztaty gwarantują również opiekę
+            pielęgniarską, która obejmuje pomoc w nagłych wypadkach, edukację zdrowotną uczestników,
+            wyjazdy do lekarza oraz na badania specjalistyczne z uczestnikami. Warsztaty organizują
+            i uczestniczą w wielu imprezach kulturalnych, kiermaszach, wystawach, festiwalach,
+            zarówno o charakterze lokalnym jak też wojewódzkim a nawet międzynarodowym. Działalność
+            Warsztatów finansowana jest ze środków Państwowego Funduszu Osób Niepełnosprawnych oraz
+            ze środków powiatu bieszczadzkiego. Warsztaty Terapii Zajęciowej współpracują z
+            Podkarpackim Bankiem Żywności.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej – Koło w Haczowie</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_haczow.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej – Koło w Haczowie
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej jest placówką pobytu dziennego, czynną od poniedziałku do
+            piątku w godz. 7.30-15.30. Naszym głównym celem jest szeroko pojęta rehabilitacja
+            zawodowa i społeczna, zmierzająca do wszechstronnego rozwoju osób niepełnosprawnych.
+            Zależy nam aby nasi uczestnicy nie tylko uczyli się samodzielności, odpowiedniej postawy
+            zawodowej, przystosowania i funkcjonowania społecznego ale również czuli się w naszym
+            ośrodku otoczeni ciepłem, miłością oraz życzliwością. Chcemy aby każdy z nas, czuł się
+            tutaj bardzo ważny i potrzebny i aby jego praca przynosiła mu satysfakcję.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Zgłobniu</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_zglobien.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Zgłobniu
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Polskie Stowarzyszenie Młodzież Sprawna Inaczej rozpoczęło swoją działalność w 1994 r. z
+            inicjatywy rodziców młodzieży niepełnosprawnej. Celem naszej działalności jest
+            wieloprofilowa pomoc skierowana do młodzieży z niepełnosprawnościami. W 1996 r. dzięki
+            staraniom Stowarzyszenia został uruchomiony Warsztat Terapii Zajęciowej w Zgłobniu.
+            Nasza placówka świadczy terapię zajęciową dla 36 osób w 7 pracowniach. Dodatkowo
+            prowadzona jest rehabilitacja w zakresie: usprawnienia ruchowego, doradztwa zawodowego,
+            zajęć sportowych, ćwiczeń samoobsługowych, zajęć dydaktycznych, psychologicznych i
+            kulturalnych. Uczestnicy Warsztatu mają możliwość rozwijania swoich uzdolnień, talentów
+            artystycznych, plastycznych, sportowych. Zdobywają umiejętności życia codziennego,
+            nawiązywania kontaktów interpersonalnych oraz aktywnie uczestniczą w życiu społecznym.
+            Od lat organizujemy feswale, plenery, wystawy, konkursy, koncerty i zawody sportowe.
+            Dzięki przyjaznej atmosferze i kompetentnej kadrze nasi podopieczni czynią postępy w
+            rozwoju intelektualnym, rozwijają własną sprawność fizyczną, zdobywają umiejętności
+            zawodowe, odnosząc znaczące sukcesy i wyróżnienia w wielu dziedzinach życia.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Bobrowej Woli</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_bobrowa_wola.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Bobrowej Woli
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Swoją działalność prowadzimy od 2007 roku, sprawnie realizując zadania z zakresu
+            rehabilitacji społecznej i zawodowej, zmierzające do ogólnego rozwoju i poprawy
+            sprawności. Ważnym elementem działalności naszej placówki jest aktywizacja zawodowa
+            uczestników poprzez:
+          </p>
+          <ul>
+            <li>Doskonalenie praktycznych umiejętności zawodowych</li>
+            <li>Wyrabianie nawyków i cech osobowości potrzebnych w pracy</li>
+            <li>Podnoszenie kompetencji społecznych</li>
+          </ul>
+          <p>
+            Człowiek czuje się dowartościowany wtedy kiedy ma możliwość praktycznej działalności i
+            aktywności oraz, gdy może wykazać się swoimi wiadomościami i umiejętnościami. Wykonywane
+            zajęcia umożliwiają nam spełnić swoje marzenia. A marzenia przecież są nieodłącznym
+            pragnieniem realizacji każdego z nas. Osoby niepełnosprawne też marzą. Pragną być
+            akceptowane i uczestniczyć w życiu publicznym, pragną normalności. W tych pragnieniach
+            może im pomóc terapia. Terapia ma na celu ogólne usprawnianie, rozwój umiejętności z
+            zakresu życia codziennego, opanowania czynności przysposabiających do pracy oraz
+            rozwijanie czynności zawodowych, które w przyszłości mogą umożliwić podjęcie pracy. To
+            wszystko może zapewnić im terapia zajęciowa w Warsztacie Terapii Zajęciowej. Umożliwia
+            on w dużym stopniu przezwyciężenie problemów i likwidowanie barier, które uniemożliwiają
+            pełnowartościowe funkcjonowanie osób niepełnosprawnych w rodzinie i społeczeństwie.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej przy Caritas Archidiecezji Przemyskiej Oddział Leżajsk</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_przy_caritas_archidiecezji_przemyskiej_oddzial_lezajsk.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej przy Caritas Archidiecezji Przemyskiej Oddział Leżajsk
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej przy Caritas Archidiecezji Przemyskiej Oddział Leżajsk
+            funkcjonuje od 1.02.2001 r. Obecnie obejmuje rehabilitacją zawodową i społeczną 50 osób
+            z różnymi przyczynami niepełnosprawności. Działania w zakresie rehabilitacji zawodowej
+            odbywają się w Warsztacie w dziesięciu pracowniach terapeutycznych, na których powstają
+            różne wyroby, prowadzona jest biblioteka, a w pracowni gastronomicznej osoby z
+            niepełnosprawnością przygotowują ciepłe posiłki, które są wydawane dla osób
+            potrzebujących z miasta i okolic. Poza ośrodkiem rehabilitacja zawodowa realizowana jest
+            poprzez praktyki zawodowe, które nasi uczestnicy odbywają w różnych miejscach pracy np.:
+            w ZAZ, restauracjach czy szkółkach roślin. Nabywają tam specjalistyczne umiejętności
+            zawodowe niezbędne do podjęcia w przyszłości samodzielnej działalności zawodowej oraz
+            kształtując właściwą postawę zawodową. W zakresie rehabilitacji społecznej staramy się
+            przygotować uczestników do aktywnego życia w środowisku społecznym, poprzez udział w
+            różnego typu treningach np.: higienicznym, poruszania się komunikacją publiczną,
+            ekonomicznym, adaptacyjnym w mieszkaniach treningowych itp.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Wielopolu Skrzyńskim</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_wielopol_skyrzynski.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Wielopolu Skrzyńskim
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej w Wielopolu Skrzyńskim powstał w 2011 r. roku z inicjatywy
+            Gminy Wielopole Skrzyńskie. Codzienną rehabilitacją i terapią obejmuje 40 osób z
+            niepełnosprawnością, zapewniając im możliwość udziału w rehabilitacji społecznej i
+            zawodowej. W trakcie zajęć uczestnicy nabywają umiejętności niezbędne do życia w
+            środowisku społecznym poprzez rozwój umiejętności planowania i komunikowania się,
+            dokonywania wyborów, decydowania o swoich sprawach, a także umiejętności zawodowych,
+            umożliwiających podjęcie pracy.
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Warsztaty Terapii Zajęciowej w Oleszycach</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/wtz_oleszyce.jpg" alt="" class="h-72 lg:h-96 w-full object-cover">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Warsztaty Terapii Zajęciowej w Oleszycach
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Warsztat Terapii Zajęciowej im. św. Józefa w Oleszycach funkcjonuje od 29 grudnia 2014
+            r. Jest placówką pobytu dziennego czynną od poniedziałku do piątku w godzinach od 7:00
+            do 15:00. Obecnie z WTZ korzysta 60 uczestników w 11 pracowniach. Rehabilitacja
+            uczestników prowadzona jest w grupach terapeutycznych, na podstawie indywidualnego
+            programu rehabilitacji i terapii, opracowanego dla każdego uczestnika. W ramach zajęć
+            oferujemy również:
+          </p>
+          <ul>
+            <li>codzienną rehabilitację, prowadzoną przez dwóch fizjoterapeutów,</li>
+            <li>opiekę pielęgniarki,</li>
+            <li>opiekę psychologiczną,</li>
+            <li>zajęcia muzyczne,</li>
+            <li>zajęcia katechetyczne,</li>
+            <li>udział w treningu ekonomicznym,</li>
+            <li>stymulację wielozmysłową w sali doświadczania świata,</li>
+            <li>praktyki zawodowe,</li>
+            <li>
+              aktywność kulturalną poprzez udział w kiermaszach, wystawach, przeglądach muzycznych,
+              imprezach sportowych i kulturalnych oraz wycieczkach,
+            </li>
+            <li>zajęcia klubowe.</li>
+          </ul>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Fundacja Educare et Servire</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/educare_et_servire.jpg" alt="" class="h-72 lg:h-96 w-full object-cover object-right-bottom">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Fundacja Educare et Servire
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            Fundacja Educare et Servire została założona i ufundowana przez
+            <strong> Antoniego Kamińskiego</strong> – lokalnego lidera, społecznika oraz jednego z pionierów
+            samorządu terytorialnego i gospodarczego w początkach lat 90-tych.
+          </p>
+          <p>
+            Aktualna oferta fundacji to Szkoły Branżowe I Stopnia, jest przeznaczona dla uczniów z
+            niepełnosprawnością intelektualną w stopniu lekkim. Realizuje kwalifikacje wyodrębnione
+            w zawodzie – PRACOWNIK POMOCNICZY GASTRONOMII HGT.04. i PRACOWNIK POMOCNICZY OBSŁUGI
+            HOTELOWEJ HGT.05.
+            <strong> Szkoła Usług Hotelarskich, Sztuki Gotowania i Innych Zawodów</strong> oraz
+            <strong> Niepubliczna Szkoła Przysposabiająca do Pracy</strong> – w szczególny sposób wykorzystuje
+            ponad 20-letnie doświadczenie Europejskiej Szkoły Nowych Technologii i Turystki oraz 18-letnie
+            doświadczenie Fundacji Educare et Servire, aby w najlepszy sposób przygotować nowe kadry
+            dla branży hotelarsko-gastronomiczno-turystycznej. Potwierdzeniem tych działań jest projekt
+            zrealizowany w latach 2006-2007
+            <em>"Turystyka - wspólna sprawa". Fundacja obecnie realizuje projekt pt. „Elastyczna
+              ścieżka do zatrudnienia 30+ II” (nr RPPK.07.01.00-18-0141/20).</em>
+          </p>
+          <p>
+            W siedzibach Szkół Fundacji Educare znajdują się nowocześnie zaprojektowane oraz bardzo
+            dobrze wyposażone pracownie gastronomiczne, symulujące kuchnie w obiektach hotelarskich
+            oraz pracownia hotelarska, symulującą pokój hotelowy z węzłem higieniczno -sanitarnym.
+            Szkoła posiada pracownie ogrodniczą oraz komputerową. Praktyki uczniowskie odbywają się
+            w realnym obiekcie hotelarskim jakim <strong>
+              Ośrodek Wypoczynkowo-Szkoleniowy GRAND CHOTOWA SPA&amp;RESORT.</strong> W okresie wakacyjnym uczniowie również realizują tutaj staże w ramach projektu
+            <strong> Szkoła Rozwoju Talentów.</strong>
+          </p>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div x-data="function mainOrganizacja() {
+    return {
+      modal: {
+        open: false
+      }
+    };
+  }" @keydown.escape.document="modal.open = false" class="astro-4PWCDIIH">
+  <div class="flex flex-col astro-4PWCDIIH">
+    <h3 class="text-3xl mb-4 min-h-[4rem] astro-4PWCDIIH">Polskie Towarzystwo Wspierania Warsztatów Terapii Zajęciowej &quot;MOST&quot;</h3>
+    <div class="w-72 lg:w-96 mx-auto">
+          <img src="/images/organizacje/logo_most.jpg" alt="" class="h-72 lg:h-96 w-full object-scale-down">
+        </div>
+    <button x-on:click="modal.open = true" class="self-center w-1/2 rounded bg-mdon_blue hover:bg-sky-500 focus:bg-sky-500 active:bg-sky-500 px-8 py-2 mt-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 astro-4PWCDIIH">
+      Przeczytaj opis
+    </button>
+  </div>
+  <div x-cloak class="relative z-10 astro-4PWCDIIH" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-show="modal.open" class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity astro-4PWCDIIH">
+    </div>
+
+    <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-show="modal.open" class="fixed inset-0 z-10 overflow-y-auto astro-4PWCDIIH">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 astro-4PWCDIIH">
+        <div x-on:click.away="modal.open = false" class="relative transform overflow-hidden rounded-lg bg-white text-left border-gray-200 border transition-all sm:my-8 sm:w-full sm:max-w-xl astro-4PWCDIIH">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 astro-4PWCDIIH">
+            <div class="sm:flex sm:items-start astro-4PWCDIIH">
+              <div class="mt-3 sm:mt-0 sm:ml-4 text-left astro-4PWCDIIH">
+                <h3 class="text-xl font-bold text-gray-900 astro-4PWCDIIH" id="modal-title">
+                  Polskie Towarzystwo Wspierania Warsztatów Terapii Zajęciowej &quot;MOST&quot;
+                </h3>
+                <div class="mt-2 text-sm sm:text-base sm:leading-7 text-gray-500 prose text-justify astro-4PWCDIIH">
+                  <div>
+          <p>
+            <strong>CEL DZIAŁANIA PTWWTZ "MOST"</strong>
+          </p>
+          <ol>
+            <li>
+              Integracja środowiska osób związanych z warsztatami terapii zajęciowej, świadomych
+              misji społecznej wtz;
+            </li>
+            <li>
+              Działania w interesie i na rzecz warsztatów terapii zajęciowej i ich misji, a także
+              rozwoju;
+            </li>
+            <li>
+              Oddziaływanie na kształtowanie polityki i prawodawstwa dotyczących wspierania
+              rehabilitacji społecznej i zawodowej osób niepełnosprawnych, w tym uwzględniania
+              istotniej roli warsztatów terapii zajęciowej;
+            </li>
+            <li>Zapobieganie wykluczeniu społecznemu osób niepełnosprawnych;</li>
+            <li>
+              Upowszechnianie wiedzy na temat warsztatów terapii zajęciowej oraz ich roli w
+              zapobieganiu wykluczeniu społecznemu osób niepełnosprawnych;
+            </li>
+            <li>Promowanie i kreowanie pozytywnego wizerunku warsztatów terapii zajęciowej;</li>
+            <li>
+              Wspieranie działań mających na celu podnoszenie poziomu rehabilitacji osób
+              niepełnosprawnych, w tym znaczenia w niej warsztatów terapii zajęciowej;
+            </li>
+            <li>
+              Integracja i ułatwienie wzajemnej współpracy i komunikacji między warsztatami terapii
+              zajęciowej a organami administracji publicznej a także propagowanie ich roli w
+              rehabilitacji społecznej osób niepełnosprawnych wśród społeczeństwa oraz sektora
+              organizacji pozarządowych;
+            </li>
+            <li>
+              Promocja szeroko pojętej ekonomii społecznej i roli warsztatów terapii zajęciowej w
+              jej kształtowaniu i rozwoju; 10. Upowszechnianie idei społecznej odpowiedzialności
+              biznesu a także jej znaczenia dla zapobiegania wykluczeniu społecznemu osób
+              niepełnosprawnych.
+            </li>
+          </ol>
+        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 text-center sm:px-6 astro-4PWCDIIH">
+            <button x-on:click="modal.open = false" aria-label="Zamknij" type="button" class="mt-3 w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 sm:mt-0 astro-4PWCDIIH">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </main>
+      </div>
+      <img src="/mdon_2022/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December" class="w-96 my-16 self-end">
+    </div>
+    <footer class="border-t border-black pt-8">
+  <nav class="flex flex-wrap justify-between">
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Kongres</li><li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li><li><a href="/mdon_2022/program/">Program</a></li><li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li><li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li><li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li><li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li><li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Organizator</li><li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
+</ul>
+
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Tegoroczna edycja</li><li><a href="/">MDON 2023</a></li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li class="uppercase font-bold">Kontakt</li><li>
+        <address class="not-italic space-y-2">
+          <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
+          <p><a href="tel:+48666526920">666 526 920</a></p>
+          <p><strong>Fundacja OPTEA</strong></p>
+          <p>Jasionka 953, 36-002 Jasionka</p>
+        </address>
+      </li>
+</ul>
+    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+  <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li><li><a href="/mdon_2022/rodo/">RODO</a></li>
+</ul>
+  </nav>
+</footer>
+  </body></html>
