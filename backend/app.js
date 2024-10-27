@@ -15,14 +15,14 @@ app.use(express.json());
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; // Extract token from 'Bearer token' format
-  if (!token || token !== 'kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ') return res.sendStatus(401); // Unauthorized
+  if (!token) return res.sendStatus(401); // Unauthorized
 
-else next();
-//   jwt.verify(token, jwtSecret, (err, decoded) => {
-    // if (err) return res.sendStatus(403); // Forbidden
-    // req.user = decoded; // Attach decoded user data to the request object
-//     next(); // Proceed if token is valid
-//   });
+  else next();
+  //   jwt.verify(token, jwtSecret, (err, decoded) => {
+  // if (err) return res.sendStatus(403); // Forbidden
+  // req.user = decoded; // Attach decoded user data to the request object
+  //     next(); // Proceed if token is valid
+  //   });
 };
 
 // READ - Get all users
@@ -37,32 +37,32 @@ app.get('/registration_data', verifyToken, (req, res) => {
 
 // CREATE - Add a new user
 app.post('/registration_data', verifyToken, (req, res) => {
-    const { fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, zgodyUzytkownika } = req.body;
+  const { fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, zgodyUzytkownika } = req.body;
 
-    // Validate input data here (e.g., check for required fields, data types)
+  // Validate input data here (e.g., check for required fields, data types)
 
-    const query = 'INSERT INTO registration_data (fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, przetwarzanieDanych, otrzymywanieInformacji, wykorzystanieWizerunku, informacjeMarketingowe, kontaktTelefoniczny) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    const values = [fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, zgodyUzytkownika.przetwarzanieDanych, zgodyUzytkownika.otrzymywanieInformacji, zgodyUzytkownika.wykorzystanieWizerunku, zgodyUzytkownika.informacjeMarketingowe, zgodyUzytkownika.kontaktTelefoniczny];
+  const query = 'INSERT INTO registration_data (fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, przetwarzanieDanych, otrzymywanieInformacji, wykorzystanieWizerunku, informacjeMarketingowe, kontaktTelefoniczny) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const values = [fullName, company, email, phone, amountOfParticipants, potwierdzenieZgod, zgodyUzytkownika.przetwarzanieDanych, zgodyUzytkownika.otrzymywanieInformacji, zgodyUzytkownika.wykorzystanieWizerunku, zgodyUzytkownika.informacjeMarketingowe, zgodyUzytkownika.kontaktTelefoniczny];
 
-    db.query(query, values, (err, result) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).send('Server error');
-        }
-        res.status(201).json({ message: 'Registration data added successfully', id: result.insertId });
-    });
+  db.query(query, values, (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Server error');
+    }
+    res.status(201).json({ message: 'Registration data added successfully', id: result.insertId });
+  });
 });
 
 // DELETE an item by id
 app.delete('/registration_data/:id', verifyToken, (req, res) => {
-    const { id } = req.params;
-    db.query('DELETE FROM registration_data WHERE id = ?', [id], (err, result) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).send('Server error');
-        }
-        res.sendStatus(204); // No content
-    });
+  const { id } = req.params;
+  db.query('DELETE FROM registration_data WHERE id = ?', [id], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Server error');
+    }
+    res.sendStatus(204); // No content
+  });
 });
 
 // Start the server
