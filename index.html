@@ -11,160 +11,266 @@
   <title>Międzynarodowy Dzień Osób z Niepełnosprawnością - mdon.pl</title>
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dosis:wght@200..800&display=swap"
+    rel="stylesheet">
   <script type="module">document.addEventListener("alpine:init", () => { Alpine.data("Marquee", ({ speed: l = 1, spaceX: n = 0, dynamicWidthElements: s = !1 }) => ({ dynamicWidthElements: s, async init() { if (this.dynamicWidthElements) { const i = this.$el.querySelectorAll("img"); i && await Promise.all(Array.from(i).map(t => new Promise((r, a) => { t.complete ? r() : t.addEventListener("load", () => { r() }) }))) } this.originalElement = this.$el.cloneNode(!0); const e = this.$el.scrollWidth + n * 4; this.$el.style.setProperty("--marquee-width", e + "px"), this.$el.style.setProperty("--marquee-time", 1 / l * e / 100 + "s"), this.resize(), window.addEventListener("resize", o(this.resize.bind(this), 100)) }, async resize() { this.$el.innerHTML = this.originalElement.innerHTML; let e = 0; for (; this.$el.scrollWidth <= this.$el.clientWidth;)this.dynamicWidthElements ? await h(this.$el, this.originalElement.children[e].cloneNode(!0)) : this.$el.appendChild(this.originalElement.children[e].cloneNode(!0)), e += 1, e = e % this.originalElement.childElementCount; let i = 0; for (; i < this.originalElement.childElementCount;)this.$el.appendChild(this.originalElement.children[e].cloneNode(!0)), i += 1, e += 1, e = e % this.originalElement.childElementCount } })) }); const o = (l, n, s = !0) => { let e; return () => { const i = globalThis, t = arguments, r = s && !e; clearTimeout(e), e = setTimeout(function () { e = null, s || l.apply(i, t) }, n), r && l.apply(i, t) } }, h = (l, n) => new Promise((s, e) => { new ResizeObserver((t, r) => { r.disconnect(), s(t) }).observe(n), l.appendChild(n) });
   </script>
 
   <script type="module" src="/page.8271e986.js"></script>
   <style>
-    .wave-background::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* background-color: rgb(5, 180, 5); */
-      /* background-image: url("/assets_2023/bg_4.png"); */
-      background-image: url("/assets_2023/new_bg.png");
+    @font-face {
+      font-family: 'Linguistic Regular';
+      src: url('/assets/LinguisticsPro-Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Linguistic Bold';
+      src: url('/assets/LinguisticsPro-Bold.otf') format('opentype');
+    }
+
+    .nav-list {
+      a {
+        color: #f2e6d8;
+      }
+    }
+
+    .first-section-home {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: #f2e6d8;
+      background-image: url("/assets_2024/duza-sekcja-tlo.png");
+      background-size: 100% 100%;
+      /* background-position: center; */
+      background-position-y: 0;
+      background-attachment: fixed;
       background-size: cover;
-      background-repeat: no-repeat;
-      /* outline-style: groove;
-      outline-color: rgb(29, 2, 104); */
-      /* clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); */
-      z-index: -1;
+      font-family: "Linguistic Regular";
+      height: 750px;
+      padding: 64px 0;
+      width: 100%;
+      position: relative;
+      align-items: center;
     }
 
-    .rameczka{
-      display: block;
-          margin-left: auto;
-          margin-right: auto;
+    /* Add this CSS to create the scrolling effect */
+    @keyframes scrollImage {
+      to {
+        background-position-y: -100%;
+        /* Adjust the value to control the scrolling speed */
+      }
     }
 
-    .zd_xd {
-      float: left; 
-      margin-left: 30px; 
-      width: 40%;
+    .first-section-home {
+      animation: scrollImage 20s linear infinite;
+      /* Adjust the animation duration and timing function as needed */
     }
-    .text_xd{
-      float: left; 
-      width: 50%; 
-      font-size: 150%; 
-      line-height: 1.5;
-    }
-    .guzik_wiecej {
-      background-color: #ef2b54;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 35px;
-      font-size: 40px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
 
+    .first-section-home p:first-child {
+      font-size: 32px;
     }
-    .guzik_galeria {
-      background-color: #ef2b54;
-      color: white;
-      border: none;
-      text-align: center;
-      border-radius: 10px;
-      padding: 35px;
-      font-size: 40px;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
+
+    .first-section-home p:nth-child(2) {
+      font-size: 64px;
+      line-height: normal;
     }
-    @media (max-width: 768px) {
-      .zd_xd {
-        float: none;
-        z-index: 1;
-        width: 100%;
+
+    .first-section-home p:nth-child(3) {
+      font-size: 42px;
+      padding-top: 16px;
+    }
+
+    .first-section-home .onz-logo {
+      position: absolute;
+      bottom: 36px;
+      left: 48px;
+      max-width: 120px;
+    }
+
+    .first-section-home .red-button,
+    .second-section-home .red-button {
+      background-color: #91051f;
+      color: #f2e6d8;
+      font-weight: bold;
+    }
+
+    .first-section-home .white-button {
+      background-color: #f2e6d8;
+      color: #91051f;
+      display: flex;
+      padding: 8px 12px;
+      align-items: center;
+      font-weight: 700;
+      gap: 8px
+    }
+
+    .first-section-home button,
+    .second-section-home button {
+      font-family: 'Dosis', sans-serif !important;
+      border-radius: 24px;
+      padding: 12px 36px;
+      font-size: 24px;
+      max-height: fit-content;
+    }
+
+    .first-section-home .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      max-width: 600px;
+      margin-top: 90px;
+    }
+
+    .second-section-home {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      width: 100%;
+      background-color: #f2e6d8;
+      padding: 32px;
+    }
+
+    .second-section-home .grid-item {
+      padding: 32px;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .second-section-home .grid-item:first-child {
+      background-color: #ca9f72;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      font-family: "Linguistic Regular";
+    }
+
+    .second-section-home .grid-item:first-child .grid-item-row {
+      display: flex;
+      font-size: 26px;
+    }
+
+    .second-section-home .grid-item:first-child .grid-item-row div:first-child {
+      color: #91051f;
+      font-weight: bold;
+      min-width: 130px;
+      margin-right: 60px;
+      font-size: 30px;
+      text-align: end;
+    }
+
+    .second-section-home .grid-item:first-child .grid-item-row div:nth-child(2) {
+      color: #f2e6d8;
+    }
+
+    .second-section-home .grid-item:nth-child(2) {
+      background-color: #aa763f;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    .second-section-home .grid-item:nth-child(3) {
+      grid-column: span 2;
+      width: 100%;
+      padding: 0;
+    }
+
+    footer {
+      background-color: #f2e6d8;
+      color: black;
+      padding: 24px 100px;
+    }
+
+    footer a {
+      color: black;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .first-section-home p {
+        font-size: 32px !important;
       }
-      .text_xd {
-        float: none;
-        text-align: center;
-        z-index: 2;
-        font-size: 100%;
-        width: 100%;
+
+      .first-section-home .buttons {
+        margin: 12px;
+        flex-direction: column;
       }
-      .guzik_wiecej {
-        float: none;
-        font-size: 100%;
-        align-items: center;
-        position: relative;
-        padding: 15px;
-      }
-      .rameczka {
+
+      .first-section-home .onz-logo {
         display: none;
       }
-      .guzik_galeria {
-        float: none;
-        font-size: 100%;
-        align-items: center;
-        position: relative;
+
+      .first-section-home {
+        height: unset;
+      }
+
+      .second-section-home img {
+        min-height: 300px;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+
+      .second-section-home .grid-item:nth-child(2),
+      .second-section-home .grid-item:first-child .grid-item-row {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .second-section-home {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+
+      footer a {
+        margin: 0 !important;
       }
     }
   </style>
 </head>
 
-<body class="max-w-[90%] mx-auto py-10">
+<body>
   <div class="lg:min-h-screen flex flex-col">
-    <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
-     <!-- Niebieskie tło -->
-      <div class="wave-background"></div>
-      <!-- tutaj -->
-      <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/">
-        <picture class="astro-3WCREGVO">
-          <source srcset="/assets_2023/logo_2_new.png" media="(min-width: 1024px)" class="astro-3WCREGVO">
-          <img src="/assets_2023/logo_2_new.png"
-            alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2023"
-            class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
-        </picture>
-      </a>
-
-      
-      <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
+    <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
+      <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
-          class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
-          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
-            <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
-              x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
-              Kongres
-            </div>
-            <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true"
-              x-on:mouseleave="showKongresDropdown = false"
-              class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
-              <a href="/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
-              <a href="/program/" class="astro-3WCREGVO">Program</a>
-              <a href="/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
-              <a href="/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
-              <a href="/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
-              <!-- <a href="/partnerzy/" class="astro-3WCREGVO">Partnerzy</a> -->
+        <div class="hidden lg:flex justify-between astro-3WCREGVO p-6 pb-8">
+          <div class="flex items-center">
+            <img style="max-width: 100px;" src="/assets_2024/white-logo.png" alt="Białe logo">
+            <div class="ml-4 text-white">
+              <p style="font-family: 'Dosis', sans-serif;">
+                <span style="font-weight: 600;">KONGRES</span>
+                <span style="font-weight: 300;">
+                  z okazji <br>
+                  Międzynarodowego
+                  Dnia Osób z Niepełnosprawnością
+                </span>
+              </p>
+              <p style="font-family:'Clicker Script', cursive; font-size: 24px;">Mikołajkowy Jarmark Pracy i Rękodzieła
+              </p>
             </div>
           </div>
-          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
-            <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false"
-              x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
-              Mikołajkowy Jarmark Rękodzieła
-            </div>
-            <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true"
-              x-on:mouseleave="showJarmarkDropdown = false"
-              class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
-              <a href="/organizacje/" class="astro-3WCREGVO">Organizacje</a>
-              <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
-            </div>
+          <div class="flex gap-8 items-end nav-list" style="font-family: 'Dosis', sans-serif;">
+            <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
+            <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
+            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
+            <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
+            <a href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
+            <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
-          <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-<a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
-<a href="/mdon_2022/" class=" astro-3WCREGVO">MDON 2022</a>
-<a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
-        <button @click="isOpen = !isOpen" type="button"
-          class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO"
+        <button @click="isOpen = !isOpen" type="button" style="background-color: white; border-radius: 12px;"
+          class="fixed top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO"
           :class="{ 'transition transform-180': isOpen }">
           <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
@@ -175,86 +281,32 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+
+        <!-- Mobilka navbar -->
+        <div style="z-index: 1;" class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO"
+          x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
-            <details class="group astro-3WCREGVO">
-              <summary
-                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                <span class=" astro-3WCREGVO">Kongres</span>
-
-                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
-                  </svg>
-                </span>
-              </summary>
-              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-                <a href="/o-kongresie/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  O Kongresie
-                </a>
-
-                <a href="/program/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Program
-                </a>
-                <a href="/prelegenci/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Prelegenci
-                </a>
-                <!-- <a href="/patronat-honorowy/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Patronat honorowy
-                </a> -->
-                <a href="/patronat-medialny/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Patronat medialny
-                </a>
-                <!-- <a href="/partnerzy/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Partnerzy
-                </a> -->
-              </nav>
-            </details>
-            <details class="group astro-3WCREGVO">
-              <summary
-                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Rękodzieła</span>
-
-                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
-                  </svg>
-                </span>
-              </summary>
-              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-                <a href="/organizacje/"
-                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-                  Organizacje
-                </a>
-
-                <!-- <span
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              Atrakcje
-            </span> -->
-              </nav>
-            </details>
-            <a href="/organizatorzy/"
+            <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Organizatorzy</a>
-            <a href="/mdon_2022/"
+              Kongres</a>
+            <a href="/jarmark/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              MDON 2022
+              Jarmark
             </a>
-<a href="/formularz-zgloszeniowy/"
+            <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz zgłoszeniowy
+            </a>
+            <a href="/poprzednie-edycje/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Poprzednie edycje</a>
+            <a href="/jarmark/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Nasi Patroni
+            </a>
+            <a href="/organizatorzy/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Organizatorzy
             </a>
             <a href="/kontakt/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
@@ -262,183 +314,106 @@
             </a>
           </div>
         </div>
+        <!-- Mobilka navbar end -->
       </nav>
     </header>
 
+    <main class="flex flex-col justify-center items-center astro-GYDAMQT5">
+      <section class="first-section-home">
+        <p>
+          Miasto Stołeczne Warszawa i Fundacja OPTEA
+          <br>
+          zapraszają na
+        </p>
 
-    <div class="flex justify-center grow pt-12">
+        <p>
+          III Kongres z okazji <br>
+          Międzynarodowego Dnia Osób <br>
+          z Niepełnosprawnością
+        </p>
 
-      <main class="lg:text-xl space-y-6 flex flex-col justify-center items-center py-6 astro-GYDAMQT5">
-        <div class="astro-GYDAMQT5">
+        <p>
+          Pałac Kultury i Nauki w Warszawie <br>
+          5 grudnia 2024
+        </p>
 
-          <!-- <h1 class="mb-6 astro-GYDAMQT5">
-        <span class="text-2xl md:text-3xl block lg:inline text-center lg:text-left lg:text-4xl font-OpenSans font-light astro-GYDAMQT5">
-        <span class="font-medium astro-GYDAMQT5">KONGRES MDON 2023</span>
-        </span>
-        <br class="astro-GYDAMQT5">
-        <p>z Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl</p>
-      </h1>-->
-          <!--<h2 class="mb-6 astro-GYDAMQT5">
-        <address class="not-italic astro-GYDAMQT5">
-          Uniwersytet Rzeszowski, Budynek A1, aleja&nbspTadeusza Rejtana 16 C
-        </address> 
-      </h2>-->
-          <div style="clear: both;">
-            <h1 class="mb-6 astro-GYDAMQT5">
-              <span
-                class="text-2xl md:text-3xl block lg:inline text-center lg:text-left lg:text-4xl font-OpenSans font-light astro-GYDAMQT5">
-                <span class="font-medium astro-GYDAMQT5">KONGRES MDON 2023</span>
-              </span>
-              <br class="astro-GYDAMQT5">
-              <p>z Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl</p>
-            </h1>
-            <div
-              style=" float: left; width: 50%; height: 15px; background-color: #ef2b54; border-radius: 10px; margin: 0 auto;">
+        <div class="flex buttons">
+          <button class="red-button">
+            Zobacz program
+          </button>
+
+          <button class="white-button">
+            <img style="max-width: 48px;" src="/assets_2024/pen.png" alt="Długopis">
+            Zarejestruj się
+          </button>
+        </div>
+
+        <img class="onz-logo" src="/assets_2024/onz-logo.png" alt="Logo ONZ">
+      </section>
+
+      <section class="second-section-home">
+        <div class="grid-item">
+          <div class="grid-item-row">
+            <div>
+              Panel I
             </div>
-            <br class="astro-GYDAMQT5">
-            <div class="mb-6 astro-GYDAMQT5">
-            <h3 class="text_xd" class="mb-6 astro-GYDAMQT5"> 3 grudnia 2023 roku w Urban Lab
-              Rzeszów przy ul.
-              3-go Maja 13
-              odbędzie się druga edycja Kongresu z okazji Międzynarodowego Dnia Osób z Niepełnosprawnościami
-              organizowanego przez Fundację OPTEA. Uczestnicy
-              Kongresu omówią aktualne wyzwania dotyczące sytuacji osób z niepełnosprawnościami w życiu osobistym i
-              zawodowym.
-              Omówimy m.in. temat Dostępności Plus, rynku pracy, aktywizacji,
-              orzecznictwa oraz metod wsparcia osób z niepełnosprawnością.
-              Podczas wydarzenia będzie można nabyć piękne rękodzieła artystyczne
-              wykonane przez Warsztaty Terapii Zajęciowych z całego Podkarpacia.
-              Zapraszamy! </h3></div>
-            <img class="zd_xd" src="/zdjecia_2023/zdj1_2.png" >
+            <div>Holistyczne spojrzenie na sferę <br>aktywizacji zawodowej
+              <br>i społecznej osób <br>
+              z niepełnosprawnościami.
+            </div>
           </div>
-          </h3>
-          <br class="astro-GYDAMQT5">
-          <p><a href="/o-kongresie/"><button class="guzik_wiecej"><b>Dowiedz się więcej</b></button></a>
-          </p>
+
+          <div class="grid-item-row">
+            <div>
+              Panel II
+            </div>
+            <div>Rynek pracy osób <br>
+              z niepełnosprawnościami.<br>
+              Wyzwania i szanse aktywizacji<br> zawodowej.</div>
+          </div>
+
+          <button class="red-button" style="max-width: fit-content; margin:auto">Zobacz cały program Kongresu</button>
+        </div>
+        <div class="grid-item">
+          <div style="min-width: 170px; max-width: 240px; width: 100%; display: flex; align-items: center;">
+            <img src="/assets_2024/elipsa.png" alt="Elipsa">
+          </div>
+
+          <div style="color: white">
+            <p style="font-family:'Clicker Script', cursive; font-size: 48px;">Mikołajkowy Jarmark
+              Pracy i Rękodzieła</p>
+            <p style=" font-weight: 300; font-size: 14px; margin-top: 24px">
+              Podczas jarmarku będzie można nabyć ręcznie wykonane <br> ozdoby, które stanowią efekty pracy i
+              kreatywności<br>
+              podopiecznych Warsztatów Terapii Zajęciowej w Warszawie.<br> Środki zebrane ze sprzedaży zostaną
+              przeznaczone
+              na wsparcie działalności warsztatów, co pozwoli na dalszy rozwój twórczych umiejętności
+              uczestników oraz
+              zapewnienie im potrzebnych<br> materiałów i narzędzi.
+            </p>
+
+            <button class="red-button" style="max-width: fit-content; margin:auto; margin-top: 42px;">Zobacz
+              więcej</button>
+          </div>
         </div>
 
-
-
-        <div class="overflow-hidden w-72 lg:w-auto lg:max-w-7xl mx-auto pt-16 astro-GYDAMQT5">
-          <h1 style="text-align: center;" class="mb-6 astro-GYDAMQT5">
-            <span
-              class="text-2xl md:text-3xl block lg:inline text-center lg:text-left lg:text-4xl font-OpenSans font-light astro-GYDAMQT5">
-              <span class="font-medium astro-GYDAMQT5">TAK BYŁO ROK TEMU</span>
-            </span>
-            <br class="astro-GYDAMQT5">
-            <p>zobacz poprzednią edycję</p>
-            <br class="astro-GYDAMQT5">
-            <a href="/galeria/"><button class="guzik_galeria"><b>Galeria zdjęć</b></button></a>
-            <img class="rameczka" src="/assets_2023/rama_2_1.png">
-          </h1>
-          <br class="astro-GYDAMQT5">
-          
-          
+        <div class="grid-item item-3">
+          <img src="/assets_2024/grupa-dol.png" alt="Grupa dol">
         </div>
-
-        <div class="overflow-hidden w-72 lg:w-auto lg:max-w-7xl mx-auto pt-16 astro-GYDAMQT5">
-          <ul class="marquee py-3 pt-8 inline-flex space-x-14 max-w-full items-center astro-GYDAMQT5"
-            x-data="Marquee({speed: 1, spaceX: 14, dynamicWidthElements: true})">
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m7.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m1.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m2.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m3.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m4.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m5.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-            <li class="flex-shrink-0 astro-GYDAMQT5">
-
-              <img src="/zdjecia_2023/m6.png" class="h-28 lg:h-48 w-auto astro-GYDAMQT5">
-              </a>
-            </li>
-          </ul>
-          <br class="astro-GYDAMQT5">
-         
-        </div>
-
-      </main>
-    </div>
-    <div class="h-72 lg:h-auto pt-16 w-72 lg:w-full lg:max-w-7xl astro-GYDAMQT5">
-      <p class="text-2xl font-semibold astro-GYDAMQT5">Organizator:</p>
-      <div class="flex flex-col lg:flex-row justify-around space-y-8 lg:space-y-0 pt-12 astro-GYDAMQT5">
-        <a href="https://www.optea.org/" target="_blank" class=" astro-GYDAMQT5">
-          <img class="self-center w-72 h-auto mx-auto astro-GYDAMQT5" src="/images/logo_optea.webp"
-            alt="Fundacja OPTEA">
-        </a>
-        <!-- <a href="https://www.ipracujzdalnie.pl/" target="_blank" class="astro-GYDAMQT5"> 
-          <img class="self-center w-96 h-auto mx-auto astro-GYDAMQT5" src="/images/ipz_logo.svg"
-            alt="ipracujzdalnie.pl">
-        </a> -->
-      </div>
-    </div>
-    
-    <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December"
-      class="w-96 my-16 self-end">
+      </section>
+    </main>
   </div>
-  <footer class="border-t border-black pt-8">
-    <nav class="flex flex-wrap justify-between">
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li class="uppercase font-bold">Kongres</li>
-        <li><a href="/o-kongresie/">O Kongresie</a></li>
-        <li><a href="/program/">Program</a></li>
-        <li><a href="/prelegenci/">Prelegenci</a></li>
-        <li><a href="/patronat-honorowy/">Patronat honorowy</a></li>
-        <li><a href="/patronat-medialny/">Patronat medialny</a></li>
-        <!-- <li><a href="/partnerzy/">Partnerzy</a></li> -->
-      </ul>
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li>
-        <li><a href="/organizacje/">Organizacje</a></li>
-      </ul>
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li class="uppercase font-bold">Organizator</li>
-        <li><a href="/organizatorzy/">Organizatorzy</a></li>
-        <li><a href="/formularz-zgloszeniowy/">Formularz zgłoszeniowy</a></li>
-      </ul>
 
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li class="uppercase font-bold">Poprzednie edycje</li>
-        <li><a href="/mdon_2022/">MDON 2022</a></li>
-      </ul>
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li class="uppercase font-bold">Kontakt</li>
-        <li>
-          <address class="not-italic space-y-2">
-            <p><a href="mailto:biuro@optea.pl ">biuro@optea.pl </a></p>
-            <p><a href="tel:+48666526920">666 526 920</a></p>
-            <p><strong>Fundacja OPTEA</strong></p>
-            <p>Jasionka 953, 36-002 Jasionka</p>
-          </address>
-        </li>
-      </ul>
-      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-        <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
-        <li><a href="/rodo/">RODO</a></li>
-      </ul>
-    </nav>
+
+  <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
+    <a href="/regulamin/">Regulamin</a>
+    <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
+    <a href="/rodo/">RODO</a>
+    <a href="/kontakt/">Kontakt</a>
+    <a href="#" style="margin-left: 48px;">Fundacja OPTEA i Miasto Stołeczne Warszawa</a>
+    <a href="#" style="max-width: 36px;">
+      <img class="max-w-[]" src="/assets_2024/fb.png" alt="Facebook logo">
+    </a>
   </footer>
 </body>
 
