@@ -32,8 +32,9 @@
       clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
       z-index: -1;
     }
+
     .registration-table {
-      border-spacing: 12px; 
+      border-spacing: 12px;
       border-collapse: inherit;
     }
   </style>
@@ -55,8 +56,7 @@
 
       <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 150%; height: 150%;"
+        <div style="background-color: white; border-radius: 10px; padding: 20px; width: 150%; height: 150%;"
           class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
           <div class="relative astro-3WCREGVO" x-data="{ showKongresDropdown: false }">
             <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
@@ -103,7 +103,7 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
             <details class="group astro-3WCREGVO">
               <summary
@@ -180,7 +180,7 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               MDON 2022
             </a>
-<a href="/formularz-zgloszeniowy/"
+            <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz zgłoszeniowy
             </a>
@@ -196,7 +196,7 @@
 
     <div class="flex justify-center grow pt-12">
       <main class="lg:flex flex-col items-center lg:items-start" style="overflow-x: auto;">
-        
+
         <form x-data="{
           fetchData() {
             fetch('https://api.mdon.pl/registration_data', {
@@ -225,126 +225,126 @@
           registrations: [], isLoading: true, error: null,
           isPasswordFormVisible: true,
       }" @submit.prevent="submitForm" class="space-y-6">
-        <div class="pb-6">
-          <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-            Lista formularzy zgłoszeniowych
-          </h1>
-          <div x-show="isPasswordFormVisible" class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-            <label class="lg:w-2/5">Hasło do tabeli</span>
-            </label>
-            <div class="flex gap-2">
-              <input class="rounded-3xl border-gray-400 w-full" type="password" required
-               x-model="password">
-               
-            <button type="submit"
-            class="bg-mdon_blue rounded-full ml-4 text-white text-xl px-4">
-            ok
+          <div class="pb-6">
+            <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+              Lista formularzy zgłoszeniowych
+            </h1>
+            <div x-show="isPasswordFormVisible"
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label class="lg:w-2/5">Hasło do tabeli</span>
+              </label>
+              <div class="flex gap-2">
+                <input class="rounded-3xl border-gray-400 w-full" type="password" required x-model="password">
+
+                <button type="submit" class="bg-mdon_blue rounded-full ml-4 text-white text-xl px-4">
+                  ok
+              </div>
             </div>
           </div>
-        </div>
 
-        <div x-show="!isPasswordFormVisible" style="margin-top: -12px;">
-          <div x-cloak>
+          <div x-show="!isPasswordFormVisible" style="margin-top: -12px;">
+            <div x-cloak>
               <template x-if="isLoading">
-                  <p>Loading...</p>
+                <p>Loading...</p>
               </template>
-      
+
               <template x-if="error">
-                  <p>Error: <span x-text="error"></span></p>
+                <p>Error: <span x-text="error"></span></p>
               </template>
-      
+
               <template x-if="!isLoading && !error">
-                  <table class="registration-table"  >
-                      <thead>
-                          <tr>
-                              <th>ID</th>
-                              <th>Imię i nazwisko</th>
-                              <th>Email</th>
-                              <th>Telefon</th>
-                              <th>Firma</th>
-                              <th>Liczba uczestników</th>
-                              <th>Dodany</th>
-                              <th>I.M</th>
-                              <th>K.T</th>
-                              <th>P.Z</th>
-                              <th>P.D</th>
-                              <th>W.W</th>
-                              <!-- Add more headers as necessary -->
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <template x-for="registration in registrations" :key="registration.id">
-                              <tr>
-                                  <td x-text="registration.id"></td>
-                                  <td x-text="registration.fullName"></td>
-                                  <td x-text="registration.email"></td>
-                                  <td x-text="registration.phone"></td>
-                                  <td x-text="registration.company"></td>
-                                  <td x-text="registration.amountOfParticipants"></td>
-                                  <td x-text="new Date(registration.created_at).toLocaleString()"></td>
-                                  <td x-text="registration.informacjeMarketingowe ? 'tak': 'nie'"></td>
-                                  <td x-text="registration.kontaktTelefoniczny ? 'tak': 'nie'"></td>
-                                  <td x-text="registration.potwierdzenieZgod ? 'tak': 'nie'"></td>
-                                  <td x-text="registration.przetwarzanieDanych ? 'tak': 'nie'"></td>
-                                  <td x-text="registration.wykorzystanieWizerunku ? 'tak': 'nie'"></td>
-                                  <td x-show="false"  class="text-red-600 cursor-pointer text-bold" @click="deleteRegistrationData(registration.id)">Usuń</td>
-                                  
-                                  <script>
-                                    function deleteRegistrationData(id) {
-                                      fetch(`https://api.mdon.pl/registration_data/${id}`, {
-                                          method: 'DELETE',
-                                          
-                headers: {
-                    'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                }
-            
-                                      })
-                                      .then(response => {
-                                          if (response.ok) {
-                                              // Remove the deleted registration from the local state
-                                              console.log('Registration data deleted successfully');
-                                              fetch('https://api.mdon.pl/registration_data',{
-                headers: {
-                    'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                }
-            })
-                                              .then(response => {
-                                                  if (!response.ok) {
-                                                      throw new Error('Network response was not ok');
-                                                  }
-                                                  return response.json();
-                                              })
-                                              .then(data => { this.registrations = data; this.isLoading = false; })
-                                              .catch(err => { this.error = err.message; this.isLoading = false; });
-                                            } else {
-                                              console.error('Error deleting registration data');
-                                          }
-                                      })
-                                      .catch(error => {
-                                          console.error('Error:', error);
-                                      });
-                                  }
-                                </script>
-                              </tr>
-                          </template>
-                      </tbody>
-                  </table>
+                <table class="registration-table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Imię i nazwisko</th>
+                      <th>Email</th>
+                      <th>Telefon</th>
+                      <th>Firma</th>
+                      <th>Liczba uczestników</th>
+                      <th>Dodany</th>
+                      <th>I.M</th>
+                      <th>K.T</th>
+                      <th>P.Z</th>
+                      <th>P.D</th>
+                      <th>W.W</th>
+                      <!-- Add more headers as necessary -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <template x-for="registration in registrations" :key="registration.id">
+                      <tr>
+                        <td x-text="registration.id"></td>
+                        <td x-text="registration.fullName"></td>
+                        <td x-text="registration.email"></td>
+                        <td x-text="registration.phone"></td>
+                        <td x-text="registration.company"></td>
+                        <td x-text="registration.amountOfParticipants"></td>
+                        <td x-text="new Date(registration.created_at).toLocaleString()"></td>
+                        <td x-text="registration.informacjeMarketingowe ? 'tak': 'nie'"></td>
+                        <td x-text="registration.kontaktTelefoniczny ? 'tak': 'nie'"></td>
+                        <td x-text="registration.potwierdzenieZgod ? 'tak': 'nie'"></td>
+                        <td x-text="registration.przetwarzanieDanych ? 'tak': 'nie'"></td>
+                        <td x-text="registration.wykorzystanieWizerunku ? 'tak': 'nie'"></td>
+                        <td x-show="false" class="text-red-600 cursor-pointer text-bold"
+                          @click="deleteRegistrationData(registration.id)">Usuń</td>
+
+                        <script>
+                          function deleteRegistrationData(id) {
+                            fetch(`https://api.mdon.pl/registration_data/${id}`, {
+                              method: 'DELETE',
+
+                              headers: {
+                                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+                              }
+
+                            })
+                              .then(response => {
+                                if (response.ok) {
+                                  // Remove the deleted registration from the local state
+                                  console.log('Registration data deleted successfully');
+                                  fetch('https://api.mdon.pl/registration_data', {
+                                    headers: {
+                                      'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+                                    }
+                                  })
+                                    .then(response => {
+                                      if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                      }
+                                      return response.json();
+                                    })
+                                    .then(data => { this.registrations = data; this.isLoading = false; })
+                                    .catch(err => { this.error = err.message; this.isLoading = false; });
+                                } else {
+                                  console.error('Error deleting registration data');
+                                }
+                              })
+                              .catch(error => {
+                                console.error('Error:', error);
+                              });
+                          }
+                        </script>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
               </template>
-              
+
+            </div>
+
+            <div class="mt-2">
+              <p>I.M - Informacje Marketingowe</p>
+              <p>K.T - Kontakt Telefoniczny</p>
+              <p>P.Z - Potwierdzenie Zgód</p>
+              <p>P.D - Przetwarzanie Danych</p>
+              <p>W.W - Wykorzystanie Wizerunku</p>
+            </div>
           </div>
-          
-      <div class="mt-2">
-        <p>I.M - Informacje Marketingowe</p>
-        <p>K.T - Kontakt Telefoniczny</p>
-        <p>P.Z - Potwierdzenie Zgód</p>
-        <p>P.D - Przetwarzanie Danych</p>
-        <p>W.W - Wykorzystanie Wizerunku</p>
-      </div>
-      </div>
-      </form>
-      
+        </form>
+
       </main>
-      
+
     </div>
     <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December"
       class="w-96 my-16 self-end">

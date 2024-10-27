@@ -51,8 +51,7 @@
 
       <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
+        <div style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
           class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
           <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
             <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
@@ -83,7 +82,7 @@
             </div>
           </div>
           <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-<a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
+          <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
           <a href="/mdon_2022/" class=" astro-3WCREGVO">Rejestracja na Kongres</a>
           <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
@@ -99,7 +98,7 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
             <details class="group astro-3WCREGVO">
               <summary

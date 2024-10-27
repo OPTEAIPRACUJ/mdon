@@ -51,8 +51,7 @@
 
       <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
+        <div style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
           class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
           <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
             <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
@@ -83,7 +82,7 @@
             </div>
           </div>
           <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-<a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
+          <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
           <a href="/mdon_2022/" class=" astro-3WCREGVO">MDON 2022</a>
           <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
@@ -99,7 +98,7 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
             <details class="group astro-3WCREGVO">
               <summary
@@ -192,19 +191,17 @@
           Patronat Honorowy
         </h1>
         <div class="lg:my-24 container flex flex-col space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 justify-center">
-          
+
           <img style="text-align: center;" src="/images/loga/ministerstwo_funduszy_i_polityki_regionalnej.webp"
-          alt="Ministerstwo Funduszy i Polityki Regionalnej">
+            alt="Ministerstwo Funduszy i Polityki Regionalnej">
 
-            <img src="/images/loga/marszalek.png"
-              alt="Minister Rodziny i Polityki Społecznej">
-          
-          
-            <img src="/images/loga/prezydent.jpeg"
-              alt="Ministerstwo Funduszy i Polityki Regionalnej">
+          <img src="/images/loga/marszalek.png" alt="Minister Rodziny i Polityki Społecznej">
 
-              
-          
+
+          <img src="/images/loga/prezydent.jpeg" alt="Ministerstwo Funduszy i Polityki Regionalnej">
+
+
+
         </div>
       </main>
     </div>

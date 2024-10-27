@@ -51,8 +51,7 @@
 
       <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
+        <div style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
           class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
           <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
             <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
@@ -83,7 +82,7 @@
             </div>
           </div>
           <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-<a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
+          <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
           <a href="/mdon_2022/" class=" astro-3WCREGVO">MDON 2022</a>
           <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
@@ -99,7 +98,7 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
             <details class="group astro-3WCREGVO">
               <summary
@@ -176,7 +175,7 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               MDON 2022
             </a>
-<a href="/formularz-zgloszeniowy/"
+            <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz zgłoszeniowy
             </a>
@@ -196,22 +195,32 @@
           O kongresie
         </h1>
         <p class="mb-6">
-          13 grudnia 2006 roku na 61 sesji Zgromadzenia Ogólnego ONZ została przyjęta Konwencja Praw Osób Niepełnosprawnych, 
-          która zawierała prawa osób z niepełnosprawnościami do wolności, bezpieczeństwa, swobody poruszania się, ochrony zdrowia, 
-          edukacji, życia prywatnego i rodzinnego oraz udziału w życiu politycznym i kulturalnym. Od tamtego dnia rokrocznie 3 grudnia obchodzimy Międzynarodowy Dzień Osób Niepełnosprawnych 
-          ustanowiony przez Organizację Narodów Zjednoczonych. W tym wyjątkowym dniu na całym świecie odbywają się uroczystości, 
-          których celem jest promowanie praw osób niepełnosprawnych i działań na rzecz pełnej realizacji tych praw. Polska ratyfikowała Konwencję o prawach osób niepełnosprawnych w 2012 roku. 
-          Jej przesłanie to pełne, aktywne uczestnictwo osób niepełnosprawnych we wszystkich dziedzinach ludzkiej aktywności, na równi z innymi osobami.
+          13 grudnia 2006 roku na 61 sesji Zgromadzenia Ogólnego ONZ została przyjęta Konwencja Praw Osób
+          Niepełnosprawnych,
+          która zawierała prawa osób z niepełnosprawnościami do wolności, bezpieczeństwa, swobody poruszania się,
+          ochrony zdrowia,
+          edukacji, życia prywatnego i rodzinnego oraz udziału w życiu politycznym i kulturalnym. Od tamtego dnia
+          rokrocznie 3 grudnia obchodzimy Międzynarodowy Dzień Osób Niepełnosprawnych
+          ustanowiony przez Organizację Narodów Zjednoczonych. W tym wyjątkowym dniu na całym świecie odbywają się
+          uroczystości,
+          których celem jest promowanie praw osób niepełnosprawnych i działań na rzecz pełnej realizacji tych praw.
+          Polska ratyfikowała Konwencję o prawach osób niepełnosprawnych w 2012 roku.
+          Jej przesłanie to pełne, aktywne uczestnictwo osób niepełnosprawnych we wszystkich dziedzinach ludzkiej
+          aktywności, na równi z innymi osobami.
         </p>
         <p class="mb-6">
-          Druga edycja Kongresu z okazji Międzynarodowego Dnia Osób z Niepełnosprawnościami oraz Mikołajkowy Jarmark Rękodzieła, 
-          organizowane przez naszą Fundację to wyjątkowe wydarzenie budujące relacje pomiędzy osobami pełnosprawnymi a osobami z niepełnosprawnością. 
-          Organizując ten szczególny event pragniemy wpłynąć na świadomość, integrować i budować relacje, przybliżyć siebie sobie nawzajem. W atmosferze zbliżających się Mikołajek 
-          oraz Świąt Bożego Narodzenia ludzkie serca otwierają się szerzej, pełniejsza jest też interakcja, o którą tak bardzo nam chodzi. Nie poprzestaniemy na tym jednym wydarzeniu!
+          Druga edycja Kongresu z okazji Międzynarodowego Dnia Osób z Niepełnosprawnościami oraz Mikołajkowy Jarmark
+          Rękodzieła,
+          organizowane przez naszą Fundację to wyjątkowe wydarzenie budujące relacje pomiędzy osobami pełnosprawnymi a
+          osobami z niepełnosprawnością.
+          Organizując ten szczególny event pragniemy wpłynąć na świadomość, integrować i budować relacje, przybliżyć
+          siebie sobie nawzajem. W atmosferze zbliżających się Mikołajek
+          oraz Świąt Bożego Narodzenia ludzkie serca otwierają się szerzej, pełniejsza jest też interakcja, o którą tak
+          bardzo nam chodzi. Nie poprzestaniemy na tym jednym wydarzeniu!
         </p>
         <p class="mb-6">
-          Obchody tego ważnego dnia w naszym kraju potrzebują stanowczo więcej mocy i charakteru, 
-          aby dotrzeć do każdego człowieka. To co się dzieje, jest niewystarczające. 
+          Obchody tego ważnego dnia w naszym kraju potrzebują stanowczo więcej mocy i charakteru,
+          aby dotrzeć do każdego człowieka. To co się dzieje, jest niewystarczające.
           Jesteśmy tu, by to zmienić!
         </p>
       </main>

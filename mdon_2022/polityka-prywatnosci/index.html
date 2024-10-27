@@ -1,443 +1,499 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundacja OPTEA ma obowiązek chronić udostępnione lub powierzone dane osobowe jego Użytkowników. Dane te są przetwarzane zgodnie z obowiązującymi przepisami prawa tj. w szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>Polityka prywatności</title>
-  <link rel="stylesheet" href="/assets/404.67f322dd.css" /><script type="module" src="/page.8271e986.js"></script></head>
-  <body class="max-w-[90%] mx-auto py-10">
-    <div class="lg:min-h-screen flex flex-col">
-      <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
-  <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
-    <picture class="astro-3WCREGVO">
-      <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
-      <img src="/images/mdon_logo_m.webp" alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022" class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
-    </picture>
-  </a>
 
-  <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-    <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
-      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
-        <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
-          Kongres
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Fundacja OPTEA ma obowiązek chronić udostępnione lub powierzone dane osobowe jego Użytkowników. Dane te są przetwarzane zgodnie z obowiązującymi przepisami prawa tj. w szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>Polityka prywatności</title>
+  <link rel="stylesheet" href="/assets/404.67f322dd.css" />
+  <script type="module" src="/page.8271e986.js"></script>
+</head>
+
+<body class="max-w-[90%] mx-auto py-10">
+  <div class="lg:min-h-screen flex flex-col">
+    <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
+      <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
+        <picture class="astro-3WCREGVO">
+          <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
+          <img src="/images/mdon_logo_m.webp"
+            alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022"
+            class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
+        </picture>
+      </a>
+
+      <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
+        @keydown.escape="isOpen = false">
+        <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
+          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
+            <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
+              x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
+              Kongres
+            </div>
+            <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true"
+              x-on:mouseleave="showKongresDropdown = false"
+              class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
+              <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
+              <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
+              <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
+              <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
+              <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
+              <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
+            </div>
+          </div>
+          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
+            <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false"
+              x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
+              Mikołajkowy Jarmark Pracy
+            </div>
+            <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true"
+              x-on:mouseleave="showJarmarkDropdown = false"
+              class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
+              <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
+              <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
+            </div>
+          </div>
+          <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
+          <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
+          <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
-        <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
-          <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
-          <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
-          <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
-          <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
-          <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
-          <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
-        </div>
-      </div>
-      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
-        <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
-          Mikołajkowy Jarmark Pracy
-        </div>
-        <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
-          <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
-          <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
-        </div>
-      </div>
-      <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-      <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
-      <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
-    </div>
-    <button @click="isOpen = !isOpen" type="button" class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO" :class="{ 'transition transform-180': isOpen }">
-      <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" class="astro-3WCREGVO"></path>
-        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" class="astro-3WCREGVO"></path>
-      </svg>
-    </button>
-    <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
-      <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
-        <details class="group astro-3WCREGVO">
-          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-            <span class=" astro-3WCREGVO">Kongres</span>
+        <button @click="isOpen = !isOpen" type="button"
+          class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO"
+          :class="{ 'transition transform-180': isOpen }">
+          <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+              class="astro-3WCREGVO"></path>
+            <path x-show="!isOpen" fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              class="astro-3WCREGVO"></path>
+          </svg>
+        </button>
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+          <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
+            <details class="group astro-3WCREGVO">
+              <summary
+                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                <span class=" astro-3WCREGVO">Kongres</span>
 
-            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
-              </svg>
-            </span>
-          </summary>
-          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-            <a href="/mdon_2022/o-kongresie/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              O Kongresie
-            </a>
+                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
+                  </svg>
+                </span>
+              </summary>
+              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+                <a href="/mdon_2022/o-kongresie/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  O Kongresie
+                </a>
 
-            <a href="/mdon_2022/program/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Program
-            </a>
-            <a href="/mdon_2022/prelegenci/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Prelegenci
-            </a>
-            <a href="/mdon_2022/patronat-honorowy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Patronat honorowy
-            </a>
-            <a href="/mdon_2022/patronat-medialny/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Patronat medialny
-            </a>
-            <a href="/mdon_2022/partnerzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Partnerzy
-            </a>
-          </nav>
-        </details>
-        <details class="group astro-3WCREGVO">
-          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-            <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
+                <a href="/mdon_2022/program/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Program
+                </a>
+                <a href="/mdon_2022/prelegenci/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Prelegenci
+                </a>
+                <a href="/mdon_2022/patronat-honorowy/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Patronat honorowy
+                </a>
+                <a href="/mdon_2022/patronat-medialny/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Patronat medialny
+                </a>
+                <a href="/mdon_2022/partnerzy/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Partnerzy
+                </a>
+              </nav>
+            </details>
+            <details class="group astro-3WCREGVO">
+              <summary
+                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
 
-            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
-              </svg>
-            </span>
-          </summary>
-          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-            <a href="/mdon_2022/organizacje/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Organizacje
-            </a>
+                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
+                  </svg>
+                </span>
+              </summary>
+              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+                <a href="/mdon_2022/organizacje/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Organizacje
+                </a>
 
-            <!-- <span
+                <!-- <span
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
               Atrakcje
             </span> -->
-          </nav>
-        </details>
-        <a href="/mdon_2022/organizatorzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          Organizatorzy</a>
-        <a href="/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          MDON 2023
-        </a>
-        <a href="/kontakt/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          Kontakt
-        </a>
-      </div>
+              </nav>
+            </details>
+            <a href="/mdon_2022/organizatorzy/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Organizatorzy</a>
+            <a href="/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              MDON 2023
+            </a>
+            <a href="/kontakt/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Kontakt
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="flex justify-center grow pt-12">
+      <main class="max-w-4xl">
+        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+          Polityka prywatności
+        </h1>
+        <p>
+          Fundacja OPTEA ma obowiązek chronić udostępnione lub powierzone dane osobowe jego
+          Użytkowników. Dane te są przetwarzane zgodnie z obowiązującymi przepisami prawa tj. w
+          szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27
+          kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych
+          i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          Niniejszy dokument - Polityka Prywatności wyjaśnia, kto jest Państwa Administratorem Danych
+          Osobowych (ADO), dla jakich celów i w jaki sposób przetwarzamy Państwa dane osobowe, komu
+          możemy je powierzać oraz jakie prawa Państwu przysługują.
+        </p>
+        <p>&nbsp;</p>
+        <p>Niniejsza Polityka Prywatności obowiązuje od dnia 17.08.2022.</p>
+        <p>&nbsp;</p>
+        <p><strong>I. ADMINISTRATOR DANYCH OSOBOWYCH (ADO)</strong></p>
+        <p>&nbsp;</p>
+        <p>
+          Administratorem Państwa danych osobowych jest Fundacja OPTEA Jasionka 953, 36-002 Jasionka,
+          wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez Sąd
+          Rejonowy w Rzeszowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS:
+          0000964959, NIP: 5170424612, REGON: 521689840.
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          Inspektorem Danych Osobowych jest TURCZA Kancelaria Radców Prawnych (r.pr. Marta
+          Rabe-Kozłowska). W sprawie szczegółowych zasad i warunków związanych z przetwarzaniem danych
+          osobowych, prosimy kierować pytania na adres e-mail: <a href="mailto:biuro@optea.pl">biuro@optea.pl</a>
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>II. DANE OSOBOWE</strong></p>
+        <p>&nbsp;</p>
+        <p>
+          Państwa dane są przetwarzane przez ADO w celach związanych z funkcjonowaniem serwisu &nbsp;i
+          świadczeniem usług w nim oferowanych.
+        </p>
+        <p>
+          Poniżej znajdą Państwo informacje w sprawie poszczególnych operacji przetwarzania danych
+          osobowych.
+        </p>
+        <p>a) Niezarejestrowani użytkownicy</p>
+        <p>
+          Jeżeli korzystają Państwo z portalu www.networkpower.pl jako niezarejestrowani użytkownicy,
+          ADO może dokonywać operacji przetwarzania niektórych danych osobowych. Przetwarzanie może
+          dotyczyć takich danych jak aktywność użytkownika w serwisie (tj. &nbsp;dane dotyczące
+          oglądanych ofert pracy, dane dotyczące sesji, urządzenia oraz systemu operacyjnego,
+          przeglądarki, lokalizacji oraz unikalnego ID). &nbsp;Podstawą prawną ADO do przetwarzania tego
+          typu danych jest art. 6 ust. 1 lit. b RODO tj. niezbędność do wykonania umowy o świadczenie
+          usług drogą elektroniczną.
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>ZAMIESZCZANIE DANYCH OSOBOWYCH W BAZIE</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p>&nbsp;<br>Poszukiwanie ofert pracy dla użytkowników znajdujących się w bazie</p>
+        <p>&nbsp;<br>ZAKRES DANYCH OSOBOWYCH</p>
+        <p><br>Dane podane w formularzu rejestracyjnym</p>
+        <p>PODSTAWA PRAWNA</p>
+        <p>
+          <br>prawnie uzasadniony interes – zgodnie z postanowieniami zawartej między nami umowy (art.
+          6 ust. 1 lit. f RODO),<br>zgoda użytkownika (art. 6 ust. 1 lit. a RODO).
+        </p>
+        <p><br>TERMIN USUNIĘCIA DANYCH<strong><br></strong>Dane będą przetwarzane do momentu:</p>
+        <p>do momentu, w którym uwzględnimy sprzeciw wobec przetwarzania<br>&nbsp;</p>
+        <p><strong>SKARGI I WNIOSKI</strong></p>
+        <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p><strong>&nbsp;</strong><br>Obsługa zapytań, zgłoszeń i wniosków</p>
+        <p>
+          &nbsp;<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika, dane
+          dotyczące korzystania z usług, będących przyczyną skargi lub wniosku, dane zawarte w
+          dokumentach załączonych do skargi lub wniosku.<br>PODSTAWA PRAWNA<br>prawnie uzasadniony
+          interes (art. 6 ust. 1 lit. f RODO,<br>zgoda użytkownika (art. 6 ust. 1 lit. a RODO).<br>TERMIN USUNIĘCIA
+          DANYCH<br>Dane będą przetwarzane:
+        </p>
+        <p>
+          przez okres niezbędny do rozpatrzenia danego zapytania, skargi lub wniosku, jednak nie dłużej
+          niż przez okres 3 lat od otrzymania określonej wiadomości,<br>jeżeli określona wiadomość
+          stanowi lub może stanowić dowód w postępowaniu przed sądem lub innym organem państwowym,
+          możemy przechowywać takie wiadomości i zawarte w nich dane osobowe do czasu prawomocnego
+          zakończenia postępowania.<br>&nbsp;
+        </p>
+        <p><strong>DZIAŁANIA ANALITYCZNE</strong></p>
+        <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p>
+          &nbsp;<br>Analiza sposobu korzystania z serwisu, celem &nbsp;dostosowania strony do potrzeb
+          i zachowania Użytkowników (więcej w dokumencie – Polityka cookies)
+        </p>
+        <p>
+          &nbsp;<br>ZAKRES DANE OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika<br>PODSTAWA
+          PRAWNA<br>prawnie uzasadniony interes (art. 6 ust.1 lit.f RODO),<br>zgoda użytkownika
+          (art. 6 ust. 1 lit. a RODO).<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do
+          momentu wygaśnięcia ważności lub usunięcia zgody na cookies.<br>&nbsp;
+        </p>
+        <p>
+          <strong>powstanie roszczeń po stronie ADO</strong><br><strong>DOCHODZENIE ROSZCZEŃ</strong>
+        </p>
+        <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p>
+          &nbsp;<br>Ustalenie, dochodzenie lub obrona ewentualnych roszczeń, związanych z zawartą
+          umową lub świadczonymi usługami<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane w
+          profilu użytkownika<br>PODSTAWA PRAWNA<br>prawnie uzasadniony interes (art. 6 ust. 1 lit.f
+          RODO)<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do momentu:
+        </p>
+        <p>
+          w którym &nbsp;upłynie okres przedawnienia roszczeń lub<br>w którym uwzględnimy sprzeciw
+          wobec przetwarzania danych osobowych.<br>&nbsp;
+        </p>
+        <p>
+          <strong>przeprowadzenie badania satysfakcji</strong><br><strong>BADANIE SATYSFAKCJI</strong>
+        </p>
+        <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p>
+          &nbsp;<br>Badanie satysfakcji użytkowników z oferowanych przez ADO usług.<br>ZAKRES DANYCH
+          OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika<br>PODSTAWA PRAWNA<br>prawnie
+          uzasadniony interes (art. 6 ust.1 lit.f RODO<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą
+          przetwarzane do momentu:
+        </p>
+        <p>
+          w którym upłynie okres przedawnienia roszczeń lub<br>w którym uwzględnimy sprzeciw wobec
+          przetwarzania danych osobowych.<br>&nbsp;
+        </p>
+        <p><strong>IV. DZIAŁANIA MARKETINGOWE</strong></p>
+        <p>
+          &nbsp;W ramach serwisu optea.org&nbsp; dokonujemy profilowania wyłącznie w przypadku
+          &nbsp;wyrażenia zgody na tego typu działania.
+        </p>
+        <p>
+          Profilowanie to polega na automatycznej ocenie, jakimi produktami lub usługami mogą być
+          Państwo zainteresowani, wykorzystując do tego informacje o wyświetlanych treściach.
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>DZIAŁANIA MARKETINGOWE</strong></p>
+        <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
+        <p>&nbsp;<br>Marketing bezpośredni, polegający na wyświetlaniu spersonalizowanych reklam.</p>
+        <p>
+          &nbsp;<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane przy utworzeniu konta, dane
+          zawarte w odrębnych formularzach do pozyskiwania zgód oraz dane dotyczące aktywności w
+          serwisie, rejestrowane i przechowywane za pośrednictwem plików cookie.<br>PODSTAWA PRAWNA<br>prawnie
+          uzadadniony interes (art. 6 ust. 1 lit.f RODO<br>zgoda użytkownika (art. 6 ust. 1
+          lit. a RODO).<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do momentu wygaśnięcia
+          ważności lub usunięcia zgody na cookies.
+        </p>
+        <p><br><strong>V. ODBIORCY DANYCH OSOBOWYCH</strong></p>
+        <p>&nbsp;</p>
+        <p>
+          Serwis optea.org korzysta z usług podmiotów zewnętrznych, które wspierają go w prowadzeniu
+          działalności. Powierzamy im do przetwarzania Państwa dane – podmioty te przetwarzają dane w
+          szczególności na nasze udokumentowane polecenie.
+        </p>
+        <p>
+          Podkreślenia wymaga, że Państwa dane osobowe nie będą przetwarzane przez podmioty spoza Unii
+          Europejskiej.
+        </p>
+        <p>
+          a) Pracodawcy - udostępniamy Państwa dane osobowe Pracodawcom korzystającym z naszych
+          Serwisów.
+        </p>
+        <p>
+          b) Dostawcy usług - Państwa dane osobowe są przekazywane dostawcom usług, z których korzysta
+          ADO przy prowadzeniu serwisu. Dostawcy usług, w zależności od uzgodnień umownych i
+          okoliczności, albo podlegają poleceniom ADO co do celów i sposobów przetwarzania tych danych
+          (podmioty przetwarzające) albo samodzielnie określają cele i sposoby ich przetwarzania
+          (administratorzy).
+        </p>
+        <p>
+          c) Podmioty przetwarzające – ADO korzysta z dostawców, którzy przetwarzają Państwa dane
+          osobowe wyłącznie na nasze polecenie. Świadczą oni dla ADO usługę hostingu w chmurze
+          obliczeniowej, dostarczają systemy do marketingu online, do wyświetlania powiadomień web push,
+          do wysyłki wiadomości e-mail, do analizy ruchu w serwisie, do analizy skuteczności kampanii
+          marketingowych, jak również wspierają realizację określonych usług i funkcjonalności.
+        </p>
+        <p>
+          d) Administratorzy – ADO korzysta z dostawców, którzy nie działają wyłącznie na nasze
+          polecenie i sami ustalą cele i sposoby wykorzystania danych osobowych. Świadczą oni dla nas
+          usługi kampanii remarketingowych oraz prowadzą badania statystyczne. Serwis korzysta także z
+          usługi Facebook i API. Warunki korzystania z tej usługi dostępne są pod linkiem
+          https://www.facebook.com/privacy/explanation, a Politykę prywatności Google można znaleźć pod
+          linkiem: https://www.google.com/policies/privacy.
+        </p>
+        <p>
+          e) Organy państwowe – ADO może udostępnić Państwa dane osobowe, jeżeli zwrócą się do nas o to
+          uprawnione organy państwowe, w szczególności jednostki organizacyjne prokuratury, Policja,
+          Prezes Urzędu Ochrony Danych Osobowych, Prezes Urzędu Ochrony Konkurencji i Konsumentów lub
+          Prezes Urzędu Komunikacji Elektronicznej.
+        </p>
+        <p>
+          Nasi dostawcy mają siedzibę głównie w Polsce i w innych krajach Europejskiego Obszaru
+          Gospodarczego (EOG), np. w Irlandii. Niektórzy spośród naszych dostawców mają siedzibę poza
+          terytorium EOG. W związku z przekazaniem danych poza terytorium EOG zadbaliśmy, aby nasi
+          dostawcy dawali gwarancje wysokiego stopnia ochrony danych osobowych.
+        </p>
+        <p>Lista odbiorców danych osobowych:</p>
+        <p>
+          Rekrutacyjne<br>Fundacja Optea&nbsp;<br>UE<br>Wizerunkowe<br>Facebook<br>UE/poze UE<br>Obsługa infrastruktury
+          informatycznej<br>Fundacja Optea<br>UE<br>&nbsp;
+        </p>
+        <p><strong>VI. UPRAWNIENIA UŻYTKOWNIKÓW</strong></p>
+        <p>&nbsp;</p>
+        <p>
+          W związku z udostępnianiem ADO danych osobowych, przysługuje Państwu szereg następujących
+          praw:
+        </p>
+        <p>
+          Prawo do cofnięcia zgody – mają Państwo prawo do cofnięcia zgody, jakiej udzielili Państwo w
+          momencie rejestracji, jak również podczas korzystania z poszczególnych usług i
+          funkcjonalności. Cofnięcie zgody ma skutek od momentu wycofania zgody. Cofnięcie zgody nie
+          wpływa na przetwarzanie dokonywane przez nas zgodnie z prawem przed jej cofnięciem.<br>Podstawa prawna: art. 7
+          ust. 3 RODO
+        </p>
+        <p>
+          Prawo do sprzeciwu wobec wykorzystania danych – mają Państwo prawo w dowolnym momencie wnieść
+          sprzeciw wobec wykorzystania danych osobowych. Jeżeli sprzeciw okaże się zasadny i ADO nie
+          będzie posiadać innej podstawy prawnej do przetwarzania Państwa danych osobowych, ADO usunie
+          dane, wobec wykorzystania których był wniesiony sprzeciw.<br>Podstawa prawna: art. 21 RODO
+        </p>
+        <p>
+          Prawo do usunięcia danych – mają Państwo prawo do żądania usunięcia wszystkich lub niektórych
+          danych osobowych. Żądanie usunięcia wszystkich danych osobowych będziemy traktować jako
+          żądanie usunięcia konta w serwisie.<br>Pomimo żądania usunięcia danych osobowych, w związku
+          z wniesieniem sprzeciwu lub wycofaniem zgody, ADO może zachować pewne dane osobowe w zakresie
+          niezbędnym do celów ustalenia, dochodzenia lub obrony roszczeń.
+        </p>
+        <p>Podstawa prawna: art. 17 RODO</p>
+        <p>
+          Prawo do ograniczenia przetwarzania danych – mają Państwo prawo do żądania ograniczenia
+          przetwarzania danych osobowych. Jeżeli zgłoszą Państwo takie żądanie, do czasu jego
+          rozpatrzenia może zostać uniemożliwione korzystanie z określonych funkcjonalności lub usług
+          serwisu.<br>Podstawa prawna: art. 18 RODO
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>Prawo dostępu do danych</strong></p>
+        <p>
+          <br>Mają Państwo prawo uzyskać od ADO potwierdzenie, czy przetwarzamy Państwa dane osobowe
+          oraz:
+        </p>
+        <p>a) uzyskać dostęp do swoich danych osobowych;</p>
+        <p>
+          b) uzyskać informacje o celach przetwarzania, kategoriach przetwarzanych danych osobowych, o
+          odbiorcach lub kategoriach odbiorców tych danych, planowanym okresie przechowywania danych lub
+          o kryteriach ustalania tego okresu, o prawach przysługujących na mocy RODO oraz o prawie
+          wniesienia skargi do organu nadzorczego, o źródle tych danych, o zautomatyzowanym podejmowaniu
+          decyzji, w tym o profilowaniu oraz o zabezpieczeniach stosowanych w związku z przekazaniem
+          tych danych poza Unię Europejską;
+        </p>
+        <p>c) uzyskać kopię swoich danych osobowych.</p>
+        <p>Podstawa prawna: art. 15 RODO</p>
+        <p>
+          Prawo do sprostowania danych<br>Mają Państwo prawo do sprostowania i uzupełnienia podanych
+          przez siebie danych osobowych.
+        </p>
+        <p>Podstawa prawna: art. 16 RODO</p>
+        <p>
+          Prawo do przenoszenia danych<br>Mają Państwo prawo otrzymać swoje dane osobowe, które
+          zostały dostarczone ADO, a następnie przesłać je do innego, wybranego przez siebie,
+          administratora danych osobowych, np. do innego operatora podobnych serwisów.
+        </p>
+        <p>Podstawa prawna: art. 20 RODO</p>
+        <p>&nbsp;</p>
+        <p><strong>Termin udzielenia odpowiedzi przez ADO</strong></p>
+        <p>&nbsp;</p>
+        <p>
+          Jeżeli zdecydują się Państwo wystąpić do ADO z żądaniem, spełnimy to żądanie albo odmówimy
+          jego spełnienia niezwłocznie, nie później jednak niż w ciągu 30 dni od daty jego otrzymaniu.
+        </p>
+        <p>
+          W celu skorzystania z przysługujących Państwu praw prosimy o kontakt z ADO pod adresem e-mail:
+          daneosobowe@ipracujzdalnie.pl.
+        </p>
+        <p>
+          Jeśli uznają Państwo, że Państwa dane osobowe są przetwarzane niezgodnie z prawem, mogą
+          Państwo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (UODO).
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>VII. PLIKI COOKIES</strong></p>
+        <p>
+          Szczegóły dotyczące sposobu korzystania z plików cookie znajdą Państwo w dokumencie - Polityka
+          Cookies.
+        </p>
+        <p>&nbsp;</p>
+        <p><strong>VIII. ZMIANY W POLITYCE PRYWATNOŚCI</strong></p>
+        <p>Stosownie do potrzeb zastrzegamy możliwość zmiany i uzupełnienia Polityki Prywatności.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </main>
     </div>
-  </nav>
-</header>
+    <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December"
+      class="w-96 my-16 self-end">
+  </div>
+  <footer class="border-t border-black pt-8">
+    <nav class="flex flex-wrap justify-between">
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Kongres</li>
+        <li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li>
+        <li><a href="/mdon_2022/program/">Program</a></li>
+        <li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li>
+        <li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li>
+        <li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li>
+        <li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li>
+        <li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Organizator</li>
+        <li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
+      </ul>
 
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Tegoroczna Edycja</li>
+        <li><a href="/">MDON 2023</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Kontakt</li>
+        <li>
+          <address class="not-italic space-y-2">
+            <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
+            <p><a href="tel:+48666526920">666 526 920</a></p>
+            <p><strong>Fundacja OPTEA</strong></p>
+            <p>Jasionka 953, 36-002 Jasionka</p>
+          </address>
+        </li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li>
+        <li><a href="/mdon_2022/rodo/">RODO</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
 
-      <div class="flex justify-center grow pt-12">
-        <main class="max-w-4xl">
-    <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-  Polityka prywatności
-</h1>
-    <p>
-      Fundacja OPTEA ma obowiązek chronić udostępnione lub powierzone dane osobowe jego
-      Użytkowników. Dane te są przetwarzane zgodnie z obowiązującymi przepisami prawa tj. w
-      szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27
-      kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych
-      i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
-    </p>
-    <p>&nbsp;</p>
-    <p>
-      Niniejszy dokument - Polityka Prywatności wyjaśnia, kto jest Państwa Administratorem Danych
-      Osobowych (ADO), dla jakich celów i w jaki sposób przetwarzamy Państwa dane osobowe, komu
-      możemy je powierzać oraz jakie prawa Państwu przysługują.
-    </p>
-    <p>&nbsp;</p>
-    <p>Niniejsza Polityka Prywatności obowiązuje od dnia 17.08.2022.</p>
-    <p>&nbsp;</p>
-    <p><strong>I. ADMINISTRATOR DANYCH OSOBOWYCH (ADO)</strong></p>
-    <p>&nbsp;</p>
-    <p>
-      Administratorem Państwa danych osobowych jest Fundacja OPTEA Jasionka 953, 36-002 Jasionka,
-      wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez Sąd
-      Rejonowy w Rzeszowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS:
-      0000964959, NIP: 5170424612, REGON: 521689840.
-    </p>
-    <p>&nbsp;</p>
-    <p>
-      Inspektorem Danych Osobowych jest TURCZA Kancelaria Radców Prawnych (r.pr. Marta
-      Rabe-Kozłowska). W sprawie szczegółowych zasad i warunków związanych z przetwarzaniem danych
-      osobowych, prosimy kierować pytania na adres e-mail: <a href="mailto:biuro@optea.pl">biuro@optea.pl</a>
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>II. DANE OSOBOWE</strong></p>
-    <p>&nbsp;</p>
-    <p>
-      Państwa dane są przetwarzane przez ADO w celach związanych z funkcjonowaniem serwisu &nbsp;i
-      świadczeniem usług w nim oferowanych.
-    </p>
-    <p>
-      Poniżej znajdą Państwo informacje w sprawie poszczególnych operacji przetwarzania danych
-      osobowych.
-    </p>
-    <p>a) Niezarejestrowani użytkownicy</p>
-    <p>
-      Jeżeli korzystają Państwo z portalu www.networkpower.pl jako niezarejestrowani użytkownicy,
-      ADO może dokonywać operacji przetwarzania niektórych danych osobowych. Przetwarzanie może
-      dotyczyć takich danych jak aktywność użytkownika w serwisie (tj. &nbsp;dane dotyczące
-      oglądanych ofert pracy, dane dotyczące sesji, urządzenia oraz systemu operacyjnego,
-      przeglądarki, lokalizacji oraz unikalnego ID). &nbsp;Podstawą prawną ADO do przetwarzania tego
-      typu danych jest art. 6 ust. 1 lit. b RODO tj. niezbędność do wykonania umowy o świadczenie
-      usług drogą elektroniczną.
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>ZAMIESZCZANIE DANYCH OSOBOWYCH W BAZIE</strong></p>
-    <p>&nbsp;</p>
-    <p><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p>&nbsp;<br>Poszukiwanie ofert pracy dla użytkowników znajdujących się w bazie</p>
-    <p>&nbsp;<br>ZAKRES DANYCH OSOBOWYCH</p>
-    <p><br>Dane podane w formularzu rejestracyjnym</p>
-    <p>PODSTAWA PRAWNA</p>
-    <p>
-      <br>prawnie uzasadniony interes – zgodnie z postanowieniami zawartej między nami umowy (art.
-      6 ust. 1 lit. f RODO),<br>zgoda użytkownika (art. 6 ust. 1 lit. a RODO).
-    </p>
-    <p><br>TERMIN USUNIĘCIA DANYCH<strong><br></strong>Dane będą przetwarzane do momentu:</p>
-    <p>do momentu, w którym uwzględnimy sprzeciw wobec przetwarzania<br>&nbsp;</p>
-    <p><strong>SKARGI I WNIOSKI</strong></p>
-    <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p><strong>&nbsp;</strong><br>Obsługa zapytań, zgłoszeń i wniosków</p>
-    <p>
-      &nbsp;<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika, dane
-      dotyczące korzystania z usług, będących przyczyną skargi lub wniosku, dane zawarte w
-      dokumentach załączonych do skargi lub wniosku.<br>PODSTAWA PRAWNA<br>prawnie uzasadniony
-      interes (art. 6 ust. 1 lit. f RODO,<br>zgoda użytkownika (art. 6 ust. 1 lit. a RODO).<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane:
-    </p>
-    <p>
-      przez okres niezbędny do rozpatrzenia danego zapytania, skargi lub wniosku, jednak nie dłużej
-      niż przez okres 3 lat od otrzymania określonej wiadomości,<br>jeżeli określona wiadomość
-      stanowi lub może stanowić dowód w postępowaniu przed sądem lub innym organem państwowym,
-      możemy przechowywać takie wiadomości i zawarte w nich dane osobowe do czasu prawomocnego
-      zakończenia postępowania.<br>&nbsp;
-    </p>
-    <p><strong>DZIAŁANIA ANALITYCZNE</strong></p>
-    <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p>
-      &nbsp;<br>Analiza sposobu korzystania z serwisu, celem &nbsp;dostosowania strony do potrzeb
-      i zachowania Użytkowników (więcej w dokumencie – Polityka cookies)
-    </p>
-    <p>
-      &nbsp;<br>ZAKRES DANE OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika<br>PODSTAWA
-      PRAWNA<br>prawnie uzasadniony interes (art. 6 ust.1 lit.f RODO),<br>zgoda użytkownika
-      (art. 6 ust. 1 lit. a RODO).<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do
-      momentu wygaśnięcia ważności lub usunięcia zgody na cookies.<br>&nbsp;
-    </p>
-    <p>
-      <strong>powstanie roszczeń po stronie ADO</strong><br><strong>DOCHODZENIE ROSZCZEŃ</strong>
-    </p>
-    <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p>
-      &nbsp;<br>Ustalenie, dochodzenie lub obrona ewentualnych roszczeń, związanych z zawartą
-      umową lub świadczonymi usługami<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane w
-      profilu użytkownika<br>PODSTAWA PRAWNA<br>prawnie uzasadniony interes (art. 6 ust. 1 lit.f
-      RODO)<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do momentu:
-    </p>
-    <p>
-      w którym &nbsp;upłynie okres przedawnienia roszczeń lub<br>w którym uwzględnimy sprzeciw
-      wobec przetwarzania danych osobowych.<br>&nbsp;
-    </p>
-    <p>
-      <strong>przeprowadzenie badania satysfakcji</strong><br><strong>BADANIE SATYSFAKCJI</strong>
-    </p>
-    <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p>
-      &nbsp;<br>Badanie satysfakcji użytkowników z oferowanych przez ADO usług.<br>ZAKRES DANYCH
-      OSOBOWYCH<br>Dane osobowe podane w profilu użytkownika<br>PODSTAWA PRAWNA<br>prawnie
-      uzasadniony interes (art. 6 ust.1 lit.f RODO<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą
-      przetwarzane do momentu:
-    </p>
-    <p>
-      w którym upłynie okres przedawnienia roszczeń lub<br>w którym uwzględnimy sprzeciw wobec
-      przetwarzania danych osobowych.<br>&nbsp;
-    </p>
-    <p><strong>IV. DZIAŁANIA MARKETINGOWE</strong></p>
-    <p>
-      &nbsp;W ramach serwisu optea.org&nbsp; dokonujemy profilowania wyłącznie w przypadku
-      &nbsp;wyrażenia zgody na tego typu działania.
-    </p>
-    <p>
-      Profilowanie to polega na automatycznej ocenie, jakimi produktami lub usługami mogą być
-      Państwo zainteresowani, wykorzystując do tego informacje o wyświetlanych treściach.
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>DZIAŁANIA MARKETINGOWE</strong></p>
-    <p>&nbsp;<br><strong>CEL PRZETWARZANIA DANYCH OSOBOWYCH</strong></p>
-    <p>&nbsp;<br>Marketing bezpośredni, polegający na wyświetlaniu spersonalizowanych reklam.</p>
-    <p>
-      &nbsp;<br>ZAKRES DANYCH OSOBOWYCH<br>Dane osobowe podane przy utworzeniu konta, dane
-      zawarte w odrębnych formularzach do pozyskiwania zgód oraz dane dotyczące aktywności w
-      serwisie, rejestrowane i przechowywane za pośrednictwem plików cookie.<br>PODSTAWA PRAWNA<br>prawnie uzadadniony interes (art. 6 ust. 1 lit.f RODO<br>zgoda użytkownika (art. 6 ust. 1
-      lit. a RODO).<br>TERMIN USUNIĘCIA DANYCH<br>Dane będą przetwarzane do momentu wygaśnięcia
-      ważności lub usunięcia zgody na cookies.
-    </p>
-    <p><br><strong>V. ODBIORCY DANYCH OSOBOWYCH</strong></p>
-    <p>&nbsp;</p>
-    <p>
-      Serwis optea.org korzysta z usług podmiotów zewnętrznych, które wspierają go w prowadzeniu
-      działalności. Powierzamy im do przetwarzania Państwa dane – podmioty te przetwarzają dane w
-      szczególności na nasze udokumentowane polecenie.
-    </p>
-    <p>
-      Podkreślenia wymaga, że Państwa dane osobowe nie będą przetwarzane przez podmioty spoza Unii
-      Europejskiej.
-    </p>
-    <p>
-      a) Pracodawcy - udostępniamy Państwa dane osobowe Pracodawcom korzystającym z naszych
-      Serwisów.
-    </p>
-    <p>
-      b) Dostawcy usług - Państwa dane osobowe są przekazywane dostawcom usług, z których korzysta
-      ADO przy prowadzeniu serwisu. Dostawcy usług, w zależności od uzgodnień umownych i
-      okoliczności, albo podlegają poleceniom ADO co do celów i sposobów przetwarzania tych danych
-      (podmioty przetwarzające) albo samodzielnie określają cele i sposoby ich przetwarzania
-      (administratorzy).
-    </p>
-    <p>
-      c) Podmioty przetwarzające – ADO korzysta z dostawców, którzy przetwarzają Państwa dane
-      osobowe wyłącznie na nasze polecenie. Świadczą oni dla ADO usługę hostingu w chmurze
-      obliczeniowej, dostarczają systemy do marketingu online, do wyświetlania powiadomień web push,
-      do wysyłki wiadomości e-mail, do analizy ruchu w serwisie, do analizy skuteczności kampanii
-      marketingowych, jak również wspierają realizację określonych usług i funkcjonalności.
-    </p>
-    <p>
-      d) Administratorzy – ADO korzysta z dostawców, którzy nie działają wyłącznie na nasze
-      polecenie i sami ustalą cele i sposoby wykorzystania danych osobowych. Świadczą oni dla nas
-      usługi kampanii remarketingowych oraz prowadzą badania statystyczne. Serwis korzysta także z
-      usługi Facebook i API. Warunki korzystania z tej usługi dostępne są pod linkiem
-      https://www.facebook.com/privacy/explanation, a Politykę prywatności Google można znaleźć pod
-      linkiem: https://www.google.com/policies/privacy.
-    </p>
-    <p>
-      e) Organy państwowe – ADO może udostępnić Państwa dane osobowe, jeżeli zwrócą się do nas o to
-      uprawnione organy państwowe, w szczególności jednostki organizacyjne prokuratury, Policja,
-      Prezes Urzędu Ochrony Danych Osobowych, Prezes Urzędu Ochrony Konkurencji i Konsumentów lub
-      Prezes Urzędu Komunikacji Elektronicznej.
-    </p>
-    <p>
-      Nasi dostawcy mają siedzibę głównie w Polsce i w innych krajach Europejskiego Obszaru
-      Gospodarczego (EOG), np. w Irlandii. Niektórzy spośród naszych dostawców mają siedzibę poza
-      terytorium EOG. W związku z przekazaniem danych poza terytorium EOG zadbaliśmy, aby nasi
-      dostawcy dawali gwarancje wysokiego stopnia ochrony danych osobowych.
-    </p>
-    <p>Lista odbiorców danych osobowych:</p>
-    <p>
-      Rekrutacyjne<br>Fundacja Optea&nbsp;<br>UE<br>Wizerunkowe<br>Facebook<br>UE/poze UE<br>Obsługa infrastruktury informatycznej<br>Fundacja Optea<br>UE<br>&nbsp;
-    </p>
-    <p><strong>VI. UPRAWNIENIA UŻYTKOWNIKÓW</strong></p>
-    <p>&nbsp;</p>
-    <p>
-      W związku z udostępnianiem ADO danych osobowych, przysługuje Państwu szereg następujących
-      praw:
-    </p>
-    <p>
-      Prawo do cofnięcia zgody – mają Państwo prawo do cofnięcia zgody, jakiej udzielili Państwo w
-      momencie rejestracji, jak również podczas korzystania z poszczególnych usług i
-      funkcjonalności. Cofnięcie zgody ma skutek od momentu wycofania zgody. Cofnięcie zgody nie
-      wpływa na przetwarzanie dokonywane przez nas zgodnie z prawem przed jej cofnięciem.<br>Podstawa prawna: art. 7 ust. 3 RODO
-    </p>
-    <p>
-      Prawo do sprzeciwu wobec wykorzystania danych – mają Państwo prawo w dowolnym momencie wnieść
-      sprzeciw wobec wykorzystania danych osobowych. Jeżeli sprzeciw okaże się zasadny i ADO nie
-      będzie posiadać innej podstawy prawnej do przetwarzania Państwa danych osobowych, ADO usunie
-      dane, wobec wykorzystania których był wniesiony sprzeciw.<br>Podstawa prawna: art. 21 RODO
-    </p>
-    <p>
-      Prawo do usunięcia danych – mają Państwo prawo do żądania usunięcia wszystkich lub niektórych
-      danych osobowych. Żądanie usunięcia wszystkich danych osobowych będziemy traktować jako
-      żądanie usunięcia konta w serwisie.<br>Pomimo żądania usunięcia danych osobowych, w związku
-      z wniesieniem sprzeciwu lub wycofaniem zgody, ADO może zachować pewne dane osobowe w zakresie
-      niezbędnym do celów ustalenia, dochodzenia lub obrony roszczeń.
-    </p>
-    <p>Podstawa prawna: art. 17 RODO</p>
-    <p>
-      Prawo do ograniczenia przetwarzania danych – mają Państwo prawo do żądania ograniczenia
-      przetwarzania danych osobowych. Jeżeli zgłoszą Państwo takie żądanie, do czasu jego
-      rozpatrzenia może zostać uniemożliwione korzystanie z określonych funkcjonalności lub usług
-      serwisu.<br>Podstawa prawna: art. 18 RODO
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>Prawo dostępu do danych</strong></p>
-    <p>
-      <br>Mają Państwo prawo uzyskać od ADO potwierdzenie, czy przetwarzamy Państwa dane osobowe
-      oraz:
-    </p>
-    <p>a) uzyskać dostęp do swoich danych osobowych;</p>
-    <p>
-      b) uzyskać informacje o celach przetwarzania, kategoriach przetwarzanych danych osobowych, o
-      odbiorcach lub kategoriach odbiorców tych danych, planowanym okresie przechowywania danych lub
-      o kryteriach ustalania tego okresu, o prawach przysługujących na mocy RODO oraz o prawie
-      wniesienia skargi do organu nadzorczego, o źródle tych danych, o zautomatyzowanym podejmowaniu
-      decyzji, w tym o profilowaniu oraz o zabezpieczeniach stosowanych w związku z przekazaniem
-      tych danych poza Unię Europejską;
-    </p>
-    <p>c) uzyskać kopię swoich danych osobowych.</p>
-    <p>Podstawa prawna: art. 15 RODO</p>
-    <p>
-      Prawo do sprostowania danych<br>Mają Państwo prawo do sprostowania i uzupełnienia podanych
-      przez siebie danych osobowych.
-    </p>
-    <p>Podstawa prawna: art. 16 RODO</p>
-    <p>
-      Prawo do przenoszenia danych<br>Mają Państwo prawo otrzymać swoje dane osobowe, które
-      zostały dostarczone ADO, a następnie przesłać je do innego, wybranego przez siebie,
-      administratora danych osobowych, np. do innego operatora podobnych serwisów.
-    </p>
-    <p>Podstawa prawna: art. 20 RODO</p>
-    <p>&nbsp;</p>
-    <p><strong>Termin udzielenia odpowiedzi przez ADO</strong></p>
-    <p>&nbsp;</p>
-    <p>
-      Jeżeli zdecydują się Państwo wystąpić do ADO z żądaniem, spełnimy to żądanie albo odmówimy
-      jego spełnienia niezwłocznie, nie później jednak niż w ciągu 30 dni od daty jego otrzymaniu.
-    </p>
-    <p>
-      W celu skorzystania z przysługujących Państwu praw prosimy o kontakt z ADO pod adresem e-mail:
-      daneosobowe@ipracujzdalnie.pl.
-    </p>
-    <p>
-      Jeśli uznają Państwo, że Państwa dane osobowe są przetwarzane niezgodnie z prawem, mogą
-      Państwo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (UODO).
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>VII. PLIKI COOKIES</strong></p>
-    <p>
-      Szczegóły dotyczące sposobu korzystania z plików cookie znajdą Państwo w dokumencie - Polityka
-      Cookies.
-    </p>
-    <p>&nbsp;</p>
-    <p><strong>VIII. ZMIANY W POLITYCE PRYWATNOŚCI</strong></p>
-    <p>Stosownie do potrzeb zastrzegamy możliwość zmiany i uzupełnienia Polityki Prywatności.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-  </main>
-      </div>
-      <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December" class="w-96 my-16 self-end">
-    </div>
-    <footer class="border-t border-black pt-8">
-  <nav class="flex flex-wrap justify-between">
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Kongres</li><li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li><li><a href="/mdon_2022/program/">Program</a></li><li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li><li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li><li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li><li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li><li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Organizator</li><li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
-</ul>
-
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Tegoroczna Edycja</li><li><a href="/">MDON 2023</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Kontakt</li><li>
-        <address class="not-italic space-y-2">
-          <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
-          <p><a href="tel:+48666526920">666 526 920</a></p>
-          <p><strong>Fundacja OPTEA</strong></p>
-          <p>Jasionka 953, 36-002 Jasionka</p>
-        </address>
-      </li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li><li><a href="/mdon_2022/rodo/">RODO</a></li>
-</ul>
-  </nav>
-</footer>
-  </body></html>
+</html>

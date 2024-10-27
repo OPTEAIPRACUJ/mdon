@@ -1,171 +1,224 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Patronat honorowy kongresu MDON">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>Patronat honorowy</title>
-  <link rel="stylesheet" href="/assets/404.67f322dd.css" /><script type="module" src="/page.8271e986.js"></script></head>
-  <body class="max-w-[90%] mx-auto py-10">
-    <div class="lg:min-h-screen flex flex-col">
-      <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
-  <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
-    <picture class="astro-3WCREGVO">
-      <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
-      <img src="/images/mdon_logo_m.webp" alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022" class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
-    </picture>
-  </a>
 
-  <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-    <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
-      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
-        <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
-          Kongres
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Patronat honorowy kongresu MDON">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <title>Patronat honorowy</title>
+  <link rel="stylesheet" href="/assets/404.67f322dd.css" />
+  <script type="module" src="/page.8271e986.js"></script>
+</head>
+
+<body class="max-w-[90%] mx-auto py-10">
+  <div class="lg:min-h-screen flex flex-col">
+    <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO">
+      <a class="text-[#6b6b6b] self-center 2xl:mr-auto astro-3WCREGVO" href="/mdon_2022">
+        <picture class="astro-3WCREGVO">
+          <source srcset="/images/mdon_logo.webp" media="(min-width: 1024px)" class="astro-3WCREGVO">
+          <img src="/images/mdon_logo_m.webp"
+            alt="Kongres z okazji Międzynarodowego Dnia Osób z Niepełnosprawnością. 3 grudnia 2022"
+            class="max-w-xs lg:max-w-md xl:max-w-lg astro-3WCREGVO">
+        </picture>
+      </a>
+
+      <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
+        @keydown.escape="isOpen = false">
+        <div class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
+          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
+            <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
+              x-on:click="showKongresDropdown = !showKongresDropdown" class=" astro-3WCREGVO">
+              Kongres
+            </div>
+            <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true"
+              x-on:mouseleave="showKongresDropdown = false"
+              class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
+              <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
+              <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
+              <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
+              <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
+              <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
+              <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
+            </div>
+          </div>
+          <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
+            <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false"
+              x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
+              Mikołajkowy Jarmark Pracy
+            </div>
+            <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true"
+              x-on:mouseleave="showJarmarkDropdown = false"
+              class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
+              <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
+              <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
+            </div>
+          </div>
+          <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
+          <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
+          <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
-        <div x-cloak x-show="showKongresDropdown" x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false" class="absolute w-48 p-6 flex flex-col border border-gray-200 rounded-xl gap-3 text-center bg-white astro-3WCREGVO">
-          <a href="/mdon_2022/o-kongresie/" class="astro-3WCREGVO">O Kongresie</a>
-          <a href="/mdon_2022/program/" class="astro-3WCREGVO">Program</a>
-          <a href="/mdon_2022/prelegenci/" class="astro-3WCREGVO">Prelegenci</a>
-          <a href="/mdon_2022/patronat-honorowy/" class="astro-3WCREGVO">Patronat honorowy</a>
-          <a href="/mdon_2022/patronat-medialny/" class="astro-3WCREGVO">Patronat medialny</a>
-          <a href="/mdon_2022/partnerzy/" class="astro-3WCREGVO">Partnerzy</a>
-        </div>
-      </div>
-      <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showJarmarkDropdown: false }">
-        <div x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" x-on:click="showJarmarkDropdown = !showJarmarkDropdown" class=" astro-3WCREGVO">
-          Mikołajkowy Jarmark Pracy
-        </div>
-        <div x-cloak x-show="showJarmarkDropdown" x-on:mouseover="showJarmarkDropdown = true" x-on:mouseleave="showJarmarkDropdown = false" class="p-6 absolute flex flex-col border border-gray-200 rounded-xl gap-3 w-full text-center bg-white astro-3WCREGVO">
-          <a href="/mdon_2022/organizacje/" class="astro-3WCREGVO">Organizacje</a>
-          <!-- <span class="text-[#6B6B6B]">Atrakcje</span> -->
-        </div>
-      </div>
-      <a href="/mdon_2022/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-      <a href="/" class=" astro-3WCREGVO">MDON 2023</a>
-      <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
-    </div>
-    <button @click="isOpen = !isOpen" type="button" class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO" :class="{ 'transition transform-180': isOpen }">
-      <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" class="astro-3WCREGVO"></path>
-        <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" class="astro-3WCREGVO"></path>
-      </svg>
-    </button>
-    <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
-      <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
-        <details class="group astro-3WCREGVO">
-          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-            <span class=" astro-3WCREGVO">Kongres</span>
+        <button @click="isOpen = !isOpen" type="button"
+          class="absolute top-4 right-4 block lg:hidden px-2 text-black hover:text-black focus:outline-none focus:text-black z-50 astro-3WCREGVO"
+          :class="{ 'transition transform-180': isOpen }">
+          <svg class="h-12 w-12 fill-current astro-3WCREGVO" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+              class="astro-3WCREGVO"></path>
+            <path x-show="!isOpen" fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              class="astro-3WCREGVO"></path>
+          </svg>
+        </button>
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+          <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
+            <details class="group astro-3WCREGVO">
+              <summary
+                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                <span class=" astro-3WCREGVO">Kongres</span>
 
-            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
-              </svg>
-            </span>
-          </summary>
-          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-            <a href="/mdon_2022/o-kongresie/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              O Kongresie
-            </a>
+                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
+                  </svg>
+                </span>
+              </summary>
+              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+                <a href="/mdon_2022/o-kongresie/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  O Kongresie
+                </a>
 
-            <a href="/mdon_2022/program/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Program
-            </a>
-            <a href="/mdon_2022/prelegenci/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Prelegenci
-            </a>
-            <a href="/mdon_2022/patronat-honorowy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Patronat honorowy
-            </a>
-            <a href="/mdon_2022/patronat-medialny/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Patronat medialny
-            </a>
-            <a href="/mdon_2022/partnerzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Partnerzy
-            </a>
-          </nav>
-        </details>
-        <details class="group astro-3WCREGVO">
-          <summary class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-            <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
+                <a href="/mdon_2022/program/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Program
+                </a>
+                <a href="/mdon_2022/prelegenci/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Prelegenci
+                </a>
+                <a href="/mdon_2022/patronat-honorowy/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Patronat honorowy
+                </a>
+                <a href="/mdon_2022/patronat-medialny/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Patronat medialny
+                </a>
+                <a href="/mdon_2022/partnerzy/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Partnerzy
+                </a>
+              </nav>
+            </details>
+            <details class="group astro-3WCREGVO">
+              <summary
+                class="flex cursor-pointer items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                <span class=" astro-3WCREGVO">Mikołajkowy Jarmark Pracy</span>
 
-            <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class="astro-3WCREGVO"></path>
-              </svg>
-            </span>
-          </summary>
-          <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
-            <a href="/mdon_2022/organizacje/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Organizacje
-            </a>
+                <span class="ml-auto shrink-0 transition duration-300 group-open:-rotate-180 astro-3WCREGVO">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 astro-3WCREGVO" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" class="astro-3WCREGVO"></path>
+                  </svg>
+                </span>
+              </summary>
+              <nav class="mt-2 ml-8 flex flex-col space-y-1 astro-3WCREGVO">
+                <a href="/mdon_2022/organizacje/"
+                  class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+                  Organizacje
+                </a>
 
-            <!-- <span
+                <!-- <span
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
               Atrakcje
             </span> -->
-          </nav>
-        </details>
-        <a href="/mdon_2022/organizatorzy/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          Organizatorzy</a>
-        <a href="/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          MDON 2023
-        </a>
-        <a href="/kontakt/" class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-          Kontakt
-        </a>
-      </div>
-    </div>
-  </nav>
-</header>
+              </nav>
+            </details>
+            <a href="/mdon_2022/organizatorzy/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Organizatorzy</a>
+            <a href="/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              MDON 2023
+            </a>
+            <a href="/kontakt/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Kontakt
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
 
-      <div class="flex justify-center grow pt-12">
-        <main class="container">
-    <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-  Patronat Honorowy
-</h1>
-    <div class="lg:my-24 container flex flex-col space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 justify-center">
-      <a href="https://www.gov.pl/web/rodzina" target="_blank">
-        <img src="/images/loga/minister_rodziny_i_polityki_spolecznej.webp" alt="Minister Rodziny i Polityki Społecznej">
-      </a>
-      <a href="https://www.gov.pl/web/fundusze-regiony" target="_blank">
-        <img src="/images/loga/ministerstwo_funduszy_i_polityki_regionalnej.webp" alt="Ministerstwo Funduszy i Polityki Regionalnej">
-      </a>
+    <div class="flex justify-center grow pt-12">
+      <main class="container">
+        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+          Patronat Honorowy
+        </h1>
+        <div class="lg:my-24 container flex flex-col space-y-8 lg:space-y-0 lg:grid lg:grid-cols-2 justify-center">
+          <a href="https://www.gov.pl/web/rodzina" target="_blank">
+            <img src="/images/loga/minister_rodziny_i_polityki_spolecznej.webp"
+              alt="Minister Rodziny i Polityki Społecznej">
+          </a>
+          <a href="https://www.gov.pl/web/fundusze-regiony" target="_blank">
+            <img src="/images/loga/ministerstwo_funduszy_i_polityki_regionalnej.webp"
+              alt="Ministerstwo Funduszy i Polityki Regionalnej">
+          </a>
+        </div>
+      </main>
     </div>
-  </main>
-      </div>
-      <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December" class="w-96 my-16 self-end">
-    </div>
-    <footer class="border-t border-black pt-8">
-  <nav class="flex flex-wrap justify-between">
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Kongres</li><li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li><li><a href="/mdon_2022/program/">Program</a></li><li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li><li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li><li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li><li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li><li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Organizator</li><li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
-</ul>
+    <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December"
+      class="w-96 my-16 self-end">
+  </div>
+  <footer class="border-t border-black pt-8">
+    <nav class="flex flex-wrap justify-between">
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Kongres</li>
+        <li><a href="/mdon_2022/o-kongresie/">O Kongresie</a></li>
+        <li><a href="/mdon_2022/program/">Program</a></li>
+        <li><a href="/mdon_2022/prelegenci/">Prelegenci</a></li>
+        <li><a href="/mdon_2022/patronat-honorowy/">Patronat honorowy</a></li>
+        <li><a href="/mdon_2022/patronat-medialny/">Patronat medialny</a></li>
+        <li><a href="/mdon_2022/partnerzy/">Partnerzy</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Mikołajkowy Jarmark Pracy</li>
+        <li><a href="/mdon_2022/organizacje/">Organizacje</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Organizator</li>
+        <li><a href="/mdon_2022/organizatorzy/">Organizatorzy</a></li>
+      </ul>
 
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Tegoroczna Edycja</li><li><a href="/">Formularz rejestracyjny</a></li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li class="uppercase font-bold">Kontakt</li><li>
-        <address class="not-italic space-y-2">
-          <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
-          <p><a href="tel:+48666526920">666 526 920</a></p>
-          <p><strong>Fundacja OPTEA</strong></p>
-          <p>Jasionka 953, 36-002 Jasionka</p>
-        </address>
-      </li>
-</ul>
-    <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
-  <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li><li><a href="/mdon_2022/rodo/">RODO</a></li>
-</ul>
-  </nav>
-</footer>
-  </body></html>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Tegoroczna Edycja</li>
+        <li><a href="/">Formularz rejestracyjny</a></li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li class="uppercase font-bold">Kontakt</li>
+        <li>
+          <address class="not-italic space-y-2">
+            <p><a href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
+            <p><a href="tel:+48666526920">666 526 920</a></p>
+            <p><strong>Fundacja OPTEA</strong></p>
+            <p>Jasionka 953, 36-002 Jasionka</p>
+          </address>
+        </li>
+      </ul>
+      <ul class="space-y-2 w-2/5 lg:w-1/3 xl:w-fit p-2">
+        <li><a href="/mdon_2022/polityka-prywatnosci/">Polityka prywatności</a></li>
+        <li><a href="/mdon_2022/rodo/">RODO</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

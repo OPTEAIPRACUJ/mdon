@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <title>Międzynarodowy Dzień Osób z Niepełnosprawnością - mdon.pl</title>
+  <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,22 +21,6 @@
 
   <script type="module" src="/page.8271e986.js"></script>
   <style>
-    @font-face {
-      font-family: 'Linguistic Regular';
-      src: url('/assets/LinguisticsPro-Regular.otf') format('opentype');
-    }
-
-    @font-face {
-      font-family: 'Linguistic Bold';
-      src: url('/assets/LinguisticsPro-Bold.otf') format('opentype');
-    }
-
-    .nav-list {
-      a {
-        color: #f2e6d8;
-      }
-    }
-
     .first-section-home {
       display: flex;
       flex-direction: column;
@@ -43,7 +28,6 @@
       color: #f2e6d8;
       background-image: url("/assets_2024/duza-sekcja-tlo.png");
       background-size: 100% 100%;
-      /* background-position: center; */
       background-position-y: 0;
       background-attachment: fixed;
       background-size: cover;
@@ -89,8 +73,7 @@
       max-width: 120px;
     }
 
-    .first-section-home .red-button,
-    .second-section-home .red-button {
+    .red-button {
       background-color: #91051f;
       color: #f2e6d8;
       font-weight: bold;
@@ -149,7 +132,7 @@
 
     .second-section-home .grid-item:first-child .grid-item-row {
       display: flex;
-      font-size: 26px;
+      font-size: 28px;
     }
 
     .second-section-home .grid-item:first-child .grid-item-row div:first-child {
@@ -176,16 +159,6 @@
       grid-column: span 2;
       width: 100%;
       padding: 0;
-    }
-
-    footer {
-      background-color: #f2e6d8;
-      color: black;
-      padding: 24px 100px;
-    }
-
-    footer a {
-      color: black;
     }
 
     @media screen and (max-width: 1024px) {
@@ -227,12 +200,8 @@
         flex-direction: column;
       }
 
-      footer {
-        flex-direction: column;
-      }
-
-      footer a {
-        margin: 0 !important;
+      .second-section-home .grid-item:first-child .grid-item-row {
+        font-size: 18px;
       }
     }
   </style>
@@ -245,7 +214,9 @@
         @keydown.escape="isOpen = false">
         <div class="hidden lg:flex justify-between astro-3WCREGVO p-6 pb-8">
           <div class="flex items-center">
-            <img style="max-width: 100px;" src="/assets_2024/white-logo.png" alt="Białe logo">
+            <a class="cursor-pointer" href="/">
+              <img style="max-width: 100px;" src="/assets_2024/white-logo.png" alt="Białe logo">
+            </a>
             <div class="ml-4 text-white">
               <p style="font-family: 'Dosis', sans-serif;">
                 <span style="font-weight: 600;">KONGRES</span>
@@ -283,9 +254,11 @@
         </button>
 
         <!-- Mobilka navbar -->
-        <div style="z-index: 1;" class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO"
-          x-show="isOpen">
-          <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
+        <div style="z-index: 1;" class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+          <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
+              style="font-weight: bold">
+              Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kongres</a>
@@ -338,14 +311,16 @@
         </p>
 
         <div class="flex buttons">
-          <button class="red-button">
-            Zobacz program
-          </button>
+          <a href="/program"><button class="red-button">
+              Zobacz program
+            </button></a>
 
-          <button class="white-button">
-            <img style="max-width: 48px;" src="/assets_2024/pen.png" alt="Długopis">
-            Zarejestruj się
-          </button>
+          <a href="/formularz-zgloszeniowy">
+            <button class="white-button">
+              <img style="max-width: 48px;" src="/assets_2024/pen.png" alt="Długopis">
+              Zarejestruj się
+            </button>
+          </a>
         </div>
 
         <img class="onz-logo" src="/assets_2024/onz-logo.png" alt="Logo ONZ">
@@ -372,10 +347,12 @@
               Wyzwania i szanse aktywizacji<br> zawodowej.</div>
           </div>
 
-          <button class="red-button" style="max-width: fit-content; margin:auto">Zobacz cały program Kongresu</button>
+          <a href="/program" style="max-width: fit-content; margin:auto">
+            <button class="red-button">Zobacz cały program Kongresu</button>
+          </a>
         </div>
         <div class="grid-item">
-          <div style="min-width: 170px; max-width: 240px; width: 100%; display: flex; align-items: center;">
+          <div style="min-width: 230px; max-width: 300px; width: 100%; display: flex; align-items: center;">
             <img src="/assets_2024/elipsa.png" alt="Elipsa">
           </div>
 
@@ -391,9 +368,9 @@
               uczestników oraz
               zapewnienie im potrzebnych<br> materiałów i narzędzi.
             </p>
-
-            <button class="red-button" style="max-width: fit-content; margin:auto; margin-top: 42px;">Zobacz
-              więcej</button>
+            <a href="/kongres">
+              <button class="red-button" style="max-width: fit-content; margin:auto; margin-top: 42px;">Zobacz
+                więcej</button></a>
           </div>
         </div>
 
@@ -411,7 +388,7 @@
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>
     <a href="#" style="margin-left: 48px;">Fundacja OPTEA i Miasto Stołeczne Warszawa</a>
-    <a href="#" style="max-width: 36px;">
+    <a href="https://www.facebook.com/fundacjaoptea/" target="_blank" style="max-width: 36px;">
       <img class="max-w-[]" src="/assets_2024/fb.png" alt="Facebook logo">
     </a>
   </footer>

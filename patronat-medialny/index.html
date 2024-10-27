@@ -51,8 +51,7 @@
 
       <nav class="text-mdon_blue text-lg uppercase astro-3WCREGVO" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
-        <div
-          style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
+        <div style="background-color: white; border-radius: 10px; padding: 20px; width: 100%; height: 150%;"
           class="hidden lg:flex gap-8 pt-10 astro-3WCREGVO">
           <div class="relative astro-3WCREGVO cursor-pointer" x-data="{ showKongresDropdown: false }">
             <div x-on:mouseover="showKongresDropdown = true" x-on:mouseleave="showKongresDropdown = false"
@@ -83,7 +82,7 @@
             </div>
           </div>
           <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
-<a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
+          <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
           <a href="/mdon_2022/" class=" astro-3WCREGVO">MDON 2022</a>
           <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
         </div>
@@ -99,7 +98,7 @@
               class="astro-3WCREGVO"></path>
           </svg>
         </button>
-        <div class="absolute min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
+        <div class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO">
             <details class="group astro-3WCREGVO">
               <summary
@@ -176,7 +175,7 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               MDON 2022
             </a>
-<a href="/formularz-zgloszeniowy/"
+            <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz zgłoszeniowy
             </a>
@@ -192,30 +191,31 @@
 
     <div class="flex justify-center grow pt-12">
       <main class="container astro-GHCIDAYH">
-  <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-Patronat medialny
-</h1>
-  <div class="flex flex-col justify-center items-center space-y-16 lg:grid lg:grid-cols-3 lg:gap-24 my-16 lg:my-32 astro-GHCIDAYH">
-    <a href="https://radio.rzeszow.pl/" class="astro-GHCIDAYH">
-      <img src="/images/loga/polskie_radio_rzeszow.webp" alt="Polskie radio Rzeszów" class="astro-GHCIDAYH">
-    </a>
-    <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
-      <img src="/images/loga/nowiny24.webp" alt="Nowiny24" class="astro-GHCIDAYH">
-    </a>
-    <a href="https://rzeszow.tvp.pl/" class="astro-GHCIDAYH">
-      <img src="/images/loga/TVP3_rzeszow.webp" alt="TVP3 Rzeszów" class="astro-GHCIDAYH">
-    </a>
-    <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
-      <img src="/images/loga/nowiny_2.png" alt="Super Nowości" class="astro-GHCIDAYH">
-    </a>
-    <a href="https://radiovia.com.pl/" class="astro-GHCIDAYH">
-      <img src="/images/loga/radio_via.webp" alt="Radio Via" class="astro-GHCIDAYH">
-    </a>
-  </div>
-</main>
+        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+          Patronat medialny
+        </h1>
+        <div
+          class="flex flex-col justify-center items-center space-y-16 lg:grid lg:grid-cols-3 lg:gap-24 my-16 lg:my-32 astro-GHCIDAYH">
+          <a href="https://radio.rzeszow.pl/" class="astro-GHCIDAYH">
+            <img src="/images/loga/polskie_radio_rzeszow.webp" alt="Polskie radio Rzeszów" class="astro-GHCIDAYH">
+          </a>
+          <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
+            <img src="/images/loga/nowiny24.webp" alt="Nowiny24" class="astro-GHCIDAYH">
+          </a>
+          <a href="https://rzeszow.tvp.pl/" class="astro-GHCIDAYH">
+            <img src="/images/loga/TVP3_rzeszow.webp" alt="TVP3 Rzeszów" class="astro-GHCIDAYH">
+          </a>
+          <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
+            <img src="/images/loga/nowiny_2.png" alt="Super Nowości" class="astro-GHCIDAYH">
+          </a>
+          <a href="https://radiovia.com.pl/" class="astro-GHCIDAYH">
+            <img src="/images/loga/radio_via.webp" alt="Radio Via" class="astro-GHCIDAYH">
+          </a>
+        </div>
+      </main>
     </div>
 
-    
+
     <img src="/images/IDPD-logo-main.webp" alt="International Day of Persons with Disabilities. 3rd December"
       class="w-96 my-16 self-end">
   </div>
