@@ -21,11 +21,42 @@ const verifyToken = (req, res, next) => {
 
 // READ - Get all users
 app.get('/registration_data', verifyToken, (req, res) => {
-  db.query('SELECT * FROM registration_data', (err, results) => {
+  const searchPhrase = req.query.search; // Get the search phrase from the query parameter
+
+  let sql = 'SELECT * FROM registration_data WHERE ';
+  let params = [];
+
+  // Build the WHERE clause dynamically based on the search phrase
+  if (searchPhrase) {
+    const searchConditions = [];
+    searchConditions.push('fullName LIKE ?');
+    searchConditions.push('company LIKE ?');
+    searchConditions.push('email LIKE ?');
+    searchConditions.push('phone LIKE ?');
+
+    sql += searchConditions.join(' OR ');
+    params.push(`%${searchPhrase}%`, `%${searchPhrase}%`, `%${searchPhrase}%`, `%${searchPhrase}%`);
+  } else {
+    // If no search phrase is provided, return all records
+    sql += '1=1';
+  }
+
+  db.query(sql, params, (err, results) => {
     if (err) {
       return res.status(500).json({ error: 'Database query failed' });
     }
     res.json(results);
+  });
+});
+
+app.get('/registration_data/count', verifyToken, (req, res) => {
+  const sql = 'SELECT COUNT(*) AS total_count FROM registration_data';
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: 'Database query failed' });
+    }
+    res.json(results[0]); // Access the first element containing the total count
   });
 });
 

@@ -51,7 +51,11 @@
             </div>
           </div>
           <div class="flex gap-8 items-end nav-list" style="font-family: 'Dosis', sans-serif;">
+            <a href="/">
+              <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
+            </a>
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
+<a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
             <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
@@ -76,12 +80,16 @@
         <!-- Mobilka navbar -->
         <div style="z-index: 1;" class="fixed min-h-screen bg-white top-0 left-0 w-full astro-3WCREGVO" x-show="isOpen">
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
+              class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kongres</a>
+<a href="/program/"
+              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
+              Program</a>
             <a href="/jarmark/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Jarmark
@@ -114,32 +122,65 @@
     <div class="flex justify-center" style="background-color: white;">
       <main class="lg:flex flex-col items-center lg:items-start" style="overflow-x: auto;  background-color: white">
         <form x-data="{
-          fetchData() {
-            fetch('https://api.mdon.pl/registration_data', {
-                headers: {
-                    'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                }
+          fetchTotal() {
+            const url = `https://api.mdon.pl/registration_data/count`;
+            fetch(url, {
+              headers: {
+                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+              }
             })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            }).then(data => {
+              this.total = data
             })
-            .then(data => { this.registrations = data; this.isLoading = false; })
-            .catch(err => { this.error = err.message; this.isLoading = false; });
+            .catch(err=> {
+              console.log(err)
+            })
+          },
+          fetchData() {
+            const url = `https://api.mdon.pl/registration_data?search=${this.searchPhrase}`;
+
+            fetch(url, {
+              headers: {
+                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+              }
+            })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              this.isPasswordInvalid = false;
+              this.fetchTotal();
+              return response.json();
+            })
+            .then(data => {
+              this.registrations = data;
+              this.isLoading = false;
+            })
+            .catch(err => {
+              this.error = err.message;
+              this.isLoading = false;
+            });
           },
           submitForm() {
             if (this.password === '9TsPXTDqhSZw6PK') {
-              console.log(this.password)
               this.isPasswordFormVisible =  false;
               this.fetchData();
+            } else {
+              this.isPasswordInvalid = true
             }
         },
           password: '',
           tableId: 1,
           registrations: [], isLoading: true, error: null,
           isPasswordFormVisible: true,
+          isPasswordInvalid: false,
+          searchPhrase: '',
+          total: 0,
       }" @submit.prevent="submitForm" class="space-y-6">
           <div class="pb-6">
             <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
@@ -154,11 +195,15 @@
 
                 <button type="submit" class="bg-mdon_blue rounded-full ml-4 text-white text-xl px-4">
                   ok
+                </button>
               </div>
             </div>
+
+            <h5 x-show="isPasswordInvalid" style="margin: 12px 0; color: red; float: right; padding-right: 24px;">Hasło
+              niepoprawne</h5>
           </div>
 
-          <div x-show="!isPasswordFormVisible" style="margin-top: -12px;">
+          <div x-show="!isPasswordFormVisible" style="margin-top: -12px; padding: 12px 12px;">
             <div x-cloak>
               <template x-if="isLoading">
                 <p>Loading...</p>
@@ -169,82 +214,91 @@
               </template>
 
               <template x-if="!isLoading && !error">
-                <table class="registration-table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Imię i nazwisko</th>
-                      <th>Email</th>
-                      <th>Telefon</th>
-                      <th>Firma</th>
-                      <th>Liczba uczestników</th>
-                      <th>Dodany</th>
-                      <th>I.M</th>
-                      <th>K.T</th>
-                      <th>P.Z</th>
-                      <th>P.D</th>
-                      <th>W.W</th>
-                      <!-- Add more headers as necessary -->
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <template x-for="registration in registrations" :key="registration.id">
+                <div class="flex flex-col">
+                  <div style="margin-bottom: 12px; gap: 12px;"
+                    class="flex flex-col lg:flex-row lg:space-x-4 lg:items-center justify-start">
+                    <label class="lg:w-3/5">Wyszukiwanie</label>
+                    <input class="rounded-3xl border-gray-400 w-2/5" type="text" x-model="searchPhrase" x-init="$watch('searchPhrase', () => fetchData())">
+                  </div>
+
+<div style="display: flex; justify-content: flex-end; width: 100%;">
+  <caption style="display: flex; justify-content: flex-end;">Łącznie wyników: <span x-text="total"></span></caption>
+</div>
+                  <table class="registration-table">
+                    <thead>
                       <tr>
-                        <td x-text="registration.id"></td>
-                        <td x-text="registration.fullName"></td>
-                        <td x-text="registration.email"></td>
-                        <td x-text="registration.phone"></td>
-                        <td x-text="registration.company"></td>
-                        <td x-text="registration.amountOfParticipants"></td>
-                        <td x-text="new Date(registration.created_at).toLocaleString()"></td>
-                        <td x-text="registration.informacjeMarketingowe ? 'tak': 'nie'"></td>
-                        <td x-text="registration.kontaktTelefoniczny ? 'tak': 'nie'"></td>
-                        <td x-text="registration.potwierdzenieZgod ? 'tak': 'nie'"></td>
-                        <td x-text="registration.przetwarzanieDanych ? 'tak': 'nie'"></td>
-                        <td x-text="registration.wykorzystanieWizerunku ? 'tak': 'nie'"></td>
-                        <td x-show="false" class="text-red-600 cursor-pointer text-bold"
-                          @click="deleteRegistrationData(registration.id)">Usuń</td>
+                        <th>ID</th>
+                        <th>Imię i nazwisko</th>
+                        <th>Email</th>
+                        <th>Telefon</th>
+                        <th>Firma</th>
+                        <th>Liczba uczestników</th>
+                        <th>Dodany</th>
+                        <th>I.M</th>
+                        <th>K.T</th>
+                        <th>P.Z</th>
+                        <th>P.D</th>
+                        <th>W.W</th>
+                        <!-- Add more headers as necessary -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <template x-for="registration in registrations" :key="registration.id">
+                        <tr>
+                          <td x-text="registration.id"></td>
+                          <td x-text="registration.fullName"></td>
+                          <td x-text="registration.email"></td>
+                          <td x-text="registration.phone"></td>
+                          <td x-text="registration.company"></td>
+                          <td x-text="registration.amountOfParticipants"></td>
+                          <td x-text="new Date(registration.created_at).toLocaleString()"></td>
+                          <td x-text="registration.informacjeMarketingowe ? 'tak': 'nie'"></td>
+                          <td x-text="registration.kontaktTelefoniczny ? 'tak': 'nie'"></td>
+                          <td x-text="registration.potwierdzenieZgod ? 'tak': 'nie'"></td>
+                          <td x-text="registration.przetwarzanieDanych ? 'tak': 'nie'"></td>
+                          <td x-text="registration.wykorzystanieWizerunku ? 'tak': 'nie'"></td>
+                          <td x-show="false" class="text-red-600 cursor-pointer text-bold"
+                            @click="deleteRegistrationData(registration.id)">Usuń</td>
 
-                        <script>
-                          function deleteRegistrationData(id) {
-                            fetch(`https://api.mdon.pl/registration_data/${id}`, {
-                              method: 'DELETE',
-
-                              headers: {
-                                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                              }
-
-                            })
-                              .then(response => {
-                                if (response.ok) {
-                                  // Remove the deleted registration from the local state
-                                  console.log('Registration data deleted successfully');
-                                  fetch('https://api.mdon.pl/registration_data', {
-                                    headers: {
-                                      'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                                    }
-                                  })
-                                    .then(response => {
-                                      if (!response.ok) {
-                                        throw new Error('Network response was not ok');
-                                      }
-                                      return response.json();
-                                    })
-                                    .then(data => { this.registrations = data; this.isLoading = false; })
-                                    .catch(err => { this.error = err.message; this.isLoading = false; });
-                                } else {
-                                  console.error('Error deleting registration data');
+                          <script>
+                            function deleteRegistrationData(id) {
+                              fetch(`https://api.mdon.pl/registration_data/${id}`, {
+                                method: 'DELETE',
+                                headers: {
+                                  'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
                                 }
                               })
-                              .catch(error => {
-                                console.error('Error:', error);
-                              });
-                          }
-                        </script>
-                      </tr>
-                    </template>
-                  </tbody>
-                </table>
+                                .then(response => {
+                                  if (response.ok) {
+                                    // Remove the deleted registration from the local state
+                                    console.log('Registration data deleted successfully');
+                                    fetch('https://api.mdon.pl/registration_data', {
+                                      headers: {
+                                        'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+                                      }
+                                    })
+                                      .then(response => {
+                                        if (!response.ok) {
+                                          throw new Error('Network response was not ok');
+                                        }
+                                        return response.json();
+                                      })
+                                      .then(data => { this.registrations = data; this.isLoading = false; })
+                                      .catch(err => { this.error = err.message; this.isLoading = false; });
+                                  } else {
+                                    console.error('Error deleting registration data');
+                                  }
+                                })
+                                .catch(error => {
+                                  console.error('Error:', error);
+                                });
+                            }
+                          </script>
+                        </tr>
+                      </template>
+                    </tbody>
+                  </table>
+                </div>
               </template>
 
             </div>
@@ -263,7 +317,7 @@
     </div>
   </div>
 
-  <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end; background-color: white;" >
+  <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end; background-color: white;">
     <a href="/regulamin/">Regulamin</a>
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
