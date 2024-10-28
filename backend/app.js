@@ -2,7 +2,6 @@ var http = require('http');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000; // Use hosting platform’s port or default to 3000
-const jwt = require('jsonwebtoken');
 
 const cors = require('cors');
 const db = require('./db');
@@ -15,14 +14,9 @@ app.use(express.json());
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; // Extract token from 'Bearer token' format
-  if (!token) return res.sendStatus(401); // Unauthorized
+  if (!token || token !== jwtSecret) return res.sendStatus(401); // Unauthorized
 
   else next();
-  //   jwt.verify(token, jwtSecret, (err, decoded) => {
-  // if (err) return res.sendStatus(403); // Forbidden
-  // req.user = decoded; // Attach decoded user data to the request object
-  //     next(); // Proceed if token is valid
-  //   });
 };
 
 // READ - Get all users
