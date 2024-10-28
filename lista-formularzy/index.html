@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Formularz zgłoszeniowy</title>
+  <title>Formularz rejestracyjny</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <div class="lg:min-h-screen flex flex-col">
+  <div class=" flex flex-col">
     <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
       <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
@@ -55,11 +55,19 @@
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
-<a href="/program/" class="astro-3WCREGVO">Program</a>
+            <a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
-            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
-            <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
-            <a href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -82,12 +90,13 @@
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
               class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
-              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;"
+                src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kongres</a>
-<a href="/program/"
+            <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
             <a href="/jarmark/"
@@ -96,12 +105,18 @@
             </a>
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Formularz zgłoszeniowy
+              Formularz rejestracyjny
             </a>
-            <a href="/poprzednie-edycje/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Poprzednie edycje</a>
-            <a href="/patroni/"
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Nasi Patroni
             </a>
@@ -135,11 +150,32 @@
               }
               return response.json();
             }).then(data => {
-              this.total = data
+              if (!data.total_count) return;
+              this.total = data.total_count
             })
             .catch(err=> {
               console.log(err)
             })
+          },
+          deleteRegistrationData(id) {
+            fetch(`https://api.mdon.pl/registration_data/${id}`, {
+              method: 'DELETE',
+              headers: {
+                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+              }
+            })
+              .then(response => {
+                if (response.ok) {
+                  setTimeout(() => {
+                    this.fetchData()
+                  }, 1500);
+                } else {
+                  console.error('Error deleting registration data');
+                }
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
           },
           fetchData() {
             const url = `https://api.mdon.pl/registration_data?search=${this.searchPhrase}`;
@@ -216,14 +252,17 @@
               <template x-if="!isLoading && !error">
                 <div class="flex flex-col">
                   <div style="margin-bottom: 12px; gap: 12px;"
-                    class="flex flex-col lg:flex-row lg:space-x-4 lg:items-center justify-start">
-                    <label class="lg:w-3/5">Wyszukiwanie</label>
-                    <input class="rounded-3xl border-gray-400 w-2/5" type="text" x-model="searchPhrase" x-init="$watch('searchPhrase', () => fetchData())">
+                    class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-start">
+                    <label class="lg:w-3/5">Wyszukiwanie </label>
+                    <input class="rounded-3xl border-gray-400 w-2/5"
+                      placeholder="Imię, nazwisko, Email, Telefon lub firma" type="text" x-model="searchPhrase"
+                      x-init="$watch('searchPhrase', () => fetchData())">
                   </div>
 
-<div style="display: flex; justify-content: flex-end; width: 100%;">
-  <caption style="display: flex; justify-content: flex-end;">Łącznie wyników: <span x-text="total"></span></caption>
-</div>
+                  <div style="display: flex; justify-content: flex-end; width: 100%;">
+                    <caption style="display: flex; justify-content: flex-end;">Łącznie wszystkich zgłoszeń: <span
+                        x-text="total" style="margin-left: 12px;"></span></caption>
+                  </div>
                   <table class="registration-table">
                     <thead>
                       <tr>
@@ -257,47 +296,17 @@
                           <td x-text="registration.potwierdzenieZgod ? 'tak': 'nie'"></td>
                           <td x-text="registration.przetwarzanieDanych ? 'tak': 'nie'"></td>
                           <td x-text="registration.wykorzystanieWizerunku ? 'tak': 'nie'"></td>
-                          <td x-show="false" class="text-red-600 cursor-pointer text-bold"
+                          <td class="text-red-600 cursor-pointer text-bold"
                             @click="deleteRegistrationData(registration.id)">Usuń</td>
-
-                          <script>
-                            function deleteRegistrationData(id) {
-                              fetch(`https://api.mdon.pl/registration_data/${id}`, {
-                                method: 'DELETE',
-                                headers: {
-                                  'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                                }
-                              })
-                                .then(response => {
-                                  if (response.ok) {
-                                    // Remove the deleted registration from the local state
-                                    console.log('Registration data deleted successfully');
-                                    fetch('https://api.mdon.pl/registration_data', {
-                                      headers: {
-                                        'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
-                                      }
-                                    })
-                                      .then(response => {
-                                        if (!response.ok) {
-                                          throw new Error('Network response was not ok');
-                                        }
-                                        return response.json();
-                                      })
-                                      .then(data => { this.registrations = data; this.isLoading = false; })
-                                      .catch(err => { this.error = err.message; this.isLoading = false; });
-                                  } else {
-                                    console.error('Error deleting registration data');
-                                  }
-                                })
-                                .catch(error => {
-                                  console.error('Error:', error);
-                                });
-                            }
-                          </script>
                         </tr>
                       </template>
                     </tbody>
                   </table>
+                  <div x-show="registrations.length && registrations.length !== total"
+                    style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 24px;">
+                    <caption style="display: flex; justify-content: flex-end;">Zgłoszeń po przefiltrowaniu: <span
+                        x-text="registrations.length" style="margin-left: 12px;"></span></caption>
+                  </div>
                 </div>
               </template>
 
@@ -318,7 +327,7 @@
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end; background-color: white;">
-    <a href="/regulamin/">Regulamin</a>
+    
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

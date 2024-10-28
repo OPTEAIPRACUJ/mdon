@@ -37,7 +37,7 @@
       font-family: "Linguistic Regular";
       padding: 48px;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
       color: rgb(85, 85, 85);
     }
 
@@ -51,7 +51,7 @@
 </head>
 
 <body>
-  <div class="lg:min-h-screen flex flex-col">
+  <div class=" flex flex-col">
     <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
       <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
@@ -80,9 +80,17 @@
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
 <a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
-            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
-            <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
-            <a href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -119,12 +127,18 @@
             </a>
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Formularz zgłoszeniowy
+              Formularz rejestracyjny
             </a>
-            <a href="/poprzednie-edycje/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Poprzednie edycje</a>
-            <a href="/patroni/"
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Nasi Patroni
             </a>
@@ -143,7 +157,7 @@
     </header>
 
     <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="max-w-2xl flex flex-col items-center lg:items-start">
+      <main class="max-w-2xl flex flex-col items-start">
         <div class="pb-6">
           <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
             Skontaktuj się z nami
@@ -253,7 +267,7 @@
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
-    <a href="/regulamin/">Regulamin</a>
+ 
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

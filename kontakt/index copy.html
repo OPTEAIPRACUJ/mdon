@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Program</title>
+  <title>Kongres</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo4.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -30,19 +30,49 @@
       align-items: center;
     }
 
-    .second-section-kongres {
+    .second-section-formularz {
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
+      font-family: 'Dosis', sans-serif;
       padding: 48px;
-      max-width: 1100px;
-      margin: 0 auto;
-      color: rgb(85, 85, 85);
+      max-width: 830px;
+      margin: auto;
+      color: #f2e6d8;
+      background-color: #91051f;
+      margin-top: 64px;
+      border-radius: 24px;
+    }
+    
+    .second-section-formularz a {
+      color: #f2e6d8 !important;
     }
 
-    @media screen and (max-width: 800px) {
-      main {
+    .second-section-formularz .wyslij-zgloszenie-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .second-section-formularz input {
+      background-color: #f2e6d8;
+      color: #91051f;
+    }
+    
+    .second-section-formularz .wyslij-zgloszenie-container button {
+      display: flex;
+      max-width: 180px;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2e6d8;
+      color: #91051f;
+      font-weight: bold;
+      border-radius: 24px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .second-section-formularz {
+        margin:24px;
         padding: 24px;
       }
     }
@@ -78,7 +108,7 @@
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
-            <a href="/program/" class="astro-3WCREGVO">Program</a>
+<a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
             <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
@@ -113,13 +143,12 @@
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
               class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
-              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;"
-                src="/assets_2024/home_bialy.png" alt="Domek">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kongres</a>
-            <a href="/program/"
+<a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
             <a href="/jarmark/"
@@ -157,100 +186,121 @@
       </nav>
     </header>
 
-    <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="flex flex-col space-y-6 max-w-4xl"
-        style="font-family: 'Linguistic Regular';font-weight: 400; color: black;">
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:30</span>
-          <p class="w-full ">
-            Oficjalne otwarcie Kongresu
-          </p>
-        </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:40</span>
-          <p class="w-full ">
-            Wystąpienia wprowadzające
-          </p>
-        </section>
-        <section class="flex w-full ">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">10:00 - 11:30</span>
-          <div class="w-full">
-            <p class="astro-O6POA4E3">
-              Panel 1: Holistyczne spojrzenie na sferę aktywizacji zawodowej i społecznej osób z niepełnosprawnościami.
-              <br class="astro-O6POA4E3">
-              <br class="astro-O6POA4E3">
+    <main class="flex flex-col items-center items-start">
+      <section class="first-section">
+      </section>
 
-            </p>
-            <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
-              <li>Jak skutecznie łączyć działania instytucji rządowych, samorządowych i NGO na rzecz aktywizacji
-                zawodowej
-                i
-                społecznej?
-              </li>
-              <li>
-                Rola edukacji, szkoleń i dostępności technologii w aktywizacji osób z niepełnosprawnościami
-              </li>
-              <li>
-                Znaczenie wsparcia psychologicznego i społecznego w procesie aktywizacji
-              </li>
-              <li>Integracja różnych modeli wsparcia - jak stworzyć zrównoważony i efektywny system, który uwzględnia
-                indywidualne potrzeby osób z niepełnosprawnościami</li>
-            </ul>
-          </div>
-        </section>
-        <section class="flex w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">12:00 - 13:20</span>
-          <div class="w-full">
-            <p class="astro-O6POA4E3">
-              Panel 2: Rynek pracy osób z niepełnosprawnościami. Wyzwania i szanse aktywizacji zawodowej.
-              <br class="astro-O6POA4E3">
-              <br class="astro-O6POA4E3">
-            </p>
-            <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
-              <li>Dostosowanie miejsc pracy i technologii do potrzeb osób z niepełnosprawnościami
-              </li>
-              <li>
-                Jakie wsparcie jest potrzebne pracodawcom, aby zachęcić ich do zatrudniania osób z
-                niepełnosprawnościami?
-              </li>
-              <li>
-                Przykłady dobrych praktyk w zatrudnianiu osób z niepełnosprawnościami w różnych branżach
-              </li>
-              <li>Bariery i wyzwania związane z zatrudnieniem osób z niepełnosprawnościami, oraz sposoby ich pokonywania
-              </li>
-              <li>Programy wsparcia finansowego i doradztwo zawodowe - jak skutecznie korzystać z dostępnych narzędzi?
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">13:30-14:00</span>
-          <p class="w-full ">
-            Networking uczestników
+      <section class="second-section-formularz ">
+        <div class="pb-6">
+          <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+            Skontaktuj się z nami
+          </h1>
+          <p>
+            Zadzwoń do nas test: <a href="tel:+48666526920">666 526 920</a>
           </p>
-        </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">14:00</span>
-          <p class="w-full ">
-            Zakończenie kongresu
+          <p>
+            Napisz do nas: <a href="mailto:biuro@optea.pl ">biuro@optea.pl </a>
           </p>
-        </section>
-        <section class="flex mt-16 w-full" style="margin-top: 48px;">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right"></span>
-          <p class="w-full ">
-            <a href="/formularz-zgloszeniowy">
-              <button class="red-button" style="max-width: fit-content;">
-                Zarejestruj się
+          <p class="text-xl lg:text-2xl mt-8">Albo wypełnij formularz:</p>
+        </div>
+
+        <div class="pt-6">
+          <form x-data="function contactForm() {
+    return {
+      formData: {
+        name: &#34;&#34;,
+        email: &#34;&#34;,
+        phone: &#34;&#34;,
+        message: &#34;&#34;,
+        zgoda: false,
+        buttonText: &#34;Prze\u015Blij&#34;,
+        status: &#34;&#34;
+      }
+    };
+  }" @submit.prevent="async function submitForm() {
+    this.formData.buttonText = &#34;Wysy\u0142anie...&#34;;
+    await fetch(&#34;/mail.php&#34;, {
+      method: &#34;POST&#34;,
+      headers: {
+        &#34;Content-Type&#34;: &#34;application/x-www-form-urlencoded&#34;
+      },
+      body: &#34;form_name=&#34; + this.formData.name + &#34;&#38;form_email=&#34; + this.formData.email + &#34;&#38;form_phone=&#34; + this.formData.phone + &#34;&#38;form_message=&#34; + this.formData.message + &#34;&#38;form_zgoda=&#34; + this.formData.zgoda
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(&#34;Wysy\u0142anie wiadomo\u015Bci nie powiod\u0142o si\u0119. Spr\xF3buj ponownie p\xF3\u017Aniej.&#34;);
+      }
+    }).then(() => {
+      this.formData.buttonText = &#34;Wy\u015Blij wiadomo\u015B\u0107&#34;;
+      this.formData.name = &#34;&#34;;
+      this.formData.email = &#34;&#34;;
+      this.formData.phone = &#34;&#34;;
+      this.formData.message = &#34;&#34;;
+      this.formData.zgoda = false;
+      this.formData.status = &#34;Wys\u0142ano wiadomo\u015B\u0107&#34;;
+    }).catch(() => {
+      this.formData.status = &#34;Wysy\u0142anie wiadomo\u015Bci nie powiod\u0142o si\u0119. Spr\xF3buj ponownie p\xF3\u017Aniej.&#34;;
+      this.formData.buttonText = &#34;Wy\u015Blij wiadomo\u015B\u0107&#34;;
+      this.formData.name = &#34;&#34;;
+      this.formData.email = &#34;&#34;;
+      this.formData.phone = &#34;&#34;;
+      this.formData.message = &#34;&#34;;
+      this.formData.zgoda = false;
+    });
+  }" class="space-y-6">
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_name" class="lg:w-2/5">Imię i nazwisko:</label>
+              <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="text" name="form_name" id="form_name"
+                x-model="formData.name">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_email" class="lg:w-2/5">Twój email: <span class="text-red-600 text-xl">*</span>
+              </label>
+              <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="email" required name="form_email"
+                id="form_email" x-model="formData.email">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_phone" class="lg:w-2/5">Twój telefon:</label>
+              <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="tel" name="form_phone"
+                id="form_phone" x-model="formData.phone">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-start">
+              <label for="form_message" class="lg:w-2/5">Treść Twojej wiadomości: <span
+                  class="text-red-600 text-xl">*</span>
+              </label>
+              <textarea class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" name="form_message" required
+                id="form_message" rows="6" x-model="formData.message"></textarea>
+            </div>
+            <div class="text-sm">
+              <input type="checkbox" x-model="formData.zgoda" required name="form_zgoda" id="form_zgoda"
+                class="border-gray-400 w-6 h-6">
+              <label for="form_zgoda" class="ml-4">Zgoda regulaminowa <span class="text-red-600 text-xl">*</span>
+                <p class="mt-4 text-justify">
+                  Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi złożonego
+                  zapytania, jestem świadomy, że dane podane w formularzu będą przetwarzane i mam prawo
+                  do wglądu swoich danych, do żądania zmiany, uzupełnienia, ograniczenia przetwarzania,
+                  a także usunięcia ich.
+                </p>
+              </label>
+            </div>
+            <div class="text-sm">
+              <p>
+                Pola oznaczone czerwoną gwiazdką <span class="text-red-600 text-xl">*</span> są wymagane
+              </p>
+            </div>
+            <div class="flex flex-col items-center pb-8">
+              <p class="text-2xl my-8 font-bold" x-text="formData.status"></p>
+              <button type="submit" x-text="formData.buttonText"
+                class="bg-mdon_blue rounded-full px-8 py-4 text-white text-xl">
               </button>
-            </a>
-          </p>
-        </section>
-      </main>
-    </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
-
+ 
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

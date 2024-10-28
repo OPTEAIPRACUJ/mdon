@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo5.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -34,24 +34,75 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
-      padding: 48px;
-      max-width: 1100px;
-      margin: auto;
+      font-family: "Dosis";
+      padding: 72px 48px;
+      margin: 0 auto;
       color: rgb(85, 85, 85);
+      width: 100%;
+      align-items: center;
     }
 
-    @media screen and (max-width: 800px) {
-      main {
+    .second-section-kongres .images-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin-bottom: 64px;
+      width: 100%;
+      gap: 24px;
+    }
+
+    .second-section-kongres .buttons {
+      display: flex;
+      gap: 24px;
+      font-size: 24px;
+    }
+
+    .second-section-kongres .buttons button {
+      min-height: 68px;
+    }
+
+    .second-section-kongres .buttons .white-button:hover {
+      background-color: transparent;
+    }
+    .second-section-kongres .images-container a{
+      transition: 400ms all;
+    }
+    .second-section-kongres .images-container a:hover {
+      transform: scale(1.05);
+    }
+
+    main {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .second-section-kongres {
         padding: 24px;
       }
+
+      .second-section-kongres .images-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .second-section-kongres .images-container img {
+        max-width: fit-content;
+      }
+
+      .second-section-kongres .buttons {
+        flex-direction: column;
+      }
     }
+
+    @media screen and (max-width: 768px) {.second-section-kongres .images-container img {
+        max-height: 200px !important;
+      }}
   </style>
   <script type="module" src="/page.8271e986.js"></script>
 </head>
 
 <body>
-  <div class="lg:min-h-screen flex flex-col">
+  <div class=" flex flex-col">
     <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
       <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
@@ -78,11 +129,19 @@
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
-<a href="/program/" class="astro-3WCREGVO">Program</a>
+            <a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
-            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
-            <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
-            <a href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -105,12 +164,13 @@
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
               class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
-              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;"
+                src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kongres</a>
-<a href="/program/"
+            <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
             <a href="/jarmark/"
@@ -119,12 +179,18 @@
             </a>
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Formularz zgłoszeniowy
+              Formularz rejestracyjny
             </a>
-            <a href="/poprzednie-edycje/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Poprzednie edycje</a>
-            <a href="/patroni/"
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Nasi Patroni
             </a>
@@ -144,78 +210,37 @@
 
     <div class="flex justify-center" style="background-color: #f2e6d8;">
       <main class=" flex flex-col items-center lg:items-start">
-        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-          Organizatorzy
-        </h1>
-        <article class="flex flex-col lg:flex-row justify-between lg:space-x-8" style="margin-bottom: 24px;">
-          <a href="https://www.optea.org/" target="_blank">
-            <img class="self-center pb-6 w-60 mx-auto" src="/images/logo_optea.webp" alt="Fundacja OPTEA">
-          </a>
-          <p class="max-w-2xl text-justify">
-            <a href="https://www.optea.org/" target="_blank">Fundacja OPTEA</a> zajmuje się aktywizacją zawodową
-            osób z orzeczonym stopniem niepełnosprawności. Od początku swojej działalności ukierunkowana
-            jest na świadczenie nieodpłatnych usług mających na celu wsparcie osób z niepełnosprawnością
-            w znalezieniu zatrudnienia na otwartym rynku pracy. Fundacja kładzie nacisk na realizację zasad
-            równości szans i niedyskryminacji. Promuje również zatrudnienie osób z małych wsi i miast bez
-            możliwości dojazdu do pracy, matek wychowujących dzieci, opiekunów osób starszych i niepełnosprawnych.
-            Fundacja OPTEA czynnie uczestniczy w procesie rekrutacji oraz zatrudniania osób z orzeczoną
-            niepełnosprawnością
-            w stopniu umiarkowanym i znacznym ze schorzeniami szczególnymi, które należą do grupy osób najbardziej
-            wykluczonych. Fundacja jest łącznikiem pomiędzy organizacjami pozarządowymi, działającymi na
-            rzecz aktywizacji zawodowej osób z niepełnosprawnością a pracodawcami. Fundacja OPTEA planuje
-            organizację Kongresu z okazji Międzynarodowego Dnia Osób z Niepełnosprawnościami, podczas, którego
-            odbędą się 4 panele dyskusyjne poświęcone aktywizacji zawodowej i społecznej osób z niepełnosprawnościami.
-            Ponadto Fundacja planuje cyklicznie organizować Kongres i Ogólnopolskie Targi Pracy NetWorkPower,
-            podczas których odbędą się liczne panele dyskusyjne, mające na celu promowanie zatrudniania osób
-            z orzeczoną niepełnosprawnością wśród pracodawców. W ramach działalności statutowej Fundacja
-            organizuje szkolenia zawodowe oraz warsztaty dla osób z niepełnosprawnością, a także utworzyła
-            infolinię informacyjną zarówno dla osób z orzeczoną niepełnosprawnością jak i dla pracodawców
-            wyrażających chęć zatrudnienia osób z orzeczonym stopniem niepełnosprawności. Dodatkowo Fundacja
-            podejmuje działania mające na celu promocję i aktywizację zawodową osób z niepełnosprawnością
-            pochodzących z Ukrainy.
-          </p>
-        </article>
+        <section class="first-section">
+        </section>
+        <section class="second-section-kongres">
+          <div class="images-container">
+            <a href="https://um.warszawa.pl/waw/markawarszawa" target="_blank">
+              <img style="max-height: 300px;" src="/assets_2024/warszawa-organizator.png" alt="Warszawa organizator">
+            </a>
+            <a href="https://www.optea.org/" target="_blank">
+              <img style="max-height: 300px;" src="/assets_2024/optea-organizator.png" alt="Optea organizator">
+            </a>
+          </div>
 
-        <article class="flex flex-col lg:flex-row justify-between lg:space-x-8">
-          <a href="https://www.ipracujzdalnie.pl/" target="_blank">
-            <img class="self-center pb-6 w-60 mx-auto" src="/images/logo_ipz.webp" alt="ipracujzdalnie.pl">
-          </a>
-          <p class="max-w-2xl text-justify">
-            <a href="https://www.ipracujzdalnie.pl/" target="_blank">iPRACUJZDALNIE.pl</a> to innowacyjny
-            portal pracy zdalnej i stacjonarnej oraz agencja pracy w jednym. iPRACUJZDALNIE.pl jako jedyne
-            w Polsce prowadzi aktywizację zawodową osób wykluczonych społecznie oraz zagrożonych wykluczeniem,
-            w tym osób z niepełnosprawnościami od stopnia lekkiego do znacznego, nie wyłączając osób z
-            niepełnosprawnościami
-            sprzężonymi i chorobami psychicznymi. iPRACUJZDALNIE.pl kładzie nacisk na realizację zasad równości
-            szans i niedyskryminacji. Aktywnie wspiera zatrudnienie osób z niepełnosprawnościami z małych
-            miejscowości bez możliwości dojazdu do pracy, poprzez promowanie pracy zdalnej. Wiele agencji
-            pracy działa w ograniczonym obszarze, nie dostosowując możliwości kandydata do oferowanego stanowiska
-            pracy, co powoduje szybką rezygnację pracodawcy z zatrudniania osób z niepełnosprawnościami,
-            przysparzając wielu rozczarowań obu stronom. iPRACUJZDALNIE.pl posiada szeroko rozwinięty system
-            rekrutacyjny, prowadzi opiekę ekspercką oraz dokumentację kadrową – te rozbudowane narzędzia
-            minimalizują późniejsze straty kadrowe, w innowacyjny sposób pomagają osobom z niepełnosprawnościami
-            miękko wejść na otwarty rynek pracy dostosowując możliwości i posiadane kompetencje do stanowiska
-            pracy. iPRACUJZDALNIE.pl to szereg współdziałających między sobą ogniw – od opieki nad zatrudnionymi
-            pracownikami, jak również nad pracodawcami, poprzez realizację szkoleń, udzielanie wsparcia
-            psychologicznego,
-            aż po wpływ na świadomość pracodawców na temat zatrudniania osób z niepełnosprawnościami poprzez
-            prowadzenie coachingów, uczestnictwo w kongresach, konferencjach, forach, giełdach i targach
-            pracy, tworzenie projektów celowanych do pracodawców. iPRACUJZDALNIE.pl prowadzi usługę rekrutacji
-            dla podmiotów komercyjnych - daje możliwości działom HR, by znaleźć odpowiedniego kandydata do
-            pracy. Jest to projekt, który łączy organizacje non – profit, stowarzyszenia, fundacje, uczelnie,
-            urzędy pracy, organy administracji państwowej zwiększając poziom zatrudnienia osób z niepełnosprawnościami
-            przez przedsiębiorców z całej Polski. Projekt nie ogranicza się jedynie do znalezienia pracy,
-            jest to szeroko zakrojona działalność wzmacniająca pozycję osób z niepełnosprawnościami na rynku
-            pracy, a przełamując bariery architektoniczne, społeczne i psychologiczne otwiera rynek pracy
-            dla osób wykluczonych społecznie i zagrożonych wykluczeniem.
-          </p>
-        </article>
+          <div class="flex buttons">
+            <a href="/program"><button class="red-button cursor-pointer">
+                Zobacz program
+              </button></a>
+
+            <a href="/formularz-zgloszeniowy">
+              <button class="white-button cursor-pointer">
+                <img style="max-width: 48px;" src="/assets_2024/pen-red.png" alt="Długopis">
+                Zarejestruj się
+              </button>
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
-    <a href="/regulamin/">Regulamin</a>
+
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

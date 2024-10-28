@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Formularz zgłoszeniowy</title>
+  <title>Kongres</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo4.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -30,19 +30,49 @@
       align-items: center;
     }
 
-    .second-section-kongres {
+    .second-section-formularz {
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
+      font-family: 'Dosis', sans-serif;
       padding: 48px;
-      max-width: 1100px;
+      max-width: 830px;
       margin: auto;
-      color: rgb(85, 85, 85);
+      color: #f2e6d8;
+      background-color: #91051f;
+      margin-top: 64px;
+      border-radius: 24px;
+    }
+    
+    .second-section-formularz a {
+      color: #f2e6d8 !important;
     }
 
-    @media screen and (max-width: 800px) {
-      main {
+    .second-section-formularz .wyslij-zgloszenie-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .second-section-formularz input {
+      background-color: #f2e6d8;
+      color: #91051f;
+    }
+    
+    .second-section-formularz .wyslij-zgloszenie-container button {
+      display: flex;
+      max-width: 180px;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2e6d8;
+      color: #91051f;
+      font-weight: bold;
+      border-radius: 24px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .second-section-formularz {
+        margin:24px;
         padding: 24px;
       }
     }
@@ -51,7 +81,7 @@
 </head>
 
 <body>
-  <div class="lg:min-h-screen flex flex-col">
+  <div class="flex flex-col">
     <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
       <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
@@ -80,9 +110,17 @@
             <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
 <a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
-            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz zgłoszeniowy</a>
-            <a href="/poprzednie-edycje/" class=" astro-3WCREGVO">Poprzednie edycje</a>
-            <a href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -119,12 +157,18 @@
             </a>
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Formularz zgłoszeniowy
+              Formularz rejestracyjny
             </a>
-            <a href="/poprzednie-edycje/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Poprzednie edycje</a>
-            <a href="/patroni/"
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+              Poprzednie edycje
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                  <ul>
+                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                  </ul>
+              </div>
+          </div>
+            <a x-show="false" href="/patroni/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Nasi Patroni
             </a>
@@ -142,347 +186,260 @@
       </nav>
     </header>
 
-    <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="max-w-2xl flex flex-col items-center lg:items-start">
-        <div class="pb-6">
-          <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-8 mt-16">Witaj!</h1>
-          <p>Aby bezpłatnie wziąć udział w Kongresie z okazji Międzynarodowego Dnia Osób z Niepełnosprawnościami i
-            Mikołajkowym Jarmarku Pracy i Rękodzieła </p>
-          <p>wypełnij poniższy formularz rejestracyjny</p>
-        </div>
+    <main class="flex flex-col items-center items-start">
+      <section class="first-section">
+      </section>
 
-        <div class="pt-6">
-          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-          <script type="text/javascript">
-            (function () {
-              emailjs.init("o8grxPUg0ZKA4R5cN"); // Replace with your EmailJS user ID
-            })();
-          </script>
-          <form x-data="{
-          formData: {
-            fullName: '',
-            company: '',
-            email: '',
-            phone: '',
-            amountOfParticipants: 1,
-            potwierdzenieZgod: false,
-            zgodyUzytkownika: {
-              przetwarzanieDanych: false,
-              otrzymywanieInformacji: false,
-              wykorzystanieWizerunku: false,
-              informacjeMarketingowe: false,
-              kontaktTelefoniczny: false
-            }
-          },
-          buttonText: 'Wyślij zgłoszenie',
-          status: '',
-            submitForm() {
-              this.buttonText = 'przesyłanie';
-              
-              fetch('https://api.mdon.pl/registration_data', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ'
-                },
-                body: JSON.stringify({
-                fullName: this.formData.fullName,
-                company: this.formData.company,
-                email: this.formData.email,
-                phone: this.formData.phone,
-                amountOfParticipants: this.formData.amountOfParticipants,
-                potwierdzenieZgod: this.formData.potwierdzenieZgod,
-                zgodyUzytkownika: {
-                  przetwarzanieDanych: this.formData.zgodyUzytkownika.przetwarzanieDanych,
-                otrzymywanieInformacji: this.formData.zgodyUzytkownika.otrzymywanieInformacji,
-                wykorzystanieWizerunku: this.formData.zgodyUzytkownika.wykorzystanieWizerunku,
-                informacjeMarketingowe: this.formData.zgodyUzytkownika.informacjeMarketingowe,
-                kontaktTelefoniczny: this.formData.zgodyUzytkownika.kontaktTelefoniczny,
-                }
-                }),
-              })
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error('Network response was not ok');
-                }
-                return response.json();
-              })
-              .then(data => {
-                console.log('Success:', data);
-              })
-              .catch(error => {
-                console.error('Error:', error);
-              });
-              
-              // Logika wysyłania formularza
-              console.log('Form submitted');
-              
-              // Wysłanie formularza za pomocą emailjs
-              emailjs.send('service_757wcup', 'template_4tog43f', this.formData)
-                  .then((response) => {
-                      console.log('SUCCESS!', response.status, response.text);
-                      this.buttonText = 'przesłano';
+      <section class="second-section-formularz ">
+      <div class="pb-6" style="font-size: 22px; font-weight: bold;">
+        <p>Aby bezpłatnie wziąć udział w Kongresie z okazji Międzynarodowego Dnia Osób </p><p>z Niepełnosprawnościami i
+          Mikołajkowym Jarmarku Pracy i Rękodzieła wypełnij poniższy formularz rejestracyjny</p>
+      </div>
 
-                      // Wysłanie formularza z podziekowaniami za zgloszenie
-              emailjs.send('service_757wcup','template_txvnen9', {
-                participant: this.formData.email
-              })
-                  .then((response) => {
-                      console.log('SUCCESS!', response.status, response.text);
-                      
-                  this.formData = {
-                    fullName: '',
-                    company: '',
-                    email: '',
-                    phone: '',
-                    amountOfParticipants: 1,
-                    potwierdzenieZgod: false,
-                    zgodyUzytkownika: {
-                      przetwarzanieDanych: false,
-                      otrzymywanieInformacji: false,
-                      wykorzystanieWizerunku: false,
-                      informacjeMarketingowe: false,
-                      kontaktTelefoniczny: false
-                    }
-                  }
-                  }, (error) => {
-                      console.log('FAILED...', error);
-                  });
-                  }, (error) => {
-                      console.log('FAILED...', error);
-                      // W razie błędu można ustawić buttonText na wartość domyślną lub inną
-                      this.buttonText = 'Wyślij zgłoszenie'; // lub inny komunikat
-                  });
-
-          },
-          refreshPage() {
-            window.location.reload()
-          },
+      <div>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function () {
+            emailjs.init("o8grxPUg0ZKA4R5cN"); // Replace with your EmailJS user ID
+          })();
+        </script>
+        <form x-data="{
+        formData: {
+          fullName: '',
+          company: '',
+          email: '',
+          phone: '',
+          amountOfParticipants: 1,
+          potwierdzenieZgod: false,
+          zgodyUzytkownika: {
+            przetwarzanieDanych: false,
+            otrzymywanieInformacji: false,
+            wykorzystanieWizerunku: false,
+            informacjeMarketingowe: false,
+            kontaktTelefoniczny: false
+          }
+        },
+        buttonText: 'Wyślij ',
+        status: '',
+          submitForm() {
+            this.buttonText = 'przesyłanie';
             
-        }" @submit.prevent="submitForm" class="space-y-6">
-            <p class="font-bold">Formularz rejestracyjny</p>
+            fetch('https://api.mdon.pl/registration_data', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ'
+              },
+              body: JSON.stringify({
+              fullName: this.formData.fullName,
+              company: this.formData.company,
+              email: this.formData.email,
+              phone: this.formData.phone,
+              amountOfParticipants: this.formData.amountOfParticipants,
+              potwierdzenieZgod: this.formData.potwierdzenieZgod,
+              zgodyUzytkownika: {
+                przetwarzanieDanych: this.formData.zgodyUzytkownika.przetwarzanieDanych,
+              otrzymywanieInformacji: this.formData.zgodyUzytkownika.otrzymywanieInformacji,
+              wykorzystanieWizerunku: this.formData.zgodyUzytkownika.wykorzystanieWizerunku,
+              informacjeMarketingowe: this.formData.zgodyUzytkownika.informacjeMarketingowe,
+              kontaktTelefoniczny: this.formData.zgodyUzytkownika.kontaktTelefoniczny,
+              }
+              }),
+            })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('Success:', data);
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+            
+            // Logika wysyłania formularza
+            console.log('Form submitted');
+            
+            // Wysłanie formularza za pomocą emailjs
+            emailjs.send('service_757wcup', 'template_4tog43f', this.formData)
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    this.buttonText = 'przesłano';
+
+                    // Wysłanie formularza z podziekowaniami za zgloszenie
+            emailjs.send('service_757wcup','template_txvnen9', {
+              participant: this.formData.email
+            })
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                this.formData = {
+                  fullName: '',
+                  company: '',
+                  email: '',
+                  phone: '',
+                  amountOfParticipants: 1,
+                  potwierdzenieZgod: false,
+                  zgodyUzytkownika: {
+                    przetwarzanieDanych: false,
+                    otrzymywanieInformacji: false,
+                    wykorzystanieWizerunku: false,
+                    informacjeMarketingowe: false,
+                    kontaktTelefoniczny: false
+                  }
+                }
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    // W razie błędu można ustawić buttonText na wartość domyślną lub inną
+                    this.buttonText = 'Wyślij '; // lub inny komunikat
+                });
+
+        },
+        refreshPage() {
+          window.location.reload()
+        },
+          
+      }" @submit.prevent="submitForm" class="space-y-6">
+          <p class="font-bold" style="font-size: 22px; margin-top: -16px;">Formularz rejestracyjny</p>
+
+          <div class="flex flex-col space-y-2" style="font-size: 18px;">
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-between lg:items-end">
+              <label for="form_firstName" class="lg:w-3/5">Imię i nazwisko osoby zgłaszającej uczestników <span
+                  class="text-xl" style="color: #f2e6d8">*</span></label>
+              <input class="rounded-3xl border-gray-400 lg:w-2/5 w-full" required type="text" name="form_firstName"
+                x-model="formData.fullName">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_lastName" class="lg:w-2/5">Firma/organizacja</label>
+              <input class="rounded-3xl border-gray-400 w-full" type="text" name="form_lastName"
+                x-model="formData.company">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_phone" class="lg:w-2/5">E-mail <span class="text-xl" style="color: #f2e6d8">*</span></label>
+              <input class="rounded-3xl border-gray-400 w-full" required type="tel" name="form_phone1"
+                x-model="formData.email">
+            </div>
+            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_department" class="lg:w-2/5">Telefon <span
+                  class="text-xl" style="color: #f2e6d8">*</span></label>
+              <input class="rounded-3xl border-gray-400 w-full" required type="text" name="form_department"
+                x-model="formData.phone">
+            </div>
+            <div
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-between lg:justify-start w-full lg:items-end">
+              <label for="form_email1" class="lg:w-2/5">Liczba zgłaszanych uczestników</label>
+              <input class="rounded-3xl border-gray-400 lg:w-1/5 w-full" type="number" required name="form_email1"
+                x-model="formData.amountOfParticipants">
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <p class="font-bold" style="font-size: 22px; margin-bottom: 24px;">Zgody:</p>
+            <p style="margin-bottom: 24px;">Prosimy o zapoznanie się z poniższymi zgodami i zaznaczenie odpowiednich pól, aby potwierdzić swój
+              udział w kongresie:</p>
 
             <div class="flex flex-col space-y-2">
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-between lg:items-end">
-                <label for="form_firstName" class="lg:w-3/5">Imię i nazwisko osoby zgłaszającej uczestników <span
-                    class="text-red-600 text-xl">*</span></label>
-                <input class="rounded-3xl border-gray-400 lg:w-2/5 w-full" required type="text" name="form_firstName"
-                  x-model="formData.fullName">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_lastName" class="lg:w-2/5">Firma/organizacja</label>
-                <input class="rounded-3xl border-gray-400 w-full" type="text" name="form_lastName"
-                  x-model="formData.company">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_phone" class="lg:w-2/5">E-mail <span class="text-red-600 text-xl">*</span></label>
-                <input class="rounded-3xl border-gray-400 w-full" required type="tel" name="form_phone1"
-                  x-model="formData.email">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_department" class="lg:w-2/5">Telefon <span
-                    class="text-red-600 text-xl">*</span></label>
-                <input class="rounded-3xl border-gray-400 w-full" required type="text" name="form_department"
-                  x-model="formData.phone">
-              </div>
-              <div
-                class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-between lg:justify-start w-full lg:items-end">
-                <label for="form_email1" class="lg:w-2/5">Liczba zgłaszanych uczestników</label>
-                <input class="rounded-3xl border-gray-400 lg:w-1/5 w-full" type="number" required name="form_email1"
-                  x-model="formData.amountOfParticipants">
-              </div>
-            </div>
-
-            <!-- <div>
-              <p class="font-bold">
-                Osoba zgłaszająca
-              </p>
               <div class="text-sm">
-                Osoba zgłaszająca nie musi być uczestnikiem. Osoba ta, jest reprezentantem firmy, który zgłasza uczestników i z którym możemy się skontaktować w sprawie zgłoszenia
-              </div>
-
-              <div class="text-sm my-2">
-                <div class="flex space-x-4 items-center">
-                    <input class="rounded-3xl border-gray-400" style="margin-right: 12px;" type="checkbox"  id="checkbox"
-                           x-model="formData.isRegistrantAlsoParticipant">
-                    <label for="checkbox">Osoba zgłaszająca Gościa jest jednocześnie uczestnikiem</label>
-                </div>
-            </div>
-            <div x-show="!formData.isRegistrantAlsoParticipant" class="flex flex-col space-y-2">
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_firstName2" class="lg:w-2/5">Imię</label>
-                <input class="rounded-3xl border-gray-400 w-full " type="text" name="form_firstName2"
-                  x-model="formData.registrant.firstName">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_lastName2" class="lg:w-2/5">Nazwisko</label>
-                <input class="rounded-3xl border-gray-400 w-full " type="text" name="form_lastName2"
-                  x-model="formData.registrant.lastName">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_position2" class="lg:w-2/5">Stanowisko</label>
-                <input class="rounded-3xl border-gray-400 w-full " type="tel" name="form_position2"
-                  x-model="formData.registrant.position">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_department2" class="lg:w-2/5">Departament</label>
-                <input class="rounded-3xl border-gray-400 w-full " type="text" name="form_department2"
-                  x-model="formData.registrant.department">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_email2" class="lg:w-2/5">Email 
+                <input type="checkbox" x-model="formData.zgodyUzytkownika.przetwarzanieDanych" required
+                  name="formData.zgodyUzytkownika.przetwarzanieDanych"
+                  id="formData.zgodyUzytkownika.przetwarzanieDanych" class="border-gray-400 w-6 h-6">
+                <label for="formData.zgodyUzytkownika.przetwarzanieDanych" class="ml-4"><strong>* Zgoda na
+                    przetwarzanie danych osobowych:</strong>
+                  Wyrażam zgodę na przetwarzanie moich danych osobowych przez Fundację OPTEA w celu rejestracji i
+                  uczestnictwa w bezpłatnym kongresie, zgodnie z przepisami RODO.
                 </label>
-                <input class="rounded-3xl border-gray-400 w-full " type="email" name="form_email2"
-                 x-model="formData.registrant.email">
               </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_phone2" class="lg:w-2/5">Telefon  </label>
-                <input class="rounded-3xl border-gray-400 w-full " type="tel" name="form_phone2"
-                  x-model="formData.registrant.phone">
-              </div>
-              <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-                <label for="form_country2" class="lg:w-2/5">Kraj</label>
-                <input class="rounded-3xl border-gray-400 w-full " type="tel" name="form_country2"
-                  x-model="formData.registrant.country">
-              </div>
-            </div>
-          -->
-
-            <div class="mt-8">
-              <p class="font-bold">Zgody:</p>
-              <p>Prosimy o zapoznanie się z poniższymi zgodami i zaznaczenie odpowiednich pól, aby potwierdzić swój
-                udział w kongresie:</p>
-
-              <div class="flex flex-col space-y-2">
-                <div class="text-sm">
-                  <input type="checkbox" x-model="formData.zgodyUzytkownika.przetwarzanieDanych" required
-                    name="formData.zgodyUzytkownika.przetwarzanieDanych"
-                    id="formData.zgodyUzytkownika.przetwarzanieDanych" class="border-gray-400 w-6 h-6">
-                  <label for="formData.zgodyUzytkownika.przetwarzanieDanych" class="ml-4"><strong>* Zgoda na
-                      przetwarzanie danych osobowych:</strong>
-                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez Fundację OPTEA w celu rejestracji i
-                    uczestnictwa w bezpłatnym kongresie, zgodnie z przepisami RODO.
-                  </label>
-                </div>
-                <div class="text-sm">
-                  <input type="checkbox" x-model="formData.zgodyUzytkownika.otrzymywanieInformacji" required
-                    name="formData.zgodyUzytkownika.otrzymywanieInformacji"
-                    id="formData.zgodyUzytkownika.otrzymywanieInformacji" class="border-gray-400 w-6 h-6">
-                  <label for="formData.zgodyUzytkownika.otrzymywanieInformacji" class="ml-4">
-                    <strong>* Zgoda na otrzymywanie informacji o wydarzeniu: </strong> Wyrażam zgodę na otrzymywanie
-                    informacji organizacyjnych oraz materiałów związanych z kongresem na podany adres e-mail.
-                  </label>
-                </div>
-                <div class="text-sm">
-                  <input type="checkbox" x-model="formData.zgodyUzytkownika.wykorzystanieWizerunku"
-                    name="formData.zgodyUzytkownika.wykorzystanieWizerunku"
-                    id="formData.zgodyUzytkownika.wykorzystanieWizerunku" class="border-gray-400 w-6 h-6">
-                  <label for="formData.zgodyUzytkownika.wykorzystanieWizerunku" class="ml-4">
-                    <strong>Zgoda na wykorzystanie wizerunku: </strong>
-                    Wyrażam zgodę na wykorzystanie mojego wizerunku utrwalonego podczas kongresu w materiałach
-                    promocyjnych oraz na stronach internetowych organizatora.
-                  </label>
-                </div>
-                <div class="text-sm">
-                  <input type="checkbox" x-model="formData.zgodyUzytkownika.informacjeMarketingowe"
-                    name="formData.zgodyUzytkownika.informacjeMarketingowe"
-                    id="formData.zgodyUzytkownika.informacjeMarketingowe" class="border-gray-400 w-6 h-6">
-                  <label for="formData.zgodyUzytkownika.informacjeMarketingowe" class="ml-4">
-                    <strong>Zgoda na otrzymywanie informacji marketingowych: </strong> Wyrażam zgodę na otrzymywanie
-                    informacji marketingowych.
-                  </label>
-                </div>
-                <div class="text-sm">
-                  <input type="checkbox" x-model="formData.zgodyUzytkownika.kontaktTelefoniczny"
-                    name="formData.zgodyUzytkownika.kontaktTelefoniczny"
-                    id="formData.zgodyUzytkownika.kontaktTelefoniczny" class="border-gray-400 w-6 h-6">
-                  <label for="formData.zgodyUzytkownika.kontaktTelefoniczny" class="ml-4">
-                    <strong>Zgoda na kontakt telefoniczny: </strong> Wyrażam zgodę na kontakt telefoniczny w sprawach
-                    związanych z organizacją kongresu.
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-8">
-              <p class="font-bold">Klauzula informacyjna</p>
-              <p>Administratorem danych osobowych jest Fundacja OPTEA z siedzibą w 36-002 Jasionka, Jasionka 953. Dane
-                osobowe będą przetwarzane w celu rejestracji i uczestnictwa w kongresie oraz w celach marketingowych,
-                jeżeli została wyrażona zgoda. Podanie danych jest dobrowolne, ale niezbędne do uczestnictwa w
-                kongresie. Przysługuje Państwu prawo dostępu do treści swoich danych oraz ich poprawiania, a także prawo
-                do wycofania zgody w dowolnym momencie.
-
-                W przypadku pytań dotyczących przetwarzania danych osobowych prosimy o kontakt pod adresem: <a
-                  href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
-            </div>
-
-            <div class="mt-8">
-              <p class="font-bold">Potwierdzenie zgód</p>
-              <p>Prosimy o zaznaczenie odpowiednich zgód i kliknięcie "Wyślij", aby zakończyć rejestrację na kongres.
-              </p>
-
               <div class="text-sm">
-                <input type="checkbox" x-model="formData.potwierdzenieZgod" required name="formData.potwierdzenieZgod"
-                  id="formData.potwierdzenieZgod" class="border-gray-400 w-6 h-6">
-                <label for="formData.potwierdzenieZgod" class="ml-4">
-                  Potwierdzam, że zapoznałem się z treścią Regulaminu i akceptuję jego postanowienia oraz z treścią <a
-                    href="/polityka-prywatnosci/" target="_blank">Polityki Prywatności</a> *
+                <input type="checkbox" x-model="formData.zgodyUzytkownika.otrzymywanieInformacji" required
+                  name="formData.zgodyUzytkownika.otrzymywanieInformacji"
+                  id="formData.zgodyUzytkownika.otrzymywanieInformacji" class="border-gray-400 w-6 h-6">
+                <label for="formData.zgodyUzytkownika.otrzymywanieInformacji" class="ml-4">
+                  <strong>* Zgoda na otrzymywanie informacji o wydarzeniu: </strong> Wyrażam zgodę na otrzymywanie
+                  informacji organizacyjnych oraz materiałów związanych z kongresem na podany adres e-mail.
+                </label>
+              </div>
+              <div class="text-sm">
+                <input type="checkbox" x-model="formData.zgodyUzytkownika.wykorzystanieWizerunku"
+                  name="formData.zgodyUzytkownika.wykorzystanieWizerunku"
+                  id="formData.zgodyUzytkownika.wykorzystanieWizerunku" class="border-gray-400 w-6 h-6">
+                <label for="formData.zgodyUzytkownika.wykorzystanieWizerunku" class="ml-4">
+                  <strong>Zgoda na wykorzystanie wizerunku: </strong>
+                  Wyrażam zgodę na wykorzystanie mojego wizerunku utrwalonego podczas kongresu w materiałach
+                  promocyjnych oraz na stronach internetowych organizatora.
+                </label>
+              </div>
+              <div class="text-sm">
+                <input type="checkbox" x-model="formData.zgodyUzytkownika.informacjeMarketingowe"
+                  name="formData.zgodyUzytkownika.informacjeMarketingowe"
+                  id="formData.zgodyUzytkownika.informacjeMarketingowe" class="border-gray-400 w-6 h-6">
+                <label for="formData.zgodyUzytkownika.informacjeMarketingowe" class="ml-4">
+                  <strong>Zgoda na otrzymywanie informacji marketingowych: </strong> Wyrażam zgodę na otrzymywanie
+                  informacji marketingowych.
+                </label>
+              </div>
+              <div class="text-sm">
+                <input type="checkbox" x-model="formData.zgodyUzytkownika.kontaktTelefoniczny"
+                  name="formData.zgodyUzytkownika.kontaktTelefoniczny"
+                  id="formData.zgodyUzytkownika.kontaktTelefoniczny" class="border-gray-400 w-6 h-6">
+                <label for="formData.zgodyUzytkownika.kontaktTelefoniczny" class="ml-4">
+                  <strong>Zgoda na kontakt telefoniczny: </strong> Wyrażam zgodę na kontakt telefoniczny w sprawach
+                  związanych z organizacją kongresu.
                 </label>
               </div>
             </div>
+          </div>
 
-            <!-- <div class="text-sm">
-              <input type="checkbox" x-model="zgoda" name="form_zgoda" id="form_zgoda"
-                class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Zgadzam się na udostępnienie Partnerom Wydarzenia podanych przeze mnie danych osobowych (adres e-mail, numer telefonu), do przetwarzania w celach marketingowych. Wyrażenie zgody jest dobrowolne
-              </label>
-            </div>
+          <div class="mt-8">
+            <p class="font-bold">Klauzula informacyjna</p>
+            <p>Administratorem danych osobowych jest Fundacja OPTEA z siedzibą w 36-002 Jasionka, Jasionka 953. Dane
+              osobowe będą przetwarzane w celu rejestracji i uczestnictwa w kongresie oraz w celach marketingowych,
+              jeżeli została wyrażona zgoda. Podanie danych jest dobrowolne, ale niezbędne do uczestnictwa w
+              kongresie. Przysługuje Państwu prawo dostępu do treści swoich danych oraz ich poprawiania, a także prawo
+              do wycofania zgody w dowolnym momencie.
+
+              W przypadku pytań dotyczących przetwarzania danych osobowych prosimy o kontakt pod adresem: <a
+                href="mailto:fundacja@optea.pl">fundacja@optea.pl</a></p>
+          </div>
+
+          <div class="mt-8">
+            <p class="font-bold">Potwierdzenie zgód</p>
+            <p style="margin-bottom: 24px;">Prosimy o zaznaczenie odpowiednich zgód i kliknięcie "Wyślij", aby zakończyć rejestrację na kongres.
+            </p>
+
             <div class="text-sm">
-              <input type="checkbox" x-model="zgoda" name="form_zgoda" id="form_zgoda"
-                class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Zgadzam się na otrzymanie od Partnerów Wydarzenia wiadomości e-mail, wiadomości tekstowych (SMS) zawierających treści handlowe oraz kontakt telefoniczny w celu przedstawienia treści handlowych. Wyrażenie zgody jest dobrowolne
+              <input type="checkbox" x-model="formData.potwierdzenieZgod" required name="formData.potwierdzenieZgod"
+                id="formData.potwierdzenieZgod" class="border-gray-400 w-6 h-6">
+              <label for="formData.potwierdzenieZgod" class="ml-4">
+                Potwierdzam, że zapoznałem się z treścią Regulaminu i akceptuję jego postanowienia oraz z treścią <a
+                  href="/polityka-prywatnosci/" target="_blank">Polityki Prywatności</a> *
               </label>
             </div>
-            <div class="text-sm">
-              <input type="checkbox" x-model="zgoda" name="form_zgoda" id="form_zgoda"
-                class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci wizerunku w formie zdjęć oraz nagrań video z organizowanych przez Administratora wydarzenia w celu zamieszczenia na stronie www/profilach Administratora w mediach społecznościowych/materiałach marketingowych. Wyrażenie zgody jest dobrowolne.
-              </label>
-            </div>
-            
-            <div class="text-sm">
-              <input type="checkbox" x-model="zgoda" name="form_zgoda" id="form_zgoda"
-                class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Wyrażam zgodę na otrzymywanie informacji handlowych drogą elektroniczną zgodnie z Ustawą o Świadczeniu Usług Drogą Elektroniczną z dnia 18 lipca 2002 r. (Dz.U. 2002 nr 144 poz. 1204) przez MM Conferences S.A. z siedzibą w Warszawie (00-193), ul. Stawki 2 o numerze identyfikacyjnym NIP: 9522040486.Wyrażenie zgody jest dobrowolne.
-              </label>
-            </div>
-            
-            <div class="text-sm">
-              <input type="checkbox" x-model="zgoda" name="form_zgoda" id="form_zgoda"
-                class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Wyrażam zgodę na używanie telekomunikacyjnych urządzeń końcowych i automatycznych systemów wywołujących dla celów marketingu bezpośredniego, zgodnie z art. 172 ustawy z dnia 16 lipca 2004r. Prawo telekomunikacyjne (Dz.U. z 2014 r. poz. 243 ze zm.) przez MM Conferences S.A. z siedzibą w Warszawie (00-193), ul. Stawki 2 o numerze identyfikacyjnym NIP: 9522040486. Wyrażenie zgody jest dobrowolne.
-              </label>
-            </div> -->
-            <div class="text-sm text-bold">
-              <p class="font-bold text-xs mt-4">
-                Pola oznaczone czerwoną gwiazdką <span class="text-red-600 text-xl">*</span> są wymagane
-              </p>
-            </div>
-            <div class="flex flex-col items-center py-4">
-              <button type="submit" x-text="buttonText" class="bg-mdon_blue rounded-full px-8 py-4 text-white text-xl">
-              </button>
-              <p class="text-2xl my-8 font-bold" x-text="status"></p>
-              <div x-show="buttonText === 'przesłano'" class="text-xs text-gray-500 mt-2 cursor-pointer"
-                @click="refreshPage">odśwież</div>
-            </div>
-          </form>
-        </div>
-      </main>
-    </div>
+          </div>
+          <div class="text-sm text-bold">
+            <p class="font-bold text-xs mt-4">
+              Pola oznaczone czerwoną gwiazdką <span class="text-xl" style="color: #f2e6d8">*</span> są wymagane
+            </p>
+          </div>
+          <div class="flex flex-col wyslij-zgloszenie-container">
+            <button type="submit" x-text="buttonText" class=" px-8 py-4 text-white text-xl">
+            </button>
+            <p class="text-2xl font-bold" x-text="status"></p>
+            <div x-show="buttonText === 'przesłano'" style="color: #f2e6d8" class="mt-2 cursor-pointer"
+              @click="refreshPage">odśwież</div>
+          </div>
+        </form>
+      </div>
+      </section>
+    </main>
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
-    <a href="/regulamin/">Regulamin</a>
+ 
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

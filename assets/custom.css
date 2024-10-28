@@ -1,64 +1,111 @@
 @font-face {
-    font-family: 'Linguistic Regular';
-    src: url('/assets/LinguisticsPro-Regular.otf') format('opentype');
+  font-family: "Linguistic Regular";
+  src: url("/assets/LinguisticsPro-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Linguistic Bold';
-    src: url('/assets/LinguisticsPro-Bold.otf') format('opentype');
+  font-family: "Linguistic Bold";
+  src: url("/assets/LinguisticsPro-Bold.otf") format("opentype");
 }
 
 .nav-list {
-    a {
-        color: #f2e6d8;
-    }
+  a {
+    color: #f2e6d8;
+  }
 }
 
 footer {
-    background-color: #f2e6d8;
-    color: black;
-    padding: 24px 100px;
-    padding-top: 40px !important;
+  background-color: #f2e6d8;
+  color: black;
+  padding: 24px 100px;
+  padding-top: 40px !important;
 }
 
 footer a {
-    color: black;
-}
-
-main {
-    background-color: #F2E6D8;
+  color: black;
 }
 
 .red-button {
-    background-color: #91051f;
-    color: #f2e6d8;
-    font-weight: bold;
-    font-family: 'Dosis', sans-serif !important;
-    border-radius: 24px;
-    padding: 12px 36px;
-    font-size: 24px;
-    max-height: fit-content;
+  background-color: #91051f;
+  color: #f2e6d8;
+  font-weight: bold;
+}
+
+.white-button {
+  background-color: #f2e6d8;
+  color: #91051f;
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  font-weight: 700;
+  gap: 8px;
+  transition: 400ms all;
+  border: 2px solid #91051f;
+  border-radius: 24px;
+}
+
+.white-button:hover {
+  background-color: white;
+}
+
+nav .menu-dropdown {
+    top: 24px;
+    padding: 12px;
+    z-index: 99;
+    position: absolute;
+    background-color: #f2e6d8;
+    border: 1px solid #91051f;
+    border-radius: 0 0 12px 12px;
+    width: 100%;
     transition: 400ms all;
 }
 
+nav .menu-dropdown li a{
+    color: #91051f !important;
+}
+nav .menu-dropdown li:hover{
+    font-weight: bold;
+}
+
+main {
+  background-color: #f2e6d8;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text-mdon_blue {
+  color: #91051f !important;
+}
+
+.red-button {
+  background-color: #91051f;
+  color: #f2e6d8;
+  font-weight: bold;
+  font-family: "Dosis", sans-serif !important;
+  border-radius: 24px;
+  padding: 12px 36px;
+  font-size: 24px;
+  max-height: fit-content;
+  transition: 400ms all;
+}
+
 .red-button:hover {
-    background-color: #550010;
+  background-color: #550010;
 }
 
 .text-mdon_red {
-    color: #91051f;
+  color: #91051f;
 }
 
 @media screen and (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
 
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
-    }
-
-    footer a {
-        margin: 0 !important;
-    }
-
+  footer a {
+    margin: 0 !important;
+  }
 }
