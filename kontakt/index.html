@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Kontakt</title>
+  <title>Kongres</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo4.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -30,19 +30,50 @@
       align-items: center;
     }
 
-    .second-section-kongres {
+    .second-section-formularz {
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
+      font-family: 'Dosis', sans-serif;
       padding: 48px;
-      max-width: 1100px;
-      margin: 0 auto;
-      color: rgb(85, 85, 85);
+      max-width: 830px;
+      margin: auto;
+      color: #f2e6d8;
+      background-color: #91051f;
+      margin-top: 64px;
+      border-radius: 24px;
+    }
+    
+    .second-section-formularz a {
+      color: #f2e6d8 !important;
     }
 
-    @media screen and (max-width: 800px) {
-      main {
+    .second-section-formularz .wyslij-zgloszenie-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .second-section-formularz input,
+    .second-section-formularz textarea {
+      background-color: #f2e6d8;
+      color: #91051f;
+    }
+    
+    .second-section-formularz .wyslij-zgloszenie-container button {
+      display: flex;
+      max-width: 180px;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2e6d8;
+      color: #91051f;
+      font-weight: bold;
+      border-radius: 24px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .second-section-formularz {
+        margin:24px;
         padding: 24px;
       }
     }
@@ -51,7 +82,7 @@
 </head>
 
 <body>
-  <div class=" flex flex-col">
+  <div class="flex flex-col">
     <header class="flex flex-col lg:flex-row items-start lg:flex-wrap justify-center astro-3WCREGVO !mx-0 !px-0">
       <nav style="background-color: #024f49;" class="astro-3WCREGVO w-full" x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false">
@@ -77,7 +108,7 @@
             <a href="/">
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
-            <a href="/kongres/" class="astro-3WCREGVO">Kongres</a>
+            <a href="/kongres/" class="astro-3WCREGVO">Trochę historii</a>
 <a href="/program/" class="astro-3WCREGVO">Program</a>
             <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
@@ -117,7 +148,7 @@
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Kongres</a>
+              Trochę historii</a>
 <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
@@ -156,22 +187,25 @@
       </nav>
     </header>
 
-    <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="max-w-2xl flex flex-col items-start">
-        <div class="pb-6">
-          <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
+    <main class="flex flex-col items-center items-start">
+      <section class="first-section">
+      </section>
+
+      <section class="second-section-formularz ">
+        <div class="pb-6"  style="font-size: 18px; font-weight: bold;">
+          <h1 style="font-size: 22px; font-weight: bold;">
             Skontaktuj się z nami
           </h1>
-          <p>
-            Zadzwoń do nas test: <a href="tel:+48666526920">666 526 920</a>
+          <p >
+            Zadzwoń do nas test: <a href="tel:+48666254066">666 254 066</a>
           </p>
           <p>
-            Napisz do nas: <a href="mailto:biuro@optea.pl ">biuro@optea.pl </a>
+            Napisz do nas: <a href="mailto:biuro@optea.pl ">fundacja@optea.pl </a>
           </p>
-          <p class="text-xl lg:text-2xl mt-8">Albo wypełnij formularz:</p>
+          <p style="font-size: 22px; font-weight: bold; margin-top: 24px;" class="mt-8">Albo wypełnij formularz:</p>
         </div>
 
-        <div class="pt-6">
+        <div>
           <form x-data="function contactForm() {
     return {
       formData: {
@@ -214,25 +248,25 @@
       this.formData.zgoda = false;
     });
   }" class="space-y-6">
-            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+            <div style="font-size: 18px; font-weight: bold;" class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
               <label for="form_name" class="lg:w-2/5">Imię i nazwisko:</label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="text" name="form_name" id="form_name"
                 x-model="formData.name">
             </div>
-            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
-              <label for="form_email" class="lg:w-2/5">Twój email: <span class="text-red-600 text-xl">*</span>
+            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+              <label for="form_email" class="lg:w-2/5">Twój email: <span style="color: #f2e6d8" class="text-xl">*</span>
               </label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="email" required name="form_email"
                 id="form_email" x-model="formData.email">
             </div>
-            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
               <label for="form_phone" class="lg:w-2/5">Twój telefon:</label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="tel" name="form_phone"
                 id="form_phone" x-model="formData.phone">
             </div>
-            <div class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-start">
+            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-start">
               <label for="form_message" class="lg:w-2/5">Treść Twojej wiadomości: <span
-                  class="text-red-600 text-xl">*</span>
+                  class=" text-xl">*</span>
               </label>
               <textarea class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" name="form_message" required
                 id="form_message" rows="6" x-model="formData.message"></textarea>
@@ -240,7 +274,7 @@
             <div class="text-sm">
               <input type="checkbox" x-model="formData.zgoda" required name="form_zgoda" id="form_zgoda"
                 class="border-gray-400 w-6 h-6">
-              <label for="form_zgoda" class="ml-4">Zgoda regulaminowa <span class="text-red-600 text-xl">*</span>
+              <label for="form_zgoda" class="ml-4">Zgoda regulaminowa <span class=" text-xl">*</span>
                 <p class="mt-4 text-justify">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych w celu obsługi złożonego
                   zapytania, jestem świadomy, że dane podane w formularzu będą przetwarzane i mam prawo
@@ -251,10 +285,10 @@
             </div>
             <div class="text-sm">
               <p>
-                Pola oznaczone czerwoną gwiazdką <span class="text-red-600 text-xl">*</span> są wymagane
+                Pola oznaczone czerwoną gwiazdką <span class=" text-xl">*</span> są wymagane
               </p>
             </div>
-            <div class="flex flex-col items-center pb-8">
+            <div class="flex flex-col wyslij-zgloszenie-container">
               <p class="text-2xl my-8 font-bold" x-text="formData.status"></p>
               <button type="submit" x-text="formData.buttonText"
                 class="bg-mdon_blue rounded-full px-8 py-4 text-white text-xl">
@@ -262,8 +296,8 @@
             </div>
           </form>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
