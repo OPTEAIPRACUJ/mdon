@@ -38,6 +38,11 @@ main {
     padding: 12px 36px;
     font-size: 24px;
     max-height: fit-content;
+    transition: 400ms all;
+}
+
+.red-button:hover {
+    background-color: #550010;
 }
 
 .text-mdon_red {
