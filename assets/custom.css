@@ -44,10 +44,6 @@ footer a {
   border-radius: 24px;
 }
 
-.white-button:hover {
-  background-color: white;
-}
-
 nav .menu-dropdown {
     top: 24px;
     padding: 12px;

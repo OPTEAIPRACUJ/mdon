@@ -109,7 +109,9 @@
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Trochę historii</a>
             <a href="/program/" class="astro-3WCREGVO">Program</a>
-            <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
+            <!--
+<a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
+-->
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
             <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
               Poprzednie edycje
@@ -151,10 +153,12 @@
 <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
-            <a href="/jarmark/"
+            <!-- 
+<a href="/jarmark/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Jarmark
             </a>
+-->
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz rejestracyjny
@@ -333,7 +337,7 @@
             <div
               class="flex flex-col lg:flex-row lg:space-x-4 items-center justify-between lg:justify-start w-full lg:items-end">
               <label for="form_email1" class="lg:w-2/5">Liczba zgłaszanych uczestników</label>
-              <input class="rounded-3xl border-gray-400 w-1/5" type="number" required name="form_email1"
+              <input class="rounded-3xl border-gray-400 w-1/5" type="number" required name="form_email1" min="1"
                 x-model="formData.amountOfParticipants">
             </div>
           </div>

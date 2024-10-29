@@ -41,8 +41,12 @@
       color: rgb(85, 85, 85);
     }
 
+    main {
+      width: 100%;
+    }
+
     @media screen and (max-width: 800px) {
-      main {
+      .second-section-kongres {
         padding: 24px;
       }
     }
@@ -79,7 +83,9 @@
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Trochę historii</a>
             <a href="/program/" class="astro-3WCREGVO">Program</a>
-            <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
+            <!--
+<a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
+-->
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
             <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
               Poprzednie edycje
@@ -122,10 +128,12 @@
             <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
-            <a href="/jarmark/"
+            <!-- 
+<a href="/jarmark/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Jarmark
             </a>
+-->
             <a href="/formularz-zgloszeniowy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz rejestracyjny
@@ -158,92 +166,97 @@
     </header>
 
     <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="flex flex-col space-y-6 max-w-4xl"
+      <main class="flex flex-col space-y-6"
         style="font-family: 'Linguistic Regular';font-weight: 400; color: black;">
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:30</span>
-          <p class="w-full ">
-            Oficjalne otwarcie Kongresu
-          </p>
+        <section class="first-section">
         </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:40</span>
-          <p class="w-full ">
-            Wystąpienia wprowadzające
-          </p>
-        </section>
-        <section class="flex w-full ">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">10:00 - 11:30</span>
-          <div class="w-full">
-            <p class="astro-O6POA4E3">
-              Panel 1: Holistyczne spojrzenie na sferę aktywizacji zawodowej i społecznej osób z niepełnosprawnościami.
-              <br class="astro-O6POA4E3">
-              <br class="astro-O6POA4E3">
 
+        <section class="max-w-4xl" style="margin: 0 auto;">
+          <div class="flex mt-8 w-full">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:30</span>
+            <p class="w-full">
+              Oficjalne otwarcie Kongresu
             </p>
-            <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
-              <li>Jak skutecznie łączyć działania instytucji rządowych, samorządowych i NGO na rzecz aktywizacji
-                zawodowej
-                i
-                społecznej?
-              </li>
-              <li>
-                Rola edukacji, szkoleń i dostępności technologii w aktywizacji osób z niepełnosprawnościami
-              </li>
-              <li>
-                Znaczenie wsparcia psychologicznego i społecznego w procesie aktywizacji
-              </li>
-              <li>Integracja różnych modeli wsparcia - jak stworzyć zrównoważony i efektywny system, który uwzględnia
-                indywidualne potrzeby osób z niepełnosprawnościami</li>
-            </ul>
           </div>
-        </section>
-        <section class="flex w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">12:00 - 13:20</span>
-          <div class="w-full">
-            <p class="astro-O6POA4E3">
-              Panel 2: Rynek pracy osób z niepełnosprawnościami. Wyzwania i szanse aktywizacji zawodowej.
-              <br class="astro-O6POA4E3">
-              <br class="astro-O6POA4E3">
+          <div class="flex mt-8 w-full">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">9:40</span>
+            <p class="w-full">
+              Wystąpienia wprowadzające
             </p>
-            <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
-              <li>Dostosowanie miejsc pracy i technologii do potrzeb osób z niepełnosprawnościami
-              </li>
-              <li>
-                Jakie wsparcie jest potrzebne pracodawcom, aby zachęcić ich do zatrudniania osób z
-                niepełnosprawnościami?
-              </li>
-              <li>
-                Przykłady dobrych praktyk w zatrudnianiu osób z niepełnosprawnościami w różnych branżach
-              </li>
-              <li>Bariery i wyzwania związane z zatrudnieniem osób z niepełnosprawnościami, oraz sposoby ich pokonywania
-              </li>
-              <li>Programy wsparcia finansowego i doradztwo zawodowe - jak skutecznie korzystać z dostępnych narzędzi?
-              </li>
-            </ul>
           </div>
-        </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">13:30-14:00</span>
-          <p class="w-full ">
-            Networking uczestników
-          </p>
-        </section>
-        <section class="flex mt-16 w-full">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">14:00</span>
-          <p class="w-full ">
-            Zakończenie kongresu
-          </p>
-        </section>
-        <section class="flex mt-16 w-full" style="margin-top: 48px;">
-          <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right"></span>
-          <p class="w-full ">
-            <a href="/formularz-zgloszeniowy">
-              <button class="red-button" style="max-width: fit-content;">
-                Zarejestruj się
-              </button>
-            </a>
-          </p>
+          <div class="flex w-full mt-8">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">10:00 - 11:30</span>
+            <div class="w-full">
+              <p class="astro-O6POA4E3">
+                Panel 1: Holistyczne spojrzenie na sferę aktywizacji zawodowej i społecznej osób z niepełnosprawnościami.
+                <br class="astro-O6POA4E3">
+                <br class="astro-O6POA4E3">
+  
+              </p>
+              <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
+                <li>Jak skutecznie łączyć działania instytucji rządowych, samorządowych i NGO na rzecz aktywizacji
+                  zawodowej
+                  i
+                  społecznej?
+                </li>
+                <li>
+                  Rola edukacji, szkoleń i dostępności technologii w aktywizacji osób z niepełnosprawnościami
+                </li>
+                <li>
+                  Znaczenie wsparcia psychologicznego i społecznego w procesie aktywizacji
+                </li>
+                <li>Integracja różnych modeli wsparcia - jak stworzyć zrównoważony i efektywny system, który uwzględnia
+                  indywidualne potrzeby osób z niepełnosprawnościami</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex w-full mt-8">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">12:00 - 13:20</span>
+            <div class="w-full">
+              <p class="astro-O6POA4E3">
+                Panel 2: Rynek pracy osób z niepełnosprawnościami. Wyzwania i szanse aktywizacji zawodowej.
+                <br class="astro-O6POA4E3">
+                <br class="astro-O6POA4E3">
+              </p>
+              <ul class="astro-O6POA4E3" style="list-style: disc; padding-left: 24px;">
+                <li>Dostosowanie miejsc pracy i technologii do potrzeb osób z niepełnosprawnościami
+                </li>
+                <li>
+                  Jakie wsparcie jest potrzebne pracodawcom, aby zachęcić ich do zatrudniania osób z
+                  niepełnosprawnościami?
+                </li>
+                <li>
+                  Przykłady dobrych praktyk w zatrudnianiu osób z niepełnosprawnościami w różnych branżach
+                </li>
+                <li>Bariery i wyzwania związane z zatrudnieniem osób z niepełnosprawnościami, oraz sposoby ich pokonywania
+                </li>
+                <li>Programy wsparcia finansowego i doradztwo zawodowe - jak skutecznie korzystać z dostępnych narzędzi?
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex mt-8 w-full">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">13:30-14:00</span>
+            <p class="w-full ">
+              Networking uczestników
+            </p>
+          </div>
+          <div class="flex mt-8 w-full">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right">14:00</span>
+            <p class="w-full ">
+              Zakończenie kongresu
+            </p>
+          </div>
+          <div class="flex mt-8 w-full" style="margin-top: 48px;">
+            <span class="w-5/12 sm:w-4/12 md:w-3/12 lg:w-2/12 mr-6 text-mdon_red text-right"></span>
+            <p class="w-full ">
+              <a href="/formularz-zgloszeniowy">
+                <button class="red-button" style="max-width: fit-content;">
+                  Zarejestruj się
+                </button>
+              </a>
+            </p>
+          </div>
         </section>
       </main>
     </div>
