@@ -18,7 +18,41 @@
     rel="stylesheet">
   <script type="module">document.addEventListener("alpine:init", () => { Alpine.data("Marquee", ({ speed: l = 1, spaceX: n = 0, dynamicWidthElements: s = !1 }) => ({ dynamicWidthElements: s, async init() { if (this.dynamicWidthElements) { const i = this.$el.querySelectorAll("img"); i && await Promise.all(Array.from(i).map(t => new Promise((r, a) => { t.complete ? r() : t.addEventListener("load", () => { r() }) }))) } this.originalElement = this.$el.cloneNode(!0); const e = this.$el.scrollWidth + n * 4; this.$el.style.setProperty("--marquee-width", e + "px"), this.$el.style.setProperty("--marquee-time", 1 / l * e / 100 + "s"), this.resize(), window.addEventListener("resize", o(this.resize.bind(this), 100)) }, async resize() { this.$el.innerHTML = this.originalElement.innerHTML; let e = 0; for (; this.$el.scrollWidth <= this.$el.clientWidth;)this.dynamicWidthElements ? await h(this.$el, this.originalElement.children[e].cloneNode(!0)) : this.$el.appendChild(this.originalElement.children[e].cloneNode(!0)), e += 1, e = e % this.originalElement.childElementCount; let i = 0; for (; i < this.originalElement.childElementCount;)this.$el.appendChild(this.originalElement.children[e].cloneNode(!0)), i += 1, e += 1, e = e % this.originalElement.childElementCount } })) }); const o = (l, n, s = !0) => { let e; return () => { const i = globalThis, t = arguments, r = s && !e; clearTimeout(e), e = setTimeout(function () { e = null, s || l.apply(i, t) }, n), r && l.apply(i, t) } }, h = (l, n) => new Promise((s, e) => { new ResizeObserver((t, r) => { r.disconnect(), s(t) }).observe(n), l.appendChild(n) });
   </script>
+    <!-- Link to the file hosted on your server, -->
+  <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
 
+  <script src="node_modules/@splidejs/splide/dist\js/splide.min.js"></script>
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide' , {
+        type: 'loop',
+        clones: 4,
+        gap: '24px',
+        speed: '1000',
+        lazyLoad: true,
+        wheel: true,
+        cover: true,
+        height: '400px',
+        perPage: 3.5,
+        drag: true,
+        breakpoints: {
+          1400: {
+            perPage: 4,
+          },
+          1140: {
+            perPage: 3,
+          },
+          740: {
+            perPage: 2,
+          },
+          440: {
+            perPage: 1,
+          },
+        }
+      });
+      splide.mount();
+    } );
+  </script>
   <script type="module" src="/page.8271e986.js"></script>
   <style>
     .first-section-home {
@@ -37,6 +71,17 @@
       width: 100%;
       position: relative;
       align-items: center;
+    }
+
+    .grid-item .splide__track {
+      border-radius: 24px;
+    }
+
+    .splide__arrow {
+      background: #f2e6d8;
+    }
+    .splide__arrow svg {
+      fill: #91051f;
     }
 
     /* Add this CSS to create the scrolling effect */
@@ -74,7 +119,7 @@
     }
 
     .first-section-home button,
-    .second-section-home button {
+    .second-section-home .grid-item:first-child button {
       font-family: 'Dosis', sans-serif !important;
       border-radius: 24px;
       padding: 12px 36px;
@@ -147,7 +192,12 @@
     }
 
     @media screen and (max-width: 1024px) {
-      .first-section-home p {
+      .first-section-home p:first-child,
+      .first-section-home p:nth-child(3) {
+        font-size: 22px !important;
+      }
+      
+      .first-section-home p:nth-child(2) {
         font-size: 32px !important;
       }
 
@@ -164,7 +214,7 @@
         height: unset;
       }
 
-      .second-section-home img {
+      .second-section-home .grid-item img {
         min-height: 300px;
         object-fit: cover;
         border-radius: 24px;
@@ -176,6 +226,9 @@
       .second-section-home .grid-item:nth-child(2),
       .second-section-home .grid-item:first-child .grid-item-row {
         flex-direction: column;
+      }
+      .second-section-home .grid-item img {
+        min-height: unset;
       }
     }
 
@@ -229,8 +282,8 @@
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown">
                   <ul>
-                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
                   </ul>
               </div>
           </div>
@@ -279,8 +332,8 @@
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
                   <ul>
-                      <li><a href="/mdon_2022/" target="_blank">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/" target="_blank">Edycja 2023</a></li>
+                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
                   </ul>
               </div>
           </div>
@@ -383,7 +436,28 @@
         </div>
 
         <div class="grid-item item-3">
-          <img src="/assets_2024/grupa-dol.png" alt="Grupa dol">
+          <!-- <img src="/assets_2024/grupa-dol.png" alt="Grupa dol"> -->
+          <section class="splide" aria-labelledby="carousel-heading">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="assets_2024/baner/przemowienie.jpg" alt="Przemówienie">
+                </li>
+                <li class="splide__slide"><img src="assets_2024/baner/pierniki.jpg" alt="Pierniki"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/obrazy.jpg" alt="Obrazy"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/grupa.jpg" alt="Grupa"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/choinka.jpg" alt="Choinka"></li>
+                
+                <li class="splide__slide">
+                  <img src="assets_2024/baner/czarne-tlo.JPG" alt="Czarne tło">
+                </li>
+                <li class="splide__slide"><img src="assets_2024/baner/grupa2.jpg" alt="Grupa"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/kamizelki.jpg" alt="Kamizelki"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/rzeczy.JPG" alt="Rzeczy"></li>
+                <li class="splide__slide"><img src="assets_2024/baner/stol.JPG" alt="Stół"></li>
+              </ul>
+            </div>
+          </section>
         </div>
       </section>
     </main>
