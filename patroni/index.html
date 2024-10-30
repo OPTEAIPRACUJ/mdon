@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo6.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -34,41 +34,80 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
-      padding: 48px;
-      max-width: 1100px;
+      font-family: "Dosis";
+      padding: 72px 48px;
       margin: 0 auto;
       color: rgb(85, 85, 85);
+      width: 100%;
+      align-items: center;
+    }
+
+    .second-section-kongres .images-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1100px;
+      margin-bottom: 64px;
+      width: 100%;
+      gap: 24px;
+    }
+
+    .second-section-kongres .images-container .images-container__image {
+      border-radius: 24px;
+      background-color: white;
+      border: 2px solid #91051f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 300px;
+      max-width: 400px;
+      min-height: 250px;
+      width: 100%;
+      height: 100%;
+      transition: 400ms all;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 24px;
+      font-size: 24px;
+      background-color: #F2E6D8;
+      justify-content: center;
+    }
+
+    .buttons button {
+      min-height: 68px;
+    }
+
+    .buttons .white-button:hover {
+      background-color: transparent;
+    }
+
+    .second-section-kongres .images-container .container__image:hover {
+      transform: scale(1.05);
     }
 
     main {
-      background-color: white !important;
+      width: 100%;
     }
 
-    main div {
-      display: flex;
-      gap: 48px;
-    }
-
-    main img {
-      max-width: 350px;
-      object-fit: contain;
-    }
-
-    @media screen and (max-width: 1400px) {
-      main div {
-        gap: 24px;
+    @media screen and (max-width: 1000px) {
+      .second-section-kongres {
+        padding: 24px;
       }
 
-      main img {
-        max-width: 150px;
-        object-fit: contain;
-      }
-    }
-
-    @media screen and (max-width: 868px) {
-      .patroni-lista {
+      .second-section-kongres .images-container {
         flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .second-section-kongres .images-container img {
+        max-height: 200px !important;
       }
     }
   </style>
@@ -108,16 +147,25 @@
 <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
 -->
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
-            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
-            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            </div>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
+              Nasi Patroni
+              <div x-show="open" class="menu-dropdown">
+                <ul>
+                  <li><a href="/patronat-merytoryczny/">Patroni Merytoryczni</a></li>
+                </ul>
+              </div>
+            </div>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -159,23 +207,29 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz rejestracyjny
             </a>
-            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
-            <a x-show="false" href="/patroni/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Nasi Patroni
-            </a>
+            </div>
             <a href="/organizatorzy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Organizatorzy
             </a>
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
+              Nasi Patroni
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                <ul>
+                  <li><a href="/patronat-merytoryczny/">Patroni Merytoryczni</a></li>
+                </ul>
+              </div>
+            </div>
             <a href="/kontakt/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kontakt
@@ -185,48 +239,70 @@
         <!-- Mobilka navbar end -->
       </nav>
     </header>
-    <div class="flex justify-center grow" style="margin: 64px 0;">
-      <main class="lg:text-xl space-y-6 flex flex-col justify-start items-center py-6 astro-GYDAMQT5">
-        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left ">
-          Patronat medialny
-        </h1>
-        <div class="astro-GHCIDAYH patroni-lista">
-          <a href="https://radio.rzeszow.pl/" class="astro-GHCIDAYH">
-            <img src="/images/loga/polskie_radio_rzeszow.webp" alt="Polskie radio Rzeszów" class="astro-GHCIDAYH">
-          </a>
-          <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
-            <img src="/images/loga/nowiny24.webp" alt="Nowiny24" class="astro-GHCIDAYH">
-          </a>
-          <a href="https://rzeszow.tvp.pl/" class="astro-GHCIDAYH">
-            <img src="/images/loga/TVP3_rzeszow.webp" alt="TVP3 Rzeszów" class="astro-GHCIDAYH">
-          </a>
-          <a href="https://nowiny24.pl/" class="astro-GHCIDAYH">
-            <img src="/images/loga/nowiny_2.png" alt="Super Nowości" class="astro-GHCIDAYH">
-          </a>
-          <a href="https://radiovia.com.pl/" class="astro-GHCIDAYH">
-            <img src="/images/loga/radio_via.webp" alt="Radio Via" class="astro-GHCIDAYH">
-          </a>
-        </div>
 
-        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left" style="margin-top: 48px;">
-          Patronat Honorowy
-        </h1>
-        <div class="patroni-lista">
-          <div class="astro-GHCIDAYH">
-            <img style="text-align: center;" src="/images/loga/ministerstwo_funduszy_i_polityki_regionalnej.webp"
-              alt="Ministerstwo Funduszy i Polityki Regionalnej">
+    <div class="flex justify-center" style="background-color: #f2e6d8;">
+      <main class=" flex flex-col items-center lg:items-start">
+        <section class="first-section">
+        </section>
+        <section class="second-section-kongres">
+          <div x-init="fetchData()" x-data="{
+            patrons: [],
+            isLoading: false,
+            fetchData() {
+              const url = `https://api.mdon.pl/patrons?patron_type=medialny`;
+          
+              fetch(url, {
+                headers: {
+                  'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+                }
+              })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                this.patrons = data;
+                this.isLoading = false;
+              })
+              .catch(err => {
+                this.error = err.message;
+                this.isLoading = false;
+              });
+            }
+          }" class="images-container">
+            <div x-show="isLoading" class="loading-indicator">
+              Loading...
+            </div>
+            <div x-show="!isLoading" class="images-container__image">
+              <template x-for="patron in patrons">
+                <a :href="patron.link">
+                  <img :src="patron.image_path" :alt="patron.name" />
+                </a>
+              </template>
+            </div>
           </div>
-          <div class="astro-GHCIDAYH">
-            <img src="/images/loga/marszalek.png" alt="Minister Rodziny i Polityki Społecznej">
-          </div>
-          <div class="astro-GHCIDAYH">
-            <img src="/images/loga/prezydent.jpeg" alt="Ministerstwo Funduszy i Polityki Regionalnej">
-          </div>
-      </main>
     </div>
+
+    <div class="flex buttons">
+      <a href="/program"><button class="red-button cursor-pointer">
+          Zobacz program
+        </button></a>
+
+      <a href="/formularz-zgloszeniowy">
+        <button class="white-button cursor-pointer">
+          <img style="max-width: 48px;" src="/assets_2024/pen-red.png" alt="Długopis">
+          Zarejestruj się
+        </button>
+      </a>
+    </div>
+    </section>
+    </main>
+  </div>
   </div>
 
-  <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end; background-color: white;">
+  <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
 
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>

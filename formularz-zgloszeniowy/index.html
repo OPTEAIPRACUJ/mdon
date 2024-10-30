@@ -122,7 +122,15 @@
                   </ul>
               </div>
           </div>
-            <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
+              Nasi Patroni
+              <div x-show="open" class="menu-dropdown">
+                <ul>
+                  <li><a href="/patronat-merytoryczny/">Patroni Merytoryczni</a></li>
+                </ul>
+              </div>
+            </div>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
           </div>
@@ -172,14 +180,19 @@
                   </ul>
               </div>
           </div>
-            <a x-show="false" href="/patroni/"
-              class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
-              Nasi Patroni
-            </a>
             <a href="/organizatorzy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Organizatorzy
             </a>
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
+              Nasi Patroni
+              <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
+                <ul>
+                  <li><a href="/patronat-merytoryczny/">Patroni Merytoryczni</a></li>
+                </ul>
+              </div>
+            </div>
             <a href="/kontakt/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Kontakt

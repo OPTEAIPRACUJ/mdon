@@ -90,6 +90,31 @@ app.delete('/registration_data/:id', verifyToken, (req, res) => {
   });
 });
 
+app.get('/patrons', verifyToken, (req, res) => {
+  const patronType = req.query.patron_type;
+
+  let sql = 'SELECT * FROM patrons';
+
+  if (patronType) {
+    sql += ' WHERE patron_type = ?';
+  }
+
+  db.query(sql, [patronType], (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: 'Database query failed' });
+    }
+    res.json(results);
+  });
+});
+
+/*
+To fetch all images:
+  http://your-api-endpoint/patrons
+
+To fetch images with the patron_type "medialny":
+  http://your-api-endpoint/patrons?patron_type=medialny
+*/
+
 // Start the server
 const server = http.createServer(app)
 

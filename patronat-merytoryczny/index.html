@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Rodo</title>
+  <title>Patroni merytoryczni</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -20,7 +20,7 @@
   </script>
   <style>
     .first-section {
-      background-image: url("/assets_2024/duza-sekcja-tlo3.png");
+      background-image: url("/assets_2024/duza-sekcja-tlo6.png");
       background-position: center;
       background-size: cover;
       height: 400px;
@@ -34,16 +34,80 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      font-family: "Linguistic Regular";
-      padding: 48px;
-      max-width: 1100px;
+      font-family: "Dosis";
+      padding: 72px 48px;
       margin: 0 auto;
       color: rgb(85, 85, 85);
+      width: 100%;
+      align-items: center;
     }
 
-    @media screen and (max-width: 800px) {
-      main {
+    .second-section-kongres .images-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1100px;
+      margin-bottom: 64px;
+      width: 100%;
+      gap: 24px;
+    }
+
+    .second-section-kongres .images-container .images-container__image {
+      border-radius: 24px;
+      background-color: white;
+      border: 2px solid #91051f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 300px;
+      max-width: 400px;
+      min-height: 250px;
+      width: 100%;
+      height: 100%;
+      transition: 400ms all;
+    }
+
+    .second-section-kongres .buttons {
+      display: flex;
+      gap: 24px;
+      font-size: 24px;
+      background-color: #F2E6D8;
+      justify-content: center;
+    }
+
+    .second-section-kongres .buttons button {
+      min-height: 68px;
+    }
+
+    .second-section-kongres .buttons .white-button:hover {
+      background-color: transparent;
+    }
+
+    .second-section-kongres .images-container .images-container__image:hover {
+      transform: scale(1.05);
+    }
+
+    main {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .second-section-kongres {
         padding: 24px;
+      }
+
+      .second-section-kongres .images-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .second-section-kongres .images-container img {
+        max-height: 200px !important;
       }
     }
   </style>
@@ -78,20 +142,21 @@
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Trochę historii</a>
-<a href="/program/" class="astro-3WCREGVO">Program</a>
+            <a href="/program/" class="astro-3WCREGVO">Program</a>
             <!--
 <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
 -->
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
-            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
+            </div>
             <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
               @click="open = !open">
               Nasi Patroni
@@ -123,12 +188,13 @@
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
               class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
-              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;"
+                src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Trochę historii</a>
-<a href="/program/"
+            <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
             <!-- 
@@ -141,15 +207,16 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz rejestracyjny
             </a>
-            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
+            </div>
             <a href="/organizatorzy/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Organizatorzy
@@ -174,139 +241,69 @@
     </header>
 
     <div class="flex justify-center" style="background-color: #f2e6d8;">
-      <main class="max-w-4xl">
-        <h1 class="text-3xl text-mdon_blue font-bold uppercase text-center lg:text-left pb-16 mt-16">
-          RODO
-        </h1>
-        <p><strong>Szanowni Państwo!</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          W związku z wejściem w życie w dniu 25 maja 2018 r. rozporządzenia Parlamentu Europejskiego i
-          Rady (UE) 2016/679 z 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z
-          przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
-          dyrektywy 95/46/WE - dalej RODO informujemy, że:
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Kto jest administratorem Twoich danych osobowych?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Administratorem Twoich danych osobowych jest Fundacja OPTEA z siedzibą w Jasionka 953
-          (36-002), wpisana do Krajowego Rejestru Sądowego prowadzonego przez Sąd Rejonowy w Rzeszowie,
-          XII Wydział Gospodarczy KRS pod nr 0000964959, NIP 5170424612, REGON 521689840
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Jak możesz uzyskać informację o swoich danych osobowych?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Możesz skontaktować się z nami pisząc na adres e-mail kontakt@optea.pl lub kierując tradycyjną
-          korespondencję na podany powyżej adres.
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>W jakim celu pozyskujemy i przetwarzamy Twoje dane osobowe?</strong></p>
-        <p>&nbsp;</p>
-        <p>Twoje dane osobowe będziemy pozyskiwać i przetwarzać wyłącznie w celach:</p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Świadczenia usług tj. zawarcia i wykonania umowy (art. 6 ust. 1
-          lit. b RODO).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Rozpatrywania skarg i reklamacji (art. 6 ust. 1 lit. c RODO
-          czyli wykonania obowiązku prawnego).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Archiwizowania dokumentów tj. umowy, korespondencji, faktur
-          (art. 6 ust. 1 lit. c RODO).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Dochodzenie roszczeń związanych z zawartą umową art. (6 ust. 1
-          lit. f RODO czyli prawnie uzasadniony cel, który polega na prowadzeniu postępowań polubownych,
-          sądowych i egzekucyjnych).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Działalność marketingowa własnych usług i produktów art. (6 ust.
-          1 lit. f RODO czyli prawnie uzasadniony cel, który polega na prowadzeniu działalności z
-          wykorzystaniem komunikacji elektronicznej).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; W celu identyfikacji nadawcy oraz obsługi jego zapytania
-          przesłanego przez udostępniony formularz.
-        </p>
-        <p>· &nbsp; &nbsp; &nbsp; &nbsp; Cele analityczne i statystyczne.</p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Obsługa zapytania poprzez aplikacje: Linkedin, Twitter,
-          Facebook, Messenger.
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Czy przetwarzamy Twoje dane w sposób zautomatyzowany?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Nie będziemy przetwarzać Twoich danych w sposób zautomatyzowany, w tym poprzez profilowanie. W
-          ramach świadczonych przez Fundację OPTEA usług korzystamy z plików cookies, tylko poprzez
-          obserwacje i analizę ruchu na naszej stronie, jednak w ramach tych czynności nie przetwarzamy
-          danych osobowych w rozumieniu RODO.
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Kto może być odbiorcą Twoich danych?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Twoje dane możemy przekazywać innym podmiotom, które będą je przetwarzać zgodnie z
-          obowiązującymi przepisami prawa, w szczególności będą to podmioty:
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Uprawnione do otrzymania Twoich danych na podstawie przepisów
-          prawa (np.: urząd skarbowy, policja, sąd).
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Przetwarzające Twoje dane na nasze zlecenie (np.: poczta, firma
-          kurierska, bank, zaufani partnerzy biznesowi wspierający naszą działalność gospodarczą).
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Jak długo będziemy przetwarzać Twoje dane?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Twoje dane jesteśmy zobowiązani przechowywać przez okres wskazany w przepisach prawa lub gdy
-          jest to konieczne do prawidłowego prowadzenia przez nas działalności gospodarczej np.:
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Dane związane z wykonaniem umowy: do czasu przedawnienia
-          roszczeń.
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Dokumenty księgowe: do czasu upływu okresu przedawnienia
-          zobowiązania podatkowego, chyba że ustawa podatkowa stanowi inaczej.
-        </p>
-        <p>
-          · &nbsp; &nbsp; &nbsp; &nbsp; Dane dla celów marketingowych w przypadku przetwarzania danych
-          na podstawie:
-        </p>
-        <p>zgody - do czasu jej wycofania,</p>
-        <p>prawnie uzasadnionego celu - do czasu wniesienia sprzeciwu.</p>
-        <p>&nbsp;</p>
-        <p><strong>Twoje uprawnienia w zakresie przetwarzanych danych przez Fundację OPTEA.</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Przysługuje Ci prawo dostępu do treści Twoich danych oraz prawa ich sprostowana, usunięcia,
-          ograniczenia przetwarzania, prawo wniesienia sprzeciwu, prawo do przenoszenia danych, prawo do
-          cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego
-          dokonano na podstawie zgody przed jej cofnięciem (w przypadku przetwarzania danych na
-          podstawie zgody). W tym celu wystarczy, że wyślesz na adres e-mail lub pocztą tradycyjną do
-          Fundacji OPTEA swoje żądanie. Jeżeli uznasz, że przetwarzając Twoje dane naruszamy RODO, to
-          masz prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych jako organu
-          nadzorczego.
-        </p>
-        <p>&nbsp;</p>
-        <p><strong>Czy podanie przez Ciebie danych jest obowiązkowe?</strong></p>
-        <p>&nbsp;</p>
-        <p>
-          Podanie przez Ciebie danych jest konieczne do zawarcia umowy, jej wykonania oraz rozliczenia.
-          W pozostałym zakresie jest dobrowolne.
-        </p>
-      </main>
+      <main class=" flex flex-col items-center lg:items-start">
+        <section class="first-section">
+        </section>
+        <section class="second-section-kongres">
+          <div x-init="fetchData()" x-data="{
+            patrons: [],
+            isLoading: false,
+            fetchData() {
+              const url = `https://api.mdon.pl/patrons?patron_type=medialny`;
+          
+              fetch(url, {
+                headers: {
+                  'Authorization': 'Bearer kVH62lImcXLQ5bZJE2QDTsWKwwObAmzJ',
+                }
+              })
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                this.patrons = data;
+                this.isLoading = false;
+              })
+              .catch(err => {
+                this.error = err.message;
+                this.isLoading = false;
+              });
+            }
+          }" class="images-container">
+            <div x-show="isLoading" class="loading-indicator">
+              Loading...
+            </div>
+            <div x-show="!isLoading" >
+              <template x-for="patron in patrons">
+                <a class="images-container__image" :href="patron.link">
+                  <img :src="patron.image_path" :alt="patron.name" />
+                </a>
+              </template>
+            </div>
+          </div>
+
+          <div class="flex buttons">
+            <a href="/program"><button class="red-button cursor-pointer">
+                Zobacz program
+              </button></a>
+
+            <a href="/formularz-zgloszeniowy">
+              <button class="white-button cursor-pointer">
+                <img style="max-width: 48px;" src="/assets_2024/pen-red.png" alt="Długopis">
+                Zarejestruj się
+              </button>
+            </a>
+          </div>
     </div>
+    </section>
+    </main>
+  </div>
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
- 
+
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>

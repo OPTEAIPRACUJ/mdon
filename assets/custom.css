@@ -45,14 +45,12 @@ footer a {
 }
 
 nav .menu-dropdown {
-    top: 24px;
     padding: 12px;
     z-index: 99;
     position: absolute;
     background-color: #f2e6d8;
     border: 1px solid #91051f;
     border-radius: 0 0 12px 12px;
-    width: 100%;
     transition: 400ms all;
 }
 
