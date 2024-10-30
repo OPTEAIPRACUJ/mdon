@@ -43,7 +43,7 @@
       margin-top: 64px;
       border-radius: 24px;
     }
-    
+
     .second-section-formularz a {
       color: #f2e6d8 !important;
     }
@@ -58,7 +58,7 @@
       background-color: #f2e6d8;
       color: #91051f;
     }
-    
+
     .second-section-formularz .wyslij-zgloszenie-container button {
       display: flex;
       max-width: 180px;
@@ -73,7 +73,7 @@
 
     @media screen and (max-width: 768px) {
       .second-section-formularz {
-        margin:24px;
+        margin: 24px;
         padding: 24px;
       }
     }
@@ -109,20 +109,21 @@
               <img style="max-width: 24px;" src="/assets_2024/home_bialy.png" alt="Domek">
             </a>
             <a href="/kongres/" class="astro-3WCREGVO">Trochę historii</a>
-<a href="/program/" class="astro-3WCREGVO">Program</a>
+            <a href="/program/" class="astro-3WCREGVO">Program</a>
             <!--
 <a href="/jarmark/" class="astro-3WCREGVO">Jarmark</a>
 -->
             <a href="/formularz-zgloszeniowy/" class="astro-3WCREGVO">Formularz rejestracyjny</a>
-            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; color: #f2e6d8; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
+            </div>
             <a x-show="false" href="/patroni/" class="astro-3WCREGVO">Nasi Patroni</a>
             <a href="/organizatorzy/" class="astro-3WCREGVO">Organizatorzy</a>
             <a href="/kontakt/" class="astro-3WCREGVO">Kontakt</a>
@@ -146,12 +147,13 @@
           <div aria-label="Menu nawigacyjne" class="flex flex-col space-y-1 mt-28 text-lg astro-3WCREGVO"><a href="/"
               class="flex rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO"
               style="font-weight: bold">
-              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;" src="/assets_2024/home_bialy.png" alt="Domek">
+              <img style="max-width: 24px; margin-right: 12px; background: black; border-radius: 8px; padding: 4px;"
+                src="/assets_2024/home_bialy.png" alt="Domek">
               Strona główna</a>
             <a href="/kongres/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Trochę historii</a>
-<a href="/program/"
+            <a href="/program/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Program</a>
             <!-- 
@@ -164,15 +166,16 @@
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Formularz rejestracyjny
             </a>
-            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }" @click="open = !open">
+            <div style="cursor: pointer; padding-left: 1rem; position: relative;" x-data="{ open: false }"
+              @click="open = !open">
               Poprzednie edycje
               <div x-show="open" class="menu-dropdown" style="max-width: 250px;">
-                  <ul>
-                      <li><a href="/mdon_2022/">Edycja 2022</a></li>
-                      <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
-                  </ul>
+                <ul>
+                  <li><a href="/mdon_2022/">Edycja 2022</a></li>
+                  <li><a href="https://2023.mdon.pl/">Edycja 2023</a></li>
+                </ul>
               </div>
-          </div>
+            </div>
             <a x-show="false" href="/patroni/"
               class="block rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 astro-3WCREGVO">
               Nasi Patroni
@@ -196,19 +199,24 @@
       </section>
 
       <section class="second-section-formularz ">
-        <div class="pb-6"  style="font-size: 18px; font-weight: bold;">
+        <div class="pb-6" style="font-size: 18px; font-weight: bold;">
           <h1 style="font-size: 22px; font-weight: bold;">
             Skontaktuj się z nami
           </h1>
-          <p >
+          <p>
             Zadzwoń do nas test: <a href="tel:+48666254066">666 254 066</a>
           </p>
           <p>
-            Napisz do nas: <a href="mailto:biuro@optea.pl ">fundacja@optea.pl </a>
+            Napisz do nas: <a href="mailto:fundacja@optea.pl">fundacja@optea.pl </a>
           </p>
           <p style="font-size: 22px; font-weight: bold; margin-top: 24px;" class="mt-8">Albo wypełnij formularz:</p>
         </div>
-
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function () {
+            emailjs.init("o8grxPUg0ZKA4R5cN"); // Replace with your EmailJS user ID
+          })();
+        </script>
         <div>
           <form x-data="function contactForm() {
     return {
@@ -224,53 +232,48 @@
     };
   }" @submit.prevent="async function submitForm() {
     this.formData.buttonText = &#34;Wysy\u0142anie...&#34;;
-    await fetch(&#34;/mail.php&#34;, {
-      method: &#34;POST&#34;,
-      headers: {
-        &#34;Content-Type&#34;: &#34;application/x-www-form-urlencoded&#34;
-      },
-      body: &#34;form_name=&#34; + this.formData.name + &#34;&#38;form_email=&#34; + this.formData.email + &#34;&#38;form_phone=&#34; + this.formData.phone + &#34;&#38;form_message=&#34; + this.formData.message + &#34;&#38;form_zgoda=&#34; + this.formData.zgoda
-    }).then((response) => {
-      if (!response.ok) {
-        throw new Error(&#34;Wysy\u0142anie wiadomo\u015Bci nie powiod\u0142o si\u0119. Spr\xF3buj ponownie p\xF3\u017Aniej.&#34;);
-      }
-    }).then(() => {
-      this.formData.buttonText = &#34;Wy\u015Blij wiadomo\u015B\u0107&#34;;
-      this.formData.name = &#34;&#34;;
-      this.formData.email = &#34;&#34;;
-      this.formData.phone = &#34;&#34;;
-      this.formData.message = &#34;&#34;;
-      this.formData.zgoda = false;
-      this.formData.status = &#34;Wys\u0142ano wiadomo\u015B\u0107&#34;;
-    }).catch(() => {
-      this.formData.status = &#34;Wysy\u0142anie wiadomo\u015Bci nie powiod\u0142o si\u0119. Spr\xF3buj ponownie p\xF3\u017Aniej.&#34;;
-      this.formData.buttonText = &#34;Wy\u015Blij wiadomo\u015B\u0107&#34;;
-      this.formData.name = &#34;&#34;;
-      this.formData.email = &#34;&#34;;
-      this.formData.phone = &#34;&#34;;
-      this.formData.message = &#34;&#34;;
-      this.formData.zgoda = false;
+
+    // Wysłanie formularza z kontaktowego
+    await emailjs.send('service_757wcup','template_t302a6d', this.formData)
+    .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        
+          this.formData = {
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+            zgoda: false,
+            buttonText: 'Prześlij',
+            status: &#34;&#34,
+          }
+    }, (error) => {
+        console.log('FAILED...', error);
     });
-  }" class="space-y-6">
-            <div style="font-size: 18px; font-weight: bold;" class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+    }
+  " class="space-y-6">
+            <div style="font-size: 18px; font-weight: bold;"
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
               <label for="form_name" class="lg:w-2/5">Imię i nazwisko:</label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="text" name="form_name" id="form_name"
                 x-model="formData.name">
             </div>
-            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+            <div style="font-size: 18px; font-weight: bold;"
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
               <label for="form_email" class="lg:w-2/5">Twój email: <span style="color: #f2e6d8" class="text-xl">*</span>
               </label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="email" required name="form_email"
                 id="form_email" x-model="formData.email">
             </div>
-            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
+            <div style="font-size: 18px; font-weight: bold;"
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-end">
               <label for="form_phone" class="lg:w-2/5">Twój telefon:</label>
               <input class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" type="tel" name="form_phone"
                 id="form_phone" x-model="formData.phone">
             </div>
-            <div style="font-size: 18px; font-weight: bold;"  class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-start">
-              <label for="form_message" class="lg:w-2/5">Treść Twojej wiadomości: <span
-                  class=" text-xl">*</span>
+            <div style="font-size: 18px; font-weight: bold;"
+              class="flex flex-col lg:flex-row lg:space-x-4 items-center lg:items-start">
+              <label for="form_message" class="lg:w-2/5">Treść Twojej wiadomości: <span class=" text-xl">*</span>
               </label>
               <textarea class="rounded-3xl border-gray-400 w-full mt-3 lg:mt-0" name="form_message" required
                 id="form_message" rows="6" x-model="formData.message"></textarea>
@@ -305,7 +308,7 @@
   </div>
 
   <footer class="pt-4 flex" style="gap: 24px; justify-content: flex-end;">
- 
+
     <a href="/polityka-prywatnosci/">Polityka Prywatności</a>
     <a href="/rodo/">RODO</a>
     <a href="/kontakt/">Kontakt</a>
