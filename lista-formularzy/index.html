@@ -8,7 +8,7 @@
     content="Międzynarodowy Dzień Osób z Niepełnosprawnością z Uniwersytetem Rzeszowskim, Fundacją OPTEA i portalem pracy iPRACUJZDALNIE.pl. Organizatorzy, w ramach wydarzenia, zapraszają również na  Mikołajkowy Jarmak Pracy podczas którego będzie można zakupić rękodzieło artystyczne wykonane przez osoby z niepełnosprawnością.">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>Formularz rejestracyjny</title>
+  <title>Lista formularzy</title>
   <link rel="stylesheet" href="/assets/custom.css">
   <link rel="stylesheet" href="/assets/404.67f322dd.css" />
   <link rel="stylesheet" href="/assets/index.840900b9.css" />
@@ -308,9 +308,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <template x-for="registration in registrations" :key="registration.id">
+                      <template x-for="(registration, index) in registrations" :key="index">
                         <tr>
-                          <td x-text="registration.id"></td>
+                          <td x-text="index + 1"></td>
                           <td x-text="registration.fullName"></td>
                           <td x-text="registration.email"></td>
                           <td x-text="registration.phone"></td>
